@@ -1,0 +1,45 @@
+﻿capital = 330
+
+oob = "BUR_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+add_ideas = {
+	limited_conscription
+}
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 0
+		}
+
+		fascism = {
+			popularity = 100
+		}
+		
+		communism = {
+			popularity = 0
+		}
+	}
+	
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Элбек-Доржи Ринчино"
+	desc = "POLITICS_KHORLOOGIIN_CHOIBALSAN_DESC"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}

@@ -1,0 +1,26 @@
+ideas = {
+	country = {
+		SIB_decentralization = {
+			picture = sib_broken
+			modifier = {
+				local_resources_factor = -0.4
+				conscription_factor = -0.3
+			}
+		}
+		SIB_military_women = {
+			#picture = 
+			modifier = {
+				conscription = 0.015
+				consumer_goods_factor = 0.05
+			}
+		}
+		SIB_technocracy = {
+			picture = generic_research_bonus
+			modifier = {
+				research_time_factor = -0.05
+				political_power_factor = -0.25
+				consumer_goods_factor = 0.1
+			}
+		}
+	}
+}

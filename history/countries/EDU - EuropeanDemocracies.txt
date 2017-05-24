@@ -1,0 +1,64 @@
+﻿capital = 85
+
+oob = "EDU_1936"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	early_destroyer = 1
+	transport = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+}
+
+add_ideas = {
+	EDU_enthic_tensions
+	EDU_pacifism
+}
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 90
+		}
+
+		fascism = {
+			popularity = 10
+		}
+		
+		communism = {
+			popularity = 0
+		}
+
+		neutrality = {
+			popularity = 0
+		}
+	}
+	ruling_party = democratic
+	last_election = "1936.3.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+create_faction = EDU_faction
+add_to_faction = EDU
+
+create_country_leader = {
+	name = "Станислав Копаньский"
+	desc = ""
+	picture = "gfx/leaders/EDU/Portrait_Stanislaw_Kopamski.dds"
+	expire = "1953.3.1"
+	ideology = conservatism
+	traits = {	
+	}
+}
+
+create_field_marshal = {
+	name = "Станислав Копаньский"
+	gfx = "gfx/leaders/EDU/Portrait_Stanislaw_Kopamski.dds"
+	traits = {  offensive_doctrine }
+	skill = 3
+}

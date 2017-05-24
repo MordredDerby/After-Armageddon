@@ -1,0 +1,45 @@
+﻿capital = 9
+
+oob = "CZE_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+}
+
+set_research_slots = 3
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 15
+		}
+
+		fascism = {
+			popularity = 0
+		}
+		
+		communism = {
+			popularity = 0
+		}
+		neutrality = {
+			popularity = 85
+		}
+	}
+	
+	ruling_party = neutrality
+	last_election = "1935.5.19"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Людвик Свобода" 
+	picture = "gfx/leaders/CZE/Portrait_Svoboda.dds"
+	expire = "1979.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}

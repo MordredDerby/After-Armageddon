@@ -1,0 +1,18 @@
+ideas = {
+	country = {
+		EDU_enthic_tensions = {
+			picture = great_depression
+			modifier = {
+				political_power_cost = 0.5
+				unity_factor = -0.1
+			}
+		}
+		EDU_pacifism = {
+			picture = disarmed_nation
+			modifier = {
+				army_org_factor = -0.2
+				conscription_factor = -0.3
+			}
+		}
+	}
+}
