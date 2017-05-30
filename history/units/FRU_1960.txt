@@ -1,0 +1,112 @@
+division_template = {
+	name = "Повстанческий полк"				
+									
+	regiments = {					
+		infantry = { x = 0 y = 0 }	
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Конный полк"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Бронемилиция"
+
+	regiments = {
+		mechanized = { x = 0 y = 0 }
+		mechanized = { x = 0 y = 1 }
+		mechanized = { x = 1 y = 0 }
+		mechanized = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "1-й гвардейский полк бронемилиции"
+		location = 9425
+		division_template = "Бронемилиция"
+		start_experience_factor = 0.7
+		force_equipment_variants = { infantry_equipment_0 = { owner = "UKR" } }
+	}
+
+	division = {
+		name = "1-й вольный полк"
+		location = 577
+		division_template = "Повстанческий полк"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2-й вольный полк"
+		location = 577
+		division_template = "Конный полк"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "3-й вольный полк"
+		location = 11550
+		division_template = "Повстанческий полк"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "4-й вольный полк"
+		location = 11550
+		division_template = "Конный полк"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "5-й вольный полк"
+		location = 11411
+		division_template = "Повстанческий полк"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "6-й вольный полк"
+		location = 11411
+		division_template = "Конный полк"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "7-й вольный полк"
+		location = 6483
+		division_template = "Повстанческий полк"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "8-й вольный полк"
+		location = 6483
+		division_template = "Конный полк"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "9-й вольный полк"
+		location = 6431
+		division_template = "Повстанческий полк"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "10-й вольный полк"
+		location = 6431
+		division_template = "Конный полк"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "11-й вольный полк"
+		location = 3434
+		division_template = "Повстанческий полк"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "12-й вольный полк"
+		location = 3434
+		division_template = "Конный полк"
+		start_equipment_factor = 0.5
+	}

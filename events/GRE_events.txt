@@ -1,0 +1,47 @@
+add_namespace = GRE
+
+#Выбор столицы
+country_event = {
+	id = GRE.1
+	title = GRE.1.t
+	desc = GRE.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = GRE.1.a
+		set_capital = 341 #Константинополь
+		add_national_unity = 0.1
+	}
+	option = {
+		name = GRE.1.b
+		set_capital = 47 #Афины
+		add_political_power = 100
+	}
+	option = {
+		name = GRE.1.c
+		#Форты
+	}
+}
+#Предложение примирения от Греции
+country_event = {
+	id = GRE.2
+	title = GRE.2.t
+	desc = GRE.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = GRE.2.a
+		diplomatic_relation = { country = GRE relation = non_aggression_pact }
+	}
+	option = {
+		name = GRE.2.b
+		trigger = { GRE = { is_faction_leader = yes } }
+		GRE = { add_to_faction = TUR }
+	}
+	option = {
+		name = GRE.2.c
+		add_political_power = 150
+	}
+}

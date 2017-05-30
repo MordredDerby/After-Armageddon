@@ -1,0 +1,21 @@
+ideas = {
+	country = {
+		internationale_aid = {
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				conscription_factor = 0.2
+				army_morale_factor = 0.1
+			}
+		}
+		guerilla_state = {
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				partisan_effect = 1
+				max_dig_in = 15
+				dig_in_speed_factor = 0.50
+			}
+		}
+	}
+}

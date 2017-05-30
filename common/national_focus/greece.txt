@@ -1,0 +1,482 @@
+focus_tree = {
+	id = greece
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GRE
+		}
+	}
+	default = no
+	focus = {
+		id = GRE_new_capital
+		icon = GFX_goal_anschluss
+		cost = 10,00
+		x = 3
+		y = 0
+		completion_reward = {
+			country_event = GRE.1
+		}
+	}
+	focus = {
+		id = GRE_new_constitution
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_new_capital
+		}
+		mutually_exclusive = {
+			focus = GRE_kingdom
+			focus = GRE_byzantium
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = no
+			}
+		}
+
+	}
+	focus = {
+		id = GRE_mediterraenan_union
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_new_constitution
+		}
+		x = 1
+		y = 2
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = "med_union" 
+		}
+	}
+	focus = {
+		id = GRE_kingdom
+		icon = GFX_focus_generic_home_defense
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_new_capital
+		}
+		mutually_exclusive = {
+			focus = GRE_new_constotition
+			focus = GRE_byzantium
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+		}
+	}
+	focus = {
+		id = GRE_hellenism
+		icon = GFX_goal_generic_propaganda
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_kingdom
+		}
+		x = 3
+		y = 2
+
+	}
+	focus = {
+		id = GRE_reconcile_turkey
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_mediterraenan_union
+			focus = GRE_hellenism
+		}
+		mutually_exclusive = {
+			focus = GRE_take_turkey
+		}
+		x = 2
+		y = 3
+		completion_reward = {
+			TUR = { country_event = GRE.2 }
+		}
+	}
+	focus = {
+		id = GRE_byzantium
+		icon = GFX_goal_support_fascism
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_new_capital
+		}
+		mutually_exclusive = {
+			focus = GRE_new_constotition
+			focus = GRE_kingdom
+		}
+		x = 5
+		y = 1
+		completion_reward = {
+			create_country_leader = {
+				name = "Александр IV"
+				picture = "gfx/leaders/GRE/Portrait_Alexandros.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+				}
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			add_ideas = {
+				partial_mobilization
+			}
+		}
+	}
+	focus = {
+		id = GRE_crusade
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_byzantium
+		}
+		x = 5
+		y = 2
+		completion_reward = {
+			add_ideas = {
+				militarism
+			}
+		}
+	}
+	focus = {
+		id = GRE_take_turkey
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_crusade
+			focus = GRE_hellenism
+		}
+		mutually_exclusive = {
+			focus = GRE_reconcile_turkey
+		}
+		x = 4
+		y = 3
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = TUR
+			}
+		}
+	}
+	focus = {
+		id = GRE_crimea
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_reconcile_turkey
+			focus = GRE_take_turkey
+		}
+		x = 1
+		y = 4
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = UKR
+				generator = { 137 }
+			}
+		}
+	}
+	focus = {
+		id = GRE_macedon
+		icon = GFX_goal_generic_military_sphere
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_take_turkey
+			focus = GRE_reconcile_turkey
+		}
+		x = 3
+		y = 4
+		completion_reward = {
+			transfer_state = 106
+		}
+
+	}
+	focus = {
+		id = GRE_levant
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_crusade
+		}
+		prerequisite = {
+			focus = GRE_take_turkey
+		}
+		x = 5
+		y = 4
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SYR
+			}
+		}
+	}
+	focus = {
+		id = GRE_sicily
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_new_capital
+		}
+		x = 8
+		y = 1
+		completion_reward = {
+			transfer_state = 115
+			transfer_state = 116
+		}
+
+	}
+	focus = {
+		id = GRE_crush_mafia
+		icon = GFX_goal_generic_political_pressure
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_sicily
+		}
+		mutually_exclusive = {
+			focus = GRE_mafia_compromise
+		}
+		x = 7
+		y = 2
+
+	}
+	focus = {
+		id = GRE_mafia_compromise
+		icon = GFX_goal_tripartite_pact
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_sicily
+		}
+		mutually_exclusive = {
+			focus = GRE_crush_mafia
+		}
+		x = 9
+		y = 2
+
+	}
+	focus = {
+		id = GRE_greater_graecia
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_crush_mafia
+			focus = GRE_mafia_compromise
+		}
+		x = 8
+		y = 3
+		completion_reward = {
+			transfer_state = 117
+			transfer_state = 156
+		}
+
+	}
+	focus = {
+		id = GRE_take_rome
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_greater_graecia
+		}
+		x = 8
+		y = 4
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PAP
+			}
+		}
+
+	}
+	focus = {
+		id = GRE_puppet_pope
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_take_rome
+		}
+		mutually_exclusive = {
+			focus = GRE_oppucy_vatican
+		}
+		x = 7
+		y = 5
+		completion_reward = {
+			puppet = PAP
+		}
+
+	}
+	focus = {
+		id = GRE_puppet_bulgaria
+		icon = GFX_goal_generic_military_deal
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_macedon
+		}
+		mutually_exclusive = {
+			focus = GRE_oppucy_bulgaria
+		}
+		x = 2
+		y = 5
+		completion_reward = {
+			BUL = {
+				transfer_state = 211
+				transfer_state = 212
+				transfer_state = 48
+				transfer_state = 77
+			}
+			puppet = BUL
+		}
+	}
+	focus = {
+		id = GRE_oppucy_bulgaria
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_macedon
+		}
+		mutually_exclusive = {
+			focus = GRE_puppet_bulgaria
+		}
+		x = 4
+		y = 5
+		completion_reward = {
+			transfer_state = 211
+			transfer_state = 212
+			transfer_state = 48
+			transfer_state = 77
+		}
+
+	}
+	focus = {
+		id = GRE_fortify_danube
+		icon = GFX_goal_generic_construct_military
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_oppucy_bulgaria
+			focus = GRE_puppet_bulgaria
+		}
+		mutually_exclusive = {
+			focus = GRE_romania
+		}
+		x = 2
+		y = 6
+
+	}
+	focus = {
+		id = GRE_romania
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_puppet_bulgaria
+			focus = GRE_oppucy_bulgaria
+		}
+		mutually_exclusive = {
+			focus = GRE_fortify_danube
+		}
+		x = 4
+		y = 6
+		completion_reward = {
+			if = {
+				limit = {
+					BUL = { is_puppet_of = GRE }
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ROM
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = WAL
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = MOL
+				}
+				else = {
+					create_wargoal = {
+						type = annex_everything
+						target = ROM
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = WAL
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = MOL
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = GRE_oppucy_vatican
+		icon = GFX_goal_generic_demand_territory
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_take_rome
+		}
+		mutually_exclusive = {
+			focus = GRE_puppet_pope
+		}
+		x = 9
+		y = 5
+
+	}
+	focus = {
+		id = GRE_puppet_italy
+		icon = GFX_focus_generic_italy_first
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_oppucy_vatican
+			focus = GRE_puppet_pope
+		}
+		mutually_exclusive = {
+			focus = GRE_restore_rome
+		}
+		x = 7
+		y = 6
+		completion_reward = {
+			any_state = {
+				limit = {
+					is_core_of = ITA
+					OR = {
+						owned_by  = GRE
+						owner = { is_puppet_of = GRE }
+					}
+				}
+				set_state_controller = ITA
+				set_state_owner = ITA
+			}
+			puppet = ITA
+		}
+	}
+	focus = {
+		id = GRE_restore_rome
+		icon = GFX_focus_generic_home_defense
+		cost = 10,00
+		prerequisite = {
+			focus = GRE_oppucy_vatican
+			focus = GRE_puppet_pope
+		}
+		mutually_exclusive = {
+			focus = GRE_puppet_italy
+		}
+		x = 9
+		y = 6
+		completion_reward = {
+			set_capital = 2
+			set_cosmetic_tag = GRE_ROM
+			add_political_power = 250
+		}
+	}
+}

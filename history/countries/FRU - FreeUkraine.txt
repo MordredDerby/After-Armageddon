@@ -1,6 +1,6 @@
 ﻿capital = 89
 
-oob = "FRU_1936"
+oob = "FRU_1960"
 
 set_research_slots = 3
 
@@ -13,6 +13,8 @@ set_technology = {
 add_ideas = {
 	scraping_the_barrel
 	free_trade
+	guerilla_state
+	internationale_aid
 }
 set_politics = {
 

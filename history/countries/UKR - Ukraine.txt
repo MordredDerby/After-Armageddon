@@ -1,6 +1,6 @@
 ﻿capital = 202 #Kiev
 
-oob = "UKR_1936"
+oob = "UKR_1960"
 
 set_research_slots = 3
 
@@ -11,6 +11,12 @@ set_technology = {
 	transport = 1
 	mass_assault = 1
 	fleet_in_being = 1
+}
+
+add_ideas = {
+	limited_exports
+	limited_conscription
+	partial_economic_mobilisation
 }
 
 set_politics = {
