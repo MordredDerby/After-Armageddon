@@ -110,3 +110,4 @@ units = {
 		division_template = "Конный полк"
 		start_equipment_factor = 0.5
 	}
+}

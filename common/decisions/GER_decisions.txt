@@ -1,0 +1,106 @@
+political_actions = {
+	integrate_sudetenland = {
+		allowed = {
+			tag = GER
+		}
+		visible = {
+			SDT = { is_subject_of = GER }
+		}
+		available = {
+			SDT = {
+				has_full_control_of_state = 74
+				has_full_control_of_state = 69
+			}
+		}
+		cost = 100
+		days_remove = 80
+		remove_effect = {
+			SDT = {
+				every_unit_leader = {
+					set_nationality = GER
+				}
+			}
+			annex_country = { target = SDT transfer_troops = yes }
+			add_state_core = 74
+			add_state_core = 69
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+
+operations = {
+	intervene_czechia = {
+		icon = border_war
+
+		allowed = { 
+			tag = GER
+		}
+
+		available = {
+			9 = { is_in_home_area = no }
+			divisions_in_border_state = {
+				state = 69
+				border_state = 9
+				size > 0
+			}
+		}
+		visible = {
+			NOT = {
+				owns_state = 9
+			}
+			owns_state = 69
+		}
+		fire_only_once = yes
+		complete_effect = {
+			start_border_war = {
+				#change_state_after_war = no
+				attacker = {
+					state = 69
+					num_provinces = 4
+					on_win = 
+					on_lose = 
+					#on_cancel = 
+				}
+				
+				defender = {
+					state = 9
+					num_provinces = 4
+					#on_win = 
+					#on_lose = 
+					#on_cancel = 
+				}
+			}
+			set_border_war_data = {
+				attacker = 69
+				defender = 9
+				attacker_modifier = 0.75
+				defender_modifier = 0.5
+				#combat_width = 100
+			}
+		}
+	}
+	retreat_czechia = {
+		allowed = {
+			tag = GER
+		}
+		visible = {
+			has_border_war_between = {
+   				attacker = 69
+    			defender = 9
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			cancel_border_war = {
+    			dont_fire_events = yes
+    			defender = 69
+   				attacker = 9
+			}
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+	}
+}

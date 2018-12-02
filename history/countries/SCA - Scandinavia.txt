@@ -144,76 +144,16 @@ set_politics = {
 }
 
 set_convoys = 25
-set_national_unity = 0.9
-
-
-
 
 create_country_leader = {
-	name = "Per Albin Hansson"
-	desc = "POLITICS_PER_ALBIN_HANSSON_DESC"
-	picture = "Portrait_Sweden_Per_Albin_Hansson.dds"
+	name = "Ханс Хеттофт"
+	desc = ""
+	picture = "gfx/leaders/SCA/Portrait_Hans_Hedtoft.dds"
 	expire = "1965.1.1"
 	ideology = socialism
 	traits = {
 		#
 	}
-}
-
-create_country_leader = {
-	name = "Sven Olov Lindholm"
-	desc = "POLITICS_SVEN_OLOV_LINDHOLM_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	expire = "1965.1.1"
-	ideology = nazism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Sven Linderot"
-	desc = "POLITICS_SVEN_LINDEROT_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Axel Pehrsson-Bramstorp"
-	desc = "POLITICS_AXEL_PEHRSSON_BRAMSTORP_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-	expire = "1965.1.1"
-	ideology = centrism
-	traits = {
-		#
-	}
-}
-
-create_corps_commander = {
-	name = "Folke Högberg"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
-	traits = { commando }
-	skill = 3
-
-}
-
-create_corps_commander = {
-	name = "Erik af Edholm"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	traits = {  hill_fighter }
-	skill = 4
-
-}
-
-create_navy_leader = {
-	name = "Claes Lindström"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
-	traits = { blockade_runner }
-	skill = 4
 }
 
 ### Ship Variants ###

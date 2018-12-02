@@ -1,0 +1,56 @@
+add_namespace = EDU
+
+country_event = {
+	id = EDU.1
+	title = EDU.1.t
+	desc = EDU.1.d
+	#picture = 
+	is_triggered_only = yes
+
+	option = {
+		name = EDU.1.a
+		start_civil_war = {
+			ideology = fascism
+			size = 0.45
+			states = { 68 61 67 64 66 62 63 }
+		}
+		random_country = {
+			limit = {
+				original_tag = EDU
+				has_government = fascism
+			}
+			save_event_target_as = EDU_german_revolt
+		}
+		DDR = {
+			annex_country = { target = event_target:EDU_german_revolt transfer_troops = yes }
+		}
+		declare_war_on = {
+			target = DDR 
+			type = annex_everything
+		}
+	}
+}
+
+country_event = {
+	id = EDU.2
+	title = EDU.2.t
+	desc = EDU.2.d
+	#picture = 
+	is_triggered_only = yes
+
+	option = {
+		name = EDU.2.a
+		BAL = {
+			add_state_core = 189
+			add_state_core = 11
+			add_state_core = 188
+			add_state_core = 190
+			add_state_core = 12
+			add_state_core = 191
+			add_state_core = 13
+		}
+		release = BAL
+		create_wargoal = { type = annex_everything target = BAL }
+		RSR = { give_guarantee = BAL }
+	}
+}

@@ -1,0 +1,54 @@
+capital = 235
+
+oob = "DKB"
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	early_fighter = 1
+	shipbuild_basics = 1
+	gw_artillery = 1
+
+}
+
+set_research_slots = 3
+
+set_politics = {
+
+	parties = {
+		neutrality = {
+			popularity = 100
+		}
+	}
+
+	ruling_party = neutrality
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_convoys = 20
+
+create_country_leader = {
+	name = "Иван Кононов"
+	desc = ""
+	picture = "gfx/leaders/DKB/Portrait_Kononov.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {}
+}
+
+create_corps_commander = {
+	name = "Иван Кононов"
+	portrait_path = "gfx/leaders/DKB/Portrait_Kononov.dds"
+	traits = { 
+		media_personality 
+		cavalry_leader 
+		trickster 
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}

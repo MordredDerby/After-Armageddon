@@ -1,0 +1,113 @@
+political_actions = {
+	partition_siberia = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+				tag = URA
+				tag = TRK
+				tag = MON
+				tag = MAN
+			}
+		}
+
+		available = {
+		}
+
+		visible = {
+			has_global_flag = SIB_decline
+			NOT = { has_country_flag = decided_siberia }
+		}
+
+		#cost = 25
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			set_country_flag = decided_siberia
+			set_country_flag = siberia_attacker
+			SIB = { add_to_temp_variable = { var = siberia_attackers value = 1 } }
+			if = {
+				limit = {
+					tag = TRK
+				}
+				set_global_flag = TRK_partition_siberia
+			}
+			if = {
+				limit = {
+					tag = MON
+				}
+				set_global_flag = MON_partition_siberia
+			}
+			if = {
+				limit = {
+					tag = URA
+				}
+				set_global_flag = URA_partition_siberia
+			}
+			if = {
+				limit = {
+					tag = MAN
+				}
+				set_global_flag = MAN_partition_siberia
+			}
+		}
+	}
+
+	defend_siberia = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			OR = {
+				tag = URA
+				tag = TRK
+				tag = MON
+				tag = MAN
+			}
+		}
+		available = {
+		}
+		visible = {
+			has_global_flag = SIB_decline
+			NOT = { has_country_flag = decided_siberia }
+		}
+
+		cost = 25
+
+		complete_effect = {
+			set_country_flag = decided_siberia
+			set_country_flag = siberia_defender	
+			SIB = { add_to_temp_variable = { var = siberia_defenders value = 1 } }
+			give_guarantee = SIB
+		}
+	}
+
+	ignore_siberia = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			OR = {
+				tag = URA
+				tag = TRK
+				tag = MON
+				tag = MAN
+			}
+		}
+		available = {
+		}
+		visible = {
+			has_global_flag = SIB_decline
+			NOT = { has_country_flag = decided_siberia }
+		}
+
+		complete_effect = {
+			set_country_flag = decided_siberia
+			add_stability = 0.05
+		}
+	}
+}

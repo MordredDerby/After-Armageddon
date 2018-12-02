@@ -1,0 +1,20 @@
+ideas = {
+	country = {
+		dockyard_clique = {
+			picture = german_clique
+			available = { war = no }
+			modifier = {
+				industrial_capacity_dockyard = -0.25
+				stability_factor = -0.05
+			}
+		}
+		resource_clique = {
+			picture = german_clique
+			available = { war = no }
+			modifier = {
+				local_resources_factor = -0.25
+				stability_factor = -0.05
+			}
+		}
+	}
+}

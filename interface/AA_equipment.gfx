@@ -1,0 +1,7 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_AUS_gwtank_medium"
+		texturefile = "gfx/interface/technologies/AUS_gwtank.dds"
+	}
+}

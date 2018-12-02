@@ -34,11 +34,22 @@ set_politics = {
 	elections_allowed = no
 }
 
+set_cosmetic_tag = CZE_ONLY
+
 create_country_leader = {
 	name = "Людвик Свобода" 
 	picture = "gfx/leaders/CZE/Portrait_Svoboda.dds"
 	expire = "1979.1.1"
-	ideology = despotism
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Герберт Чая" 
+	picture = "gfx/leaders/CZE/Portrait_Herbert_Czaja.dds"
+	expire = "1979.1.1"
+	ideology = conservatism
 	traits = {
 		#
 	}

@@ -6,8 +6,9 @@ state={
 	
 	state_category = pastoral
 	history={
-		owner = REM
-		add_core_of = REM
+		owner = MAN
+		add_core_of = MAN
+		add_core_of = SIB
 		buildings = {
 			infrastructure = 3
 			air_base = 1

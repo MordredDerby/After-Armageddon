@@ -1,0 +1,31 @@
+add_namespace = GHE
+
+#Stalingrad captured
+country_event = {
+	id = GHE.1
+	title = GHE.1.t
+	desc = GHE.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = GHE.1.a
+		transfer_state = 217
+		transfer_state = 245
+		transfer_state = 265
+	}
+}
+#Stalingrad defeat
+country_event = {
+	id = GHE.2
+	title = GHE.2.t
+	desc = GHE.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = GHE.2.a
+		add_political_power = -50
+		add_stability = -0.1
+	}
+}

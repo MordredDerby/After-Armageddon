@@ -1,0 +1,98 @@
+operations = {
+	take_sicily = {
+		icon = border_war
+
+		allowed = { 
+			tag = GRE
+		}
+
+		available = {
+			has_full_control_of_state = 156
+			divisions_in_border_state = {
+				state = 156
+				border_state = 115
+				size > 0
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 115
+			}
+			owns_state = 156
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				ITA = {
+					division_template = { 
+						name = "Milizia Mafioso" 
+						is_locked = yes 
+						regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } } 
+					}
+					115 = {
+						create_unit = { 
+							division = "name = \"1. Milizia Mafioso\" division_template = \"Milizia Mafioso\" start_experience_factor = 0.2" 
+							owner = ITA
+						}
+						create_unit = { 
+							division = "name = \"2. Milizia Mafioso\" division_template = \"Milizia Mafioso\" start_experience_factor = 0.2" 
+							owner = ITA
+						}
+						create_unit = { 
+							division = "name = \"3. Milizia Mafioso\" division_template = \"Milizia Mafioso\" start_experience_factor = 0.2" 
+							owner = ITA
+						}
+						create_unit = { 
+							division = "name = \"4. Milizia Mafioso\" division_template = \"Milizia Mafioso\" start_experience_factor = 0.2" 
+							owner = ITA
+						}
+						create_unit = { 
+							division = "name = \"5. Milizia Mafioso\" division_template = \"Milizia Mafioso\" start_experience_factor = 0.2" 
+							owner = ITA
+						}
+						create_unit = { 
+							division = "name = \"6. Milizia Mafioso\" division_template = \"Milizia Mafioso\" start_experience_factor = 0.2" 
+							owner = ITA
+						}
+						create_unit = { 
+							division = "name = \"7. Milizia Mafioso\" division_template = \"Milizia Mafioso\" start_experience_factor = 0.2" 
+							owner = ITA
+						}
+						create_unit = { 
+							division = "name = \"8. Milizia Mafioso\" division_template = \"Milizia Mafioso\" start_experience_factor = 0.2" 
+							owner = ITA
+						}
+					}
+				}
+			}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 156
+					num_provinces = 1
+					on_win = ITA.1
+					on_lose = ITA.2
+					#on_cancel = 
+				}
+				
+				defender = {
+					state = 115
+					num_provinces = 1
+					#on_win = 
+					#on_lose = 
+					#on_cancel = 
+				}
+			}
+			set_border_war_data = {
+				attacker = 156
+				defender = 115
+				defender_modifier = 0.5
+				attacker_modifier = 0.5
+				#combat_width = 100
+			}
+		}
+	}
+}

@@ -1,0 +1,84 @@
+ideas = {
+	country = {
+		shevchenko_plan = {
+			available = { is_subject = yes }
+			modifier = {
+				autonomy_gain = 0.75
+				fascism_drift = 0.05
+			}
+		}
+		GHE_court_ministry = {
+			modifier = {
+				consumer_goods_factor = 0.1
+				political_power_factor = 0.25
+			}
+		}
+		GHE_court_ministry_ref = {
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_factor = 0.15
+			}
+		}
+		knighthood = {
+			modifier = {
+				army_morale_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		GHE_royal_guard_idea = {
+			modifier = {
+				special_forces_cap = 0.05
+			}
+		}
+		GHE_spec_ops_idea = {
+			modifier = {
+				special_forces_cap = 0.1
+				special_forces_attack_factor = 0.15
+	   			special_forces_defence_factor = 0.15
+	   		}
+		}
+		GHE_general_staff = {
+			modifier = {
+				army_leader_start_planning_level = 1
+				army_org_Factor = 0.05
+				planning_speed = 0.05
+			}
+		}
+		GHE_yunarmia_idea = {
+			modifier = {
+				conscription_factor = 0.15
+			}
+		}
+		GHE_conscription_idea = {
+			modifier = {
+				mobilization_laws_cost_factor = -0.30
+				economy_cost_factor = 0.2
+			}
+		}
+		GHE_air_production_idea = {
+			picture = generic_air_bonus
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		GHE_welfare_idea = {
+			modifier = {
+				consumer_goods_factor = 0.02
+				stability_factor = 0.05
+			}
+		}
+		GHE_grand_fleet = {
+			picture = generic_navy_bonus
+			equipment_bonus = {
+				capital_ship = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				screen_ship = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+	}
+}

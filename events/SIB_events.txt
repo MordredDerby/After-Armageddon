@@ -1,0 +1,184 @@
+add_namespace = SIB
+
+news_event = {
+	id = SIB.1
+	title = SIB.1.t
+	desc = SIB.1.d
+	picture = GFX_news_event_kuznetsk
+
+	tigger = {
+		tag = SIB
+		date > 1937.1.1
+	}
+
+	major = yes
+	fire_only_once = yes
+
+	option = {
+		name = SIB.1.a
+		set_global_flag	= SIB_decline
+		SIB = {
+			set_temp_variable = { var = siberia_defenders value = 0 }
+			set_temp_variable = { var = siberia_attackers value = 0 }
+		}
+	}
+}
+
+country_event = {
+	id = SIB.2
+	title = SIB.2.t
+	desc = SIB.2.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SIB
+		URA = { 
+			has_country_flag = decided_siberia
+		}
+		TRK = { 
+			has_country_flag = decided_siberia
+		}
+		MON = { 
+			has_country_flag = decided_siberia
+		}
+		MAN = { 
+			has_country_flag = decided_siberia
+		}
+	}
+
+	option = {
+		name = SIB.2.a
+		if = {
+			limit = {
+				has_global_flag = TRK_partition_siberia
+			}
+			TRK = {
+				transfer_state = 590
+				transfer_state = 588
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = MAN_partition_siberia
+			}
+			MAN = {
+				transfer_state = 562
+				transfer_state = 637
+				transfer_state = 561
+				transfer_state = 644
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = URA_partition_siberia
+			}
+			URA = {
+				transfer_state = 403
+				transfer_state = 579
+				transfer_state = 580
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = MON_partition_siberia
+			}
+			MON = {
+				transfer_state = 654
+				transfer_state = 568
+				transfer_state = 569
+			}
+			BUR = {
+				transfer_state = 565
+				transfer_state = 567
+			}
+			YAK = {
+				transfer_state = 574
+				add_state_core = 574
+			}
+		}
+	}
+	option = {
+		name = SIB.2.b
+		trigger = { check_temp_variable = { siberia_defenders > 0 } }
+		if = {
+			limit = {
+				check_temp_variable = { siberia_defenders = 1 }
+			}
+			random_country = {
+				limit = {
+					has_country_flag = siberia_defender
+				}
+				puppet = SIB
+			}
+		}
+		every_country = {
+			limit = {
+				has_country_flag = siberia_attacker
+			}
+			country_event =  { id = SIB.3 }
+		}
+	}
+	option = {
+		name = SIB.2.c
+		trigger = { check_temp_variable = { siberia_defenders < 1 } }
+		every_country = {
+			limit = {
+				has_country_flag = siberia_attacker
+			}
+			country_event =  { id = SIB.3 }
+		}
+	}
+}
+
+country_event = {
+	id = SIB.3
+	title = SIB.3.t
+	desc = SIB.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SIB.3.a
+		if = {
+			limit = {
+				tag = MAN
+			}
+			create_wargoal = {
+				type = take_state
+				target = SIB
+				generator = { 562 637 561 644 }
+			}
+		}
+		if = {
+			limit = {
+				tag = MON
+			}
+			create_wargoal = {
+				type = take_state
+				target = SIB
+				generator = { 562 637 561 654 565 567 574 574 568 569 }
+			}
+		}
+		if = {
+			limit = {
+				tag = URA
+			}
+			create_wargoal = {
+				type = take_state
+				target = SIB
+				generator = { 403 579 580 }
+			}
+		}
+		if = {
+			limit = {
+				tag = TRK
+			}
+			create_wargoal = {
+				type = take_state
+				target = SIB
+				generator = { 590 588 }
+			}
+		}
+	}
+}

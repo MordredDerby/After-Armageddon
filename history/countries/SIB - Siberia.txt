@@ -12,6 +12,7 @@ set_technology = {
 add_ideas = {
 	SIB_decentralization
 	SIB_technocracy
+	SIB_military_women
 }
 
 set_politics = {

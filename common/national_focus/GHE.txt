@@ -1,0 +1,1409 @@
+focus_tree = {
+	id = GHE
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = UKR
+		}
+	}
+	default = no
+	focus = {
+		id = GHE_politics
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		x = 4
+		y = 0
+		completion_reward = {
+			add_political_power = 120
+			set_rule = { can_create_factions = yes }
+		}
+	}
+	focus = {
+		id = GHE_czech
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_slovakia
+		}
+		relative_position_id = GHE_crush_rebels
+		x = 0
+		y = 3
+
+	}
+	focus = {
+		id = GHE_ariscracy
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		x = 12
+		y = 0
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = GHE_new_doctrine
+		icon = GFX_focus_generic_combined_arms
+		cost = 10.00
+		x = 18
+		y = 0
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine	
+			}
+		}
+	}
+	focus = {
+		id = GHE_economy
+		icon = GFX_focus_rom_parties_end
+		cost = 10.00
+		x = 27
+		y = 0
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GHE_court_ministry
+				add_idea = GHE_court_ministry_ref
+			}
+		}
+	}
+	focus = {
+		id = GHE_kiev_university
+		icon = GFX_focus_research
+		cost = 10.00
+		x = 33
+		y = 0
+		available = {
+			num_of_factories > 50
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = GHE_crimea
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 10.00
+		x = 37
+		y = 0
+		available = { has_full_control_of_state = 137 }
+		completion_reward = {
+			137 = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = GHE_crush_rebels
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_politics
+		}
+		relative_position_id = GHE_politics
+		x = 0
+		y = 1
+		relative_position_id = GHE_politics
+		completion_reward = {
+			add_war_support = 0.05
+			create_wargoal = {
+				target = FRU
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = GHE_romania
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_politics
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			add_political_power = -70
+			WAL = {
+				add_ideas = shevchenko_plan
+			}
+			MOL = {
+				add_ideas = shevchenko_plan
+			}
+		}
+	}
+	focus = {
+		id = GHE_bulgaria
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = GHE_romania
+		}
+		x = 1
+		y = 2
+		available = {
+			OR = {
+				has_completed_focus = GHE_marines
+				is_neighbor_of = BUL
+				any_country = {
+					OR = {
+						is_subject_of = UKR
+						is_in_faction_with = UKR
+					}
+					is_neighbor_of = BUL
+				}
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = BUL
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = GHE_greek_alliance
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_bulgaria
+		}
+		mutually_exclusive = {
+			focus = GHE_demand_constantinople
+		}
+		x = 0
+		y = 3
+
+	}
+	focus = {
+		id = GHE_demand_constantinople
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_bulgaria
+		}
+		mutually_exclusive = {
+			focus = GHE_greek_alliance
+		}
+		x = 2
+		y = 3
+
+	}
+	focus = {
+		id = GHE_take_yugoslavia
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_greek_alliance
+			focus = GHE_demand_constantinople
+		}
+		mutually_exclusive = {
+			focus = GHE_puppet_yugoslavia
+		}
+		available = {
+			48 = {
+				owner = {
+					OR = {
+						tag = UKR
+						is_subject_of = UKR
+					}
+				}
+			}
+		}
+		x = 2
+		y = 4
+		completion_reward = {
+			create_wargoal = {
+				target = YUG
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = GHE_west_road
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_crush_rebels
+		}
+		available = {
+			owns_state = 73
+			owns_state = 80
+			owns_state = 89
+		}
+		relative_position_id = GHE_crush_rebels
+		x = -1
+		y = 1
+		completion_reward = {
+			73 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			80 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			89 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GHE_west_fort
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_crush_rebels
+		}
+		available = {
+			has_full_control_of_state = 73
+			has_full_control_of_state = 80
+			has_full_control_of_state = 89
+		}
+		relative_position_id = GHE_crush_rebels
+		x = 1
+		y = 1
+		completion_reward = {
+			80 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9548
+					instant_build = yes
+				}
+			}
+			89 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3548
+					instant_build = yes
+				}
+			}
+			73 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6571
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3548
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11691
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GHE_slovakia
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_west_road
+			focus = GHE_west_fort
+		}
+		relative_position_id = GHE_crush_rebels
+		x = 0
+		y = 2
+		available = {
+			SLO = {
+				exists = yes
+				is_subject = no
+			}
+			owns_state = 89
+			owns_state = 73
+			OR = {
+				has_full_control_of_state = 88
+				AND = {
+					has_full_control_of_state = 43
+					has_full_control_of_state = 155
+				}
+				SLO = { has_government = fascism }
+			}
+		}
+		completion_reward = {
+			puppet = SLO
+			SLO = {
+				remove_anarchy = yes
+			}
+		}
+	}
+	focus = {
+		id = GHE_don_cossacks
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_politics
+		}
+		x = 9
+		y = 1
+		completion_reward = {
+			DKB = { 
+				add_ideas = fascist_influence
+			}
+		}
+	}
+	focus = {
+		id = GHE_vassalize_cossacks
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_don_cossacks
+		}
+		available = {
+			DKB = {
+				is_subject = no
+				has_government = fascism
+			}
+		}
+		relative_position_id = GHE_don_cossacks
+		x = -2
+		y = 1
+		completion_reward = {
+			set_autonomy = {
+				target = DKB
+				autonomous_state = autonomy_puppet
+			}
+		}
+	}
+	focus = {
+		id = GHE_volga
+		icon = GFX_focus_SAF_colonialist_crusade
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_don_cossacks
+		}
+		x = 9
+		y = 2
+
+	}
+	focus = {
+		id = GHE_belorussia
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_volga
+		}
+		prerequisite = {
+			focus = GHE_west_fort
+		}
+		available = {
+			BLR = {
+				exists = yes
+				is_subject = no
+			}
+			owns_state = 217
+			owns_state = 245
+			owns_state = 265
+		}
+		x = 7
+		y = 3
+		completion_reward = {
+			set_autonomy = {
+				target = BLR
+				autonomous_state = autonomy_integrated_puppet
+			}
+			BLR = {
+				remove_anarchy = yes
+			}
+		}
+	}
+	focus = {
+		id = GHE_moscow
+		icon = GFX_focus_ger_strike_at_the_source
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_volga
+		}
+		x = 9
+		y = 3
+		available = {
+			OR = {
+				AND = {
+					owns_state = 217
+					owns_state = 245
+					owns_state = 265
+				}
+				date > 1939.1.1
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = MOS
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = GHE_north_russia
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_moscow
+		}
+		available = {
+			MOS = { exists = no }
+		}
+		x = 9
+		y = 4
+		completion_reward = {
+			create_wargoal = {
+				target = RSR
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = GHE_noble_officers
+		icon = GFX_goal_generic_cavalry
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_ariscracy
+		}
+		x = 12
+		y = 1
+		completion_reward = {
+			army_experience = 15
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.25
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = GHE_knighthood
+		icon = GFX_goal_rhineland
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_noble_officers
+		}
+		x = 11
+		y = 2
+		completion_reward = {
+			add_ideas = knighthood
+		}
+	}
+	focus = {
+		id = GHE_royal_guard
+		icon = GFX_focus_chi_army_reform
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_noble_officers
+		}
+		x = 13
+		y = 2
+		completion_reward = {
+			add_ideas = GHE_royal_guard_idea
+			division_template = {
+				name = "Императорская Гвардия"
+				is_locked = yes
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 3 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					engineer = { x = 0 y = 2 }
+				}
+			}
+			202 = {
+				create_unit = { 
+					division = "name = \"1-я Дивизия Императорской Гвардии\" division_template = \"Императорская Гвардия\" start_experience_factor = 1" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"2-я Дивизия Императорской Гвардии\" division_template = \"Императорская Гвардия\" start_experience_factor = 1" 
+					owner = ROOT
+				}
+			}
+		}
+	}
+	focus = {
+		id = GHE_officer_purge
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_new_doctrine
+		}
+		x = 15
+		y = 1
+		completion_reward = {
+			add_stability = 0.15
+			add_timed_idea = { idea = officers_purged_6 days = 200 }
+		}
+	}
+	focus = {
+		id = GHE_general_staff
+		icon = GFX_focus_generic_military_academy
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_officer_purge
+		}
+		prerequisite = {
+			focus = GHE_noble_officers
+		}
+		available = {
+			NOT = { has_idea = officers_purged_6 }
+		}
+		x = 15
+		y = 2
+		completion_reward = {
+			add_ideas = GHE_general_staff
+		}
+	}
+	focus = {
+		id = GHE_spirit
+		icon = GFX_goal_generic_CAS
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_general_staff
+		}
+		x = 15
+		y = 3
+		completion_reward = {
+			hidden_effect = {
+				set_rule = {
+					can_use_kamikaze_pilots = yes
+				}
+			}
+			custom_effect_tooltip = kamikaze_focus_tooltip
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = GHE_militia
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_new_doctrine
+		}
+		x = 17
+		y = 1
+		completion_reward = {
+			add_ideas = militarism_focus
+		}
+	}
+	focus = {
+		id = GHE_conscription
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_militia
+		}
+		x = 17
+		y = 2
+		completion_reward = {
+			add_ideas = GHE_conscription_idea
+		}
+	}
+	focus = {
+		id = GHE_yunarmia
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_conscription
+		}
+		x = 17
+		y = 3
+		completion_reward = {
+			add_ideas = GHE_yunarmia_idea
+		}
+	}
+	focus = {
+		id = GHE_specops
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_new_doctrine
+		}
+		x = 19
+		y = 1
+		completion_reward = {
+			add_ideas = GHE_spec_ops_idea
+			division_template = {
+				name = "СПОН"
+				#is_locked = yes
+				regiments = {
+					paratroopers = { x = 0 y = 0 }
+					paratroopers = { x = 0 y = 1 }
+					paratroopers = { x = 0 y = 2 }
+					paratroopers = { x = 1 y = 0 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					engineer = { x = 0 y = 2 }
+				}
+			}
+			202 = {
+				create_unit = { 
+					division = "division_template = \"СПОН\" start_experience_factor = 1" 
+					owner = ROOT
+				}
+			}
+		}
+	}
+	focus = {
+		id = GHE_sich_riflemen
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_specops
+		}
+		x = 19
+		y = 2
+		completion_reward = {
+			add_ideas = paramilitarism_focus
+		}
+	}
+	focus = {
+		id = GHE_marines
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_sich_riflemen
+		}
+		x = 19
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = marine_tech	
+			}
+		}
+	}
+	focus = {
+		id = GHE_rifles
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_new_doctrine
+		}
+		x = 21
+		y = 1
+		completion_reward = {
+			add_ideas = FRA_infantry_focus
+		}
+	}
+	focus = {
+		id = GHE_armor
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_rifles
+		}
+		x = 21
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = armor	
+			}
+		}
+	}
+	focus = {
+		id = GHE_rocketry
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_armor
+		}
+		x = 21
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = rocketry	
+			}
+		}
+	}
+	focus = {
+		id = GHE_air_construction
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_economy
+		}
+		available = { has_full_control_of_state = 200 }
+		x = 23
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = air_equipment	
+			}
+			200 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GHE_air_production
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_air_construction
+		}
+		x = 23
+		y = 2
+		completion_reward = {
+			add_ideas = GHE_air_production_idea
+			221 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GHE_welfare
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_economy
+		}
+		x = 27
+		y = 1
+		completion_reward = {
+			add_ideas = GHE_welfare_idea
+		}
+	}
+	focus = {
+		id = GHE_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_welfare
+		}
+		x = 25
+		y = 2
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GHE_agriculture
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_infrastructure
+		}
+		x = 25
+		y = 3
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = GHE_rationing
+		icon = GFX_focus_AST_squander_bug
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_welfare
+		}
+		available = {
+			has_war = yes
+		}
+		x = 27
+		y = 2
+		completion_reward = {
+			remove_ideas = {
+				GHE_welfare_idea
+				GHE_court_ministry_ref
+			}
+			add_ideas = imperial_austerity_idea
+		}
+	}
+	focus = {
+		id = GHE_hydro_power
+		icon = GFX_focus_generic_industry_1
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_welfare
+		}
+		available = { has_full_control_of_state = 200 }
+		x = 29
+		y = 2
+		completion_reward = {
+			200 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GHE_metallurgy
+		icon = GFX_focus_generic_steel
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_hydro_power
+		}
+		available = { has_full_control_of_state = 245 }
+		x = 28
+		y = 3
+		completion_reward = {
+			245 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+			}
+		}
+	}
+	focus = {
+		id = GHE_concrete
+		icon = GFX_focus_generic_industry_2
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_metallurgy
+		}
+		available = { has_full_control_of_state = 245 }
+		x = 27
+		y = 4
+		completion_reward = {
+			245 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GHE_refinery
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_metallurgy
+		}
+		available = { has_full_control_of_state = 200 }
+		x = 29
+		y = 4
+		completion_reward ={
+			200 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = synth_resources	
+			}
+		}
+	}
+	focus = {
+		id = GHE_mil_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_economy
+		}
+		x = 30
+		y = 1
+		completion_reward = {
+			add_ideas = war_economy
+		}
+	}
+	focus = {
+		id = GHE_armor_production
+		icon = GFX_focus_generic_tank_production
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_mil_industry
+		}
+		prerequisite = {
+			focus = GHE_hydro_power
+		}
+		available = { has_full_control_of_state = 202 }
+		x = 30
+		y = 3
+		completion_reward = {
+			202 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = armor	
+			}
+		}
+	}
+	focus = {
+		id = GHE_rnd
+		icon = GFX_focus_research2
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_kiev_university
+		}
+		available = {
+			num_of_factories > 75
+		}
+		x = 33
+		y = 1
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = GHE_radio
+		icon = GFX_goal_generic_radar
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_rnd
+		}
+		prerequisite = {
+			focus = GHE_mil_industry
+		}
+		available = {
+			has_tech = radio_detection 
+			has_full_control_of_state = 202 
+		}
+		x = 31
+		y = 2
+		completion_reward = {
+			202 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = radar_focus
+				bonus = 0.5
+				uses = 1
+				category = radar_tech
+			}
+		}
+	}
+	focus = {
+		id = GHE_nuclear
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_rnd
+		}
+		x = 33
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+	focus = {
+		id = GHE_fortify_crimea
+		icon = GFX_focus_generic_coastal_fort
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_crimea
+		}
+		x = 35
+		y = 1
+		completion_reward = {
+			137 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 3686
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 9680
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GHE_perekop
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_fortify_crimea
+		}
+		x = 35
+		y = 2
+		completion_reward = {
+			137 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 3722
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GHE_antiair
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_perekop
+		}
+		available = { has_full_control_of_state = 137 }
+		x = 35
+		y = 3
+		completion_reward = {
+			137 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GHE_naval_industry
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_crimea
+		}
+		available = { has_full_control_of_state = 137 }
+		x = 37
+		y = 1
+		completion_reward = {
+			137 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GHE_great_fleet
+		icon = GFX_goal_generic_build_navy
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_naval_industry
+		}
+		x = 37
+		y = 2
+		completion_reward = {
+			add_ideas = GHE_grand_fleet
+		}
+	}
+	focus = {
+		id = GHE_crimea_aviation
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_great_fleet
+		}
+		available = { has_full_control_of_state = 137 }
+		x = 37
+		y = 3
+		completion_reward = {
+			137 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GHE_rocket_site
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_crimea_aviation
+		}
+		prerequisite = {
+			focus = GHE_antiair
+		}
+		available = { 
+			has_tech = experimental_rockets
+			has_full_control_of_state = 137
+		}
+		x = 36
+		y = 4
+		completion_reward = {
+			137 = {
+				add_building_construction = {
+					type = rocket_site
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GHE_puppet_yugoslavia
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 15
+		prerequisite = {
+			focus = GHE_greek_alliance
+			focus = GHE_demand_constantinople
+		}
+		mutually_exclusive = {
+			focus = GHE_take_yugoslavia
+		}
+		available = {
+		48 = {
+				owner = {
+					OR = {
+						tag = UKR
+						is_subject_of = UKR
+					}
+				}
+			}
+		}
+		x = 0
+		y = 4
+		completion_reward = {
+			add_political_power = -150
+			puppet = YUG
+			YUG = {
+				remove_anarchy = yes
+			}
+		}
+	}
+	focus = {
+		id = GHE_poland
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_belorussia
+		}
+		x = 7
+		y = 4
+		completion_reward = {
+			create_wargoal = {
+				target = EDU
+				type = take_state_focus
+				generator = { 10 92 98 90 88 87 86 85 89 }
+			}
+		}
+	}
+	focus = {
+		id = GHE_tsar_of_slavs
+		icon = GFX_focus_generic_home_defense
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_czech
+		}
+		prerequisite = {
+			focus = GHE_poland
+		}
+		prerequisite = {
+			focus = GHE_north_russia
+			focus = GHE_take_yugoslavia
+			focus = GHE_puppet_yugoslavia
+		}
+		relative_position_id = GHE_crush_rebels
+		x = 0
+		y = 4
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.2
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = MOS
+						is_core_of = RSR
+						is_core_of = BLR
+						is_core_of = SLO
+						is_core_of = POL
+						is_core_of = CZE
+						is_core_of = BUL
+						is_core_of = YUG
+					}
+				}
+				add_core_of = UKR
+			}
+		}
+	}
+	focus = {
+		id = GHE_naval_doctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_crimea
+		}
+		x = 39
+		y = 1
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine	
+			}
+		}
+	}
+	focus = {
+		id = GHE_escort
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_naval_doctrine
+		}
+		x = 39
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = dd_tech	
+			}
+		}
+	}
+	focus = {
+		id = GHE_capital_ships
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_escort
+		}
+		x = 39
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = bb_tech
+			}
+		}
+	}
+	focus = {
+		id = GHE_carriers
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_capital_ships
+		}
+		x = 39
+		y = 4
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+	focus = {
+		id = GHE_machinery
+		icon = GFX_focus_generic_industry_3
+		cost = 10.00
+		prerequisite = {
+			focus = GHE_concrete
+		}
+		available = { has_full_control_of_state = 245 }
+		x = 27
+		y = 5
+		completion_reward = {
+			245 = {
+				add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

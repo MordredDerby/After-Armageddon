@@ -9,7 +9,8 @@ state={
 	state_category = town
 	
 	history={
-		owner = XXX
+		owner = SLO
+		add_core_of = SLO
 		buildings = {
 			infrastructure = 6
 			industrial_complex = 3

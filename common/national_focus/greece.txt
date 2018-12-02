@@ -34,7 +34,7 @@ focus_tree = {
 		completion_reward = {
 			set_politics = {
 				ruling_party = democratic
-				elections_allowed = no
+				elections_allowed = yes
 			}
 		}
 
@@ -231,8 +231,10 @@ focus_tree = {
 		x = 8
 		y = 1
 		completion_reward = {
-			transfer_state = 115
-			transfer_state = 116
+			set_state_owner = 115
+			set_state_controller = 115
+			set_state_owner = 116
+			set_state_controller = 116
 		}
 
 	}
@@ -268,10 +270,10 @@ focus_tree = {
 		id = GRE_greater_graecia
 		icon = GFX_goal_generic_more_territorial_claims
 		cost = 10,00
-		prerequisite = {
-			focus = GRE_crush_mafia
-			focus = GRE_mafia_compromise
-		}
+		#prerequisite = {
+		#	focus = GRE_crush_mafia
+		#	focus = GRE_mafia_compromise
+		#}
 		x = 8
 		y = 3
 		completion_reward = {

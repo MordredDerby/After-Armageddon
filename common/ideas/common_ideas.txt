@@ -1,0 +1,13 @@
+ideas = {
+	country = {
+		anarchy_idea = {
+			picture = anarchy
+			modifier = {
+				local_resources_factor = -1
+				consumer_goods_factor = 1
+				research_time_factor = 10
+				industrial_capacity_factory = -1
+			}
+		}
+	}
+}

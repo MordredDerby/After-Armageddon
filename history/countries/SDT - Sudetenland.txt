@@ -1,0 +1,47 @@
+﻿capital = 69
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	transport = 1
+}
+
+set_research_slots = 3
+set_national_unity = 0.5
+
+set_politics = {
+
+	parties = {
+		fascism = {
+			popularity = 30
+		}
+		
+		neutrality = {
+			popularity = 70
+		}
+	}
+	ruling_party = fascism
+	election_frequency = 48
+	elections_allowed = no
+
+}
+
+create_country_leader = {
+	name = "Ганс-Кристоф Зеебом"
+	desc = ""
+	picture = "gfx/leaders/SDT/Portrait_Hans_Christoph_Seebohm.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Вальтер Бехер"
+	desc = ""
+	picture = "gfx/leaders/SDT/Portrait_Walter_Becher.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+	}
+}

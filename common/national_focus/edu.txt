@@ -1,0 +1,388 @@
+focus_tree = {
+	id = edu
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = EDU
+		}
+	}
+	default = no
+	focus = {
+		id = EDU_provisional_regime
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10,00
+		x = 5
+		y = 0
+
+	}
+	focus = {
+		id = EDU_federal_army
+		icon = GFX_goal_rhineland
+		cost = 10,00
+		mutually_exclusive = {
+			focus = EDU_local_armies
+		}
+		x = 13
+		y = 0
+
+	}
+	focus = {
+		id = EDU_local_armies
+		icon = GFX_focus_generic_little_entente
+		cost = 10,00
+		mutually_exclusive = {
+			focus = EDU_federal_army
+		}
+		x = 15
+		y = 0
+
+	}
+	focus = {
+		id = EDU_german_officers
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10,00
+		mutually_exclusive = {
+			focus = EDU_polish_officers
+		}
+		x = 19
+		y = 0
+
+	}
+	focus = {
+		id = EDU_polish_officers
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		mutually_exclusive = {
+			focus = EDU_german_officers
+		}
+		x = 17
+		y = 0
+
+	}
+	focus = {
+		id = EDU_war_is_nigh
+		icon = GFX_goal_generic_attack_allies
+		cost = 10,00
+		x = 16
+		y = 1
+
+	}
+	focus = {
+		id = EDU_suffrage
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_provisional_regime
+		}
+		x = 2
+		y = 1
+
+	}
+	focus = {
+		id = EDU_leftism
+		icon = GFX_focus_yug_pan_slavic_congress
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_suffrage
+		}
+		x = 0
+		y = 2
+
+	}
+	focus = {
+		id = EDU_coalition
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_suffrage
+		}
+		x = 2
+		y = 2
+
+	}
+	focus = {
+		id = EDU_languages
+		icon = GFX_goal_generic_propaganda
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_coalition
+		}
+		x = 2
+		y = 3
+
+	}
+	focus = {
+		id = EDU_lustration
+		icon = GFX_goal_continuous_def_against_influence
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_languages
+		}
+		x = 2
+		y = 4
+
+	}
+	focus = {
+		id = EDU_nonpartisan
+		icon = GFX_goal_anschluss
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_suffrage
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = EDU_tutelage
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_nonpartisan
+		}
+		x = 4
+		y = 3
+
+	}
+	focus = {
+		id = EDU_sanation
+		icon = GFX_goal_demand_sudetenland
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_tutelage
+		}
+		x = 4
+		y = 4
+
+	}
+	focus = {
+		id = EDU_nationalities
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_provisional_regime
+		}
+		x = 8
+		y = 1
+
+	}
+	focus = {
+		id = EDU_baltic_vanguard
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_nationalities
+		}
+		x = 6
+		y = 2
+
+	}
+	focus = {
+		id = EDU_pacification_baltia
+		icon = GFX_goal_generic_political_pressure
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_nationalities
+		}
+		x = 8
+		y = 2
+
+	}
+	focus = {
+		id = EDU_ostzee
+		icon = GFX_focus_generic_home_defense
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_nationalities
+		}
+		x = 10
+		y = 2
+
+	}
+	focus = {
+		id = EDU_baltia
+		icon = GFX_focus_freedom
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_baltic_vanguard
+		}
+		prerequisite = {
+			focus = EDU_pacification_baltia
+		}
+		prerequisite = {
+			focus = EDU_ostzee
+		}
+		x = 8
+		y = 3
+
+	}
+	focus = {
+		id = EDU_german_friendship
+		icon = GFX_goal_tripartite_pact
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_baltia
+		}
+		x = 6
+		y = 4
+
+	}
+	focus = {
+		id = EDU_polonization
+		icon = GFX_goal_generic_demand_territory
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_baltia
+		}
+		x = 8
+		y = 4
+
+	}
+	focus = {
+		id = EDU_german_paramilitary
+		icon = GFX_goal_generic_military_sphere
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_baltia
+		}
+		x = 10
+		y = 4
+
+	}
+	focus = {
+		id = EDU_peacekeeping
+		icon = GFX_focus_secret_rearmament
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_federal_army
+			focus = EDU_local_armies
+		}
+		x = 14
+		y = 1
+
+	}
+	focus = {
+		id = EDU_war_propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_war_is_nigh
+		}
+		x = 16
+		y = 2
+
+	}
+	focus = {
+		id = EDU_armed_neutrality
+		icon = GFX_goal_generic_defence
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_war_propaganda
+		}
+		mutually_exclusive = {
+			focus = EDU_defend_democracy
+		}
+		x = 15
+		y = 3
+
+	}
+	focus = {
+		id = EDU_defend_democracy
+		icon = GFX_goal_generic_small_arms
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_war_propaganda
+		}
+		mutually_exclusive = {
+			focus = EDU_armed_neutrality
+		}
+		x = 17
+		y = 3
+
+	}
+	focus = {
+		id = EDU_general_staff
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_polish_officers
+			focus = EDU_german_officers
+		}
+		x = 18
+		y = 1
+
+	}
+	focus = {
+		id = EDU_junta
+		icon = GFX_focus_generic_military_mission
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_sanation
+		}
+		x = 4
+		y = 5
+
+	}
+	focus = {
+		id = EDU_federation
+		icon = GFX_goal_support_democracy
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_lustration
+		}
+		x = 2
+		y = 5
+
+	}
+	focus = {
+		id = EDU_soviet
+		icon = GFX_focus_generic_join_comintern
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_override_parliament
+		}
+		x = 0
+		y = 5
+
+	}
+	focus = {
+		id = EDU_syndicalism
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_leftism
+		}
+		x = -1
+		y = 3
+
+	}
+	focus = {
+		id = EDU_override_parliament
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_syndicalism
+		}
+		x = -1
+		y = 4
+
+	}
+	focus = {
+		id = EDU_germania
+		icon = GFX_focus_freedom
+		cost = 10,00
+		prerequisite = {
+			focus = EDU_german_paramilitary
+		}
+		prerequisite = {
+			focus = EDU_polonization
+		}
+		prerequisite = {
+			focus = EDU_german_friendship
+		}
+		x = 8
+		y = 5
+
+	}
+}

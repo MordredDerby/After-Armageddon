@@ -6,6 +6,8 @@ state={
 	}
 
 	history={
+		owner = DKB
+		add_core_of = DKB
 		buildings = {
 			infrastructure = 3
 

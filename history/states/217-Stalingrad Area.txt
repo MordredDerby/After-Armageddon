@@ -7,6 +7,7 @@ state={
 	state_category = city
 
 	history={
+		owner = VOL
 		victory_points = {
 			3529 30.0
 		}
@@ -16,6 +17,7 @@ state={
 			industrial_complex = 1
 			air_base = 1
 		}
+		add_core_of = VOL
 		1939.1.1 = {
 			buildings = {
 				arms_factory = 2

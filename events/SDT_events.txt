@@ -1,0 +1,394 @@
+add_namespace = SDT
+
+#Crisis
+country_event = {
+	id = SDT.1
+	title = SDT.1.t
+	desc = SDT.1.d
+
+	is_triggered_only = yes
+
+	#Call for conference
+	option = {
+		name = SDT.1.a
+		every_country = {
+			limit = {
+				OR = {
+					tag = AUS
+					tag = GER
+					tag = EDU
+					tag = UKR
+					tag = MOS
+				}
+			}
+			country_event = { id = SDT.3 }
+		}
+	}
+	#Cede
+	option = {
+		name = SDT.1.b
+		country_event = { id = SDT.2 }
+	}
+}
+#Sudetenland seded
+country_event = {
+	id = SDT.2
+	title = SDT.2.t
+	desc = SDT.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SDT.2.a 
+		transfer_state = 69
+		transfer_state = 74
+	}
+}
+#Conference
+country_event = {
+	id = SDT.3
+	title = SDT.3.t
+	desc = SDT.3.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = {
+    		var = sdt_germany
+    		value = 0
+		}
+		set_variable = {
+    		var = sdt_austria
+    		value = 0
+		}
+		set_variable = {
+    		var = sdt_czechia
+    		value = 0
+		}
+	}
+
+	#To Germany
+	option = {
+		name = SDT.3.a 
+		add_to_variable = {
+   			var = sdt_germany
+    		value = 1
+		}
+	}
+	#To Austria
+	option = {
+		name = SDT.3.b
+		add_to_variable = {
+   			var = sdt_austria
+    		value = 1
+		}
+	}
+	#To Czechia
+	option = {
+		name = SDT.3.c
+		add_to_variable = {
+   			var = sdt_czechia
+    		value = 1
+		}
+	}
+}
+#Resolution - Germany
+country_event = {
+	id = SDT.4
+	title = SDT.4.t
+	desc = SDT.4.d
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	trigger = {
+		tag = AUS
+		AND = {
+			check_variable = { sdt_germany > sdt_austria }
+			check_variable = { sdt_germany > sdt_czechia }
+		}
+	}
+	#Accept terms
+	option = {
+		name = SDT.4.a
+		add_political_power = -50
+		release = SDT
+		GER = {
+			set_autonomy = {
+				target = SDT
+				autonomous_state = autonomy_integrated_puppet
+			}
+		}
+	}
+	#Refuse
+	option = {
+		name = SDT.4.b
+		add_stability = -0.1
+	}
+}
+#Resolution - Austria
+country_event = {
+	id = SDT.5
+	title = SDT.5.t
+	desc = SDT.5.d
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	trigger = {
+		tag = AUS
+		AND = {
+			check_variable = { sdt_austria > sdt_germany }
+			check_variable = { sdt_austria > sdt_czechia }
+		}
+	}
+	option = {
+		name = SDT.5.a
+		add_stability = 0.1
+		release_puppet = SDT
+	}
+}
+#Resolution - Czechia
+country_event = {
+	id = SDT.6
+	title = SDT.6.t
+	desc = SDT.6.d
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	trigger = {
+		tag = AUS
+		AND = {
+			check_variable = { sdt_czechia > sdt_germany }
+			check_variable = { sdt_czechia > sdt_austria }
+		}
+	}
+	#Accept terms
+	option = {
+		name = SDT.6.a
+		add_political_power = -75
+		release = CZE
+	}
+	#Refuse
+	option = {
+		name = SDT.6.b
+		add_stability = -0.2
+	}
+}
+#Germany: Austria refused
+country_event = {
+	id = SDT.7
+	title = SDT.7.t
+	desc = SDT.7.d
+
+	is_triggered_only = yes
+
+	#Ignore
+	option = {
+		name = SDT.7.a
+		add_war_support = -0.05
+	}
+	#Fight
+	option = {
+		name = SDT.7.b
+		add_threat = 2
+		create_wargoal = {
+			type = take_state
+			target = AUS
+			generator = { 69 74 }
+		}
+	}
+}
+#GHE: Austria refused
+country_event = {
+	id = SDT.8
+	title = SDT.8.t
+	desc = SDT.8.d
+
+	is_triggered_only = yes
+
+	#Ignore
+	option = {
+		name = SDT.8.a
+		add_war_support = -0.05
+	}
+	#Fight
+	option = {
+		name = SDT.8.b
+		add_threat = 5
+		create_wargoal = {
+			type = liberate_wargoal
+			target = CZE
+		}
+	}
+}
+#Germany: not in our favor
+country_event = {
+	id = SDT.9
+	title = SDT.9.t
+	desc = SDT.9.d
+
+	is_triggered_only = yes
+
+	#Ignore
+	option = {
+		name = SDT.9.a
+	}
+	#Fight
+	option = {
+		name = SDT.9.b
+		add_threat = 5
+		add_stability = -0.15
+		add_political_power = -50
+		else_if = {
+			limit = {
+				country_exists = CZE
+			}
+			create_wargoal = {
+				type = take_state
+				target = CZE
+				generator = { 69 74 }
+			}
+		}
+		else = {
+			create_wargoal = {
+				type = take_state
+				target = SDT
+				generator = { 69 74 }
+			}
+		}
+	}
+}
+#Czech referendum
+country_event = {
+	id = SDT.10
+	title = SDT.10.t
+	desc = SDT.10.d
+
+	is_triggered_only = yes
+
+	#Austrian autonomy
+	option = {
+		name = SDT.10.a
+		AUS = {
+			set_autonomy = {
+				target = CZE
+				autonomous_state = autonomy_puppet
+			}
+		}
+	}
+	#GHE sattelite
+	option = {
+		name = SDT.10.b
+		UKR = {
+			set_autonomy = {
+				target = CZE
+				autonomous_state = autonomy_satellite
+			}
+		}
+	}
+	#Independent federation
+	option = {
+		name = SDT.10.c
+		set_cosmetic_tag = CZE_SDT
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		#TODO - ask for guarantees
+		UKR = { give_guarantee = CZE }
+		AUS = { give_guarantee = CZE }
+		EDU = { give_guarantee = CZE }
+	}
+}
+#Resolution - tie 
+country_event = {
+	id = SDT.11
+	title = SDT.11.t
+	desc = SDT.11.d
+
+	is_triggered_only = yes
+}
+#Austria lost - comply or trigger war
+country_event = {
+	id = SDT.12
+	title = SDT.12.t
+	desc = SDT.12.d
+
+	is_triggered_only = yes
+
+	#Surrender Czechia
+	option = {
+		name = SDT.12.a
+		effect_tooltip = {
+			GER = {
+				transfer_state = 9
+				transfer_state = 75
+			}
+		}
+		hidden_effect = {
+			GER = { country_event = { id = SDT.13 } }
+		}
+	}
+	#Resist
+	option = {
+		name = SDT.12.b
+		effect_tooltip = {
+			GER = {
+				declare_war_on = {
+					type = take_state
+					target = AUS
+					generator = { 9 75 }
+				}
+				set_state_controller = 9
+				set_state_controller = 75
+			}
+		}
+	}
+}
+#Germany notified of Sudeten victory
+country_event = {
+	id = SDT.13
+	title = SDT.13.t
+	desc = SDT.13.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SDT.13.a
+		transfer_state = 9
+		transfer_state = 75
+	}
+}
+#Germany notified of Austrian resistance
+country_event = {
+	id = SDT.14
+	title = SDT.14.t
+	desc = SDT.14.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SDT.14.a
+		declare_war_on = {
+			type = take_state
+			target = AUS
+			generator = { 9 75 }
+		}
+		set_state_controller = 9
+		set_state_controller = 75
+	}
+}
+#Germany lost - loss of Sudetenland?
+#Austria won
+#Czech secession

@@ -1,0 +1,76 @@
+operations = {
+	take_staligrad = {
+		icon = border_war
+
+		allowed = { 
+			tag = UKR
+		}
+
+		available = {
+			war = no
+		}
+		visible = {
+			has_completed_focus = GHE_volga
+		}
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				VOL = {
+					division_template = { 
+						name = "Рабочая бригада" 
+						is_locked = yes 
+						regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } } 
+					}
+					245 = {
+						create_unit = { 
+							division = "name = \"1. Рабочая бригада\" division_template = \"Рабочая бригада\" start_experience_factor = 0.2 start_equipment_factor = 0.5" 
+							owner = VOL
+						}
+						create_unit = { 
+							division = "name = \"2. Рабочая бригада\" division_template = \"Рабочая бригада\" start_experience_factor = 0.2 start_equipment_factor = 0.5" 
+							owner = VOL
+						}
+						create_unit = { 
+							division = "name = \"3. Рабочая бригада\" division_template = \"Рабочая бригада\" start_experience_factor = 0.2 start_equipment_factor = 0.5" 
+							owner = VOL
+						}
+						create_unit = { 
+							division = "name = \"4. Рабочая бригада\" division_template = \"Рабочая бригада\" start_experience_factor = 0.2 start_equipment_factor = 0.5" 
+							owner = VOL
+						}
+						create_unit = { 
+							division = "name = \"5. Рабочая бригада\" division_template = \"Рабочая бригада\" start_experience_factor = 0.2 start_equipment_factor = 0.5" 
+							owner = VOL
+						}
+						create_unit = { 
+							division = "name = \"6. Рабочая бригада\" division_template = \"Рабочая бригада\" start_experience_factor = 0.2 start_equipment_factor = 0.5" 
+							owner = VOL
+						}
+					}
+				}
+			}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 228
+					num_provinces = 3
+					on_win = GHE.1
+					on_lose = GHE.2
+					#on_cancel = 
+				}
+				defender = {
+					state = 245
+					num_provinces = 3
+					#on_win = 
+					#on_lose = 
+					#on_cancel = 
+				}
+			}
+			set_border_war_data = {
+				attacker = 69
+				defender = 9
+				combat_width = 120
+			}
+		}
+	}
+}

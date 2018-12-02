@@ -1,0 +1,11 @@
+focus_tree = {
+	id = anarchy
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_idea = anarchy_idea
+		}
+	}
+	default = no
+}

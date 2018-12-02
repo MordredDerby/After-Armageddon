@@ -36,8 +36,8 @@ set_politics = {
 create_country_leader = {
 	name = "Михаил Тухачевский"
 	desc = ""
-	picture = "gfx/leaders/SOV/Portrait_Soviet_Mikhail_Tukhachevsky.dds"
-	expire = "1953.3.1"
+	picture = "gfx/leaders/MOS/Portrait_Mikhail_Tukhachevsky.dds"
+	expire = "1960.3.1"
 	ideology = despotism
 	traits = {
 	}

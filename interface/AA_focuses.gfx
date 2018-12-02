@@ -1,0 +1,7 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_goal_freedom"
+		texturefile = "gfx/interface/goals/focus_freedom.dds"			
+	}
+}

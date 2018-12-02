@@ -1,0 +1,187 @@
+add_namespace = FRU
+
+#Подрыв инфраструктуры
+country_event = {
+	id = FRU.1
+	title = FRU.1.t
+	desc = FRU.1.d
+	#picture = 
+	
+	trigger = {
+		tag = UKR
+		has_war_with = FRU
+	}
+
+	mean_time_to_happen = {
+		days = 70
+	}
+
+	option = {
+		name = FRU.1.a
+		random_state = {
+			limit = {
+				is_controlled_by = UKR
+				#is_core_of = FRU
+				any_neighbor_state = {
+					is_controlled_by = FRU
+				}
+			}
+			damage_building = { type = infrastructure damage = 1 }
+		}
+	}
+}
+#Иностранные подкрепления
+country_event = {
+	id = FRU.2
+	title = FRU.2.t
+	desc = FRU.2.d
+	#picture = 
+	
+	trigger = {
+		tag = FRU
+		has_war_with = UKR
+		has_idea = internationale_aid
+	}
+
+	mean_time_to_happen = {
+		days = 100
+		#support from
+		#spain
+		#austria
+		#EDU
+		#northern russia
+		#france
+	}
+	option = {
+		name = FRU.2.a
+		random_country = {
+			limit = { 
+				OR = {
+					tag = SPC
+					tag = AUS
+					tag = EDU
+					tag = RSR
+				}
+			}
+			#save_event_target_as = FRU_supplier
+		}
+		
+		add_manpower = 5000
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 500 producer = PREV }
+	}
+}
+
+#Подкрепления с освобожденных земель - Львов
+country_event = {
+	id = FRU.3
+	title = FRU.3.t
+	desc = FRU.3.d
+	#picture = 
+	
+	trigger = {
+		tag = FRU
+		has_war_with = UKR
+		has_idea = guerilla_state
+		91 = { is_controlled_by = FRU }
+	}
+
+	mean_time_to_happen = {
+		days = 20
+	}
+	option = {
+		name = FRU.3.a
+		91 = {
+			create_unit = {
+				division = "name = \"1-й Львоский вольный полк\" 
+				division_template = \"Повстанческий полк\" 
+				start_experience_factor = 0.2" 
+				owner = FRU
+			}
+			create_unit = {
+				division = "name = \"2-й Львоский вольный полк\" 
+				division_template = \"Повстанческий полк\" 
+				start_experience_factor = 0.2" 
+				owner = FRU
+			}
+			create_unit = {
+				division = "name = \"3-й Львоский вольный полк\" 
+				division_template = \"Повстанческий полк\" 
+				start_experience_factor = 0.2" 
+				owner = FRU
+			}
+		}
+	}
+}
+#Регион восстает против ВСИ
+country_event = {
+	id = FRU.4
+	title = FRU.4.t
+	desc = FRU.4.d
+	#picture = GFX_report_event_chinese_soldiers
+
+	trigger = {
+		original_tag = UKR
+		has_government = fascism
+		FRU = {
+			exists = yes
+			has_government = communism
+		}
+		communism > 0.3
+	}
+
+	mean_time_to_happen = {
+		days = 270
+		modifier = {
+			factor = 0.5
+			communism > 0.5
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					any_neighbor_state = {
+						owner = { tag = FRU }
+					}
+				}
+				save_event_target_as = UKR_communist_state
+			}
+		}
+	}
+
+	option = {
+		name = FRU.4.a
+		PRC = {
+			transfer_state = event_target:UKR_communist_state
+			country_event = { id = FRU.5 days = 1 }
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -0.15
+		}
+	}
+}
+
+#Вольница оповещена об отколе
+country_event = {
+	id = FRU.5
+	title = FRU.5.t
+	desc = FRU.5.d
+	#picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = FRU.5.a
+		effect_tooltip = {
+			UKR = {
+				add_popularity = {
+					ideology = communism
+					popularity = -0.15
+				}		
+			}
+		}
+	}
+}
+

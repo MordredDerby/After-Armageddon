@@ -10,6 +10,11 @@ state={
 	}
 
 	history={
+		owner = DKB
+		add_core_of = DKB
+		victory_points = {
+			6753 10
+		}
 		buildings = {
 			infrastructure = 4
 			air_base = 2

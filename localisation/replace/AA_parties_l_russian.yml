@@ -1,6 +1,55 @@
 ﻿l_russian:
+ integralism:0 "Интегрализм"
+ integralism_desc:0 "Придерживаясь унионистской и корпоративистской политики, интегрализм утверждает, что идентичность народов диктуется историей, культурой и климатом страны."
+
  MON_fascism_party:0 "АСП"
  MON_fascism_party_long:0 "Ассоциация помощи трону"
  MON_democratic_party:0 "Демократы"
- MON_democratic_party_long:0 "Демократический Альянс"
+ MON_democratic_party_long:0 "Демократический альянс"
  MON_neutrality_party:0 "Совет лам"
+
+ DKB_neutrality_party:0 "Круг спасения казачества"
+ DKB_fascism_party:0 "Черноморцы"
+
+ UKR_fascism_party:0 "УНС"
+ UKR_fascism_party_long:0 "Украинское народное сообщество"
+
+ MOS_neutrality_party:0 "РНП"
+ MOS_neutrality_party:0 "Российская национальная партия"
+
+ URA_democratic_party:0 "Демократическая партия"
+ URA_fascism_party:0 "Преображение Урала"
+ URA_communism_party:0 "Рабочая партия"
+ URA_neutrality_party:0 "Республиканская партия"
+
+ AUS_neutrality_party:0 "ПОЕ"
+ AUS_neutrality_party_long:0 "Партия объединения Европы"
+ AUS_fascism_party:0 "Отечественный Фронт"
+ AUS_communism_party:0 "СДПА"
+ AUS_communism_party_long:0 "Социал-демократическая партия Австрии"
+
+ SCA_communism_party:0 "Рабочая партия"
+ SCA_democratic_party:0 "Панскандинавская коалиция"
+ SCA_fascism_party:0 "Свеарике"
+
+ BAL_communism_party:0 "Балтийский авангард"
+ BAL_fascism_party:0 "Остзейский национальный союз"
+
+ RSR_communism_party:0 "САП"
+ RSR_communism_party_long:0 "Социал-авангардистская партия"
+
+ TEX_democratic_party:0 "Партия Ганфайтеров"
+
+ SDT_fascism_party:0 "Союз немецкой обороны"
+ SDT_neutrality_party:0 "Пангерманская Лига"
+
+ CZE_fascism_party:0 "Карпатский лев"
+ CZE_neutrality_party:0 "Славянский союз"
+ CZE_democratic_party:0 "Федеральная партия"
+ CZE_democratic_party_long:0 "Федеральная партия"
+
+ SYR_fascism_party:0 "ССНП"
+ SYR_fascism_party_long:0 "Сирийская социальная националистическая партия"
+ SYR_communism_party:0 "Коммунистическая партия Сирии"
+ SYR_democratic_party:0 "Национальный союз"
+ SYR_neutrality_party:0 "Роялисты"

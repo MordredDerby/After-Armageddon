@@ -52,7 +52,7 @@ set_national_unity = 0.9
 create_import = {
 		resource = tungsten
 		factories = 1
-		exporter = SWE
+		exporter = SCA
 }
 
 set_politics = {
@@ -84,17 +84,19 @@ add_to_faction = GER
 
 
 add_ideas = {
-	sour_loser
-	general_staff
+	#sour_loser
+	#general_staff
+	dockyard_clique
+	resource_clique
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
 }
 
 create_country_leader = {
-	name = "Adolf Hitler"
-	desc = "POLITICS_ADOLF_HITLER_DESC"
-	picture = "Portrait_Germany_Adolf_Hitler.dds"
+	name = "Вальтер Венк"
+	desc = ""
+	picture = "gfx/leaders/GER/Portrait_Walther_Wenck.dds"
 	expire = "1965.1.1"
 	ideology = nazism
 	traits = {

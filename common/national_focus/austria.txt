@@ -1,0 +1,419 @@
+focus_tree = {
+	id = austria
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = AUS
+		}
+	}
+	default = no
+	focus = {
+		id = AUS_politics
+		icon = GFX_goal_generic_propaganda
+		cost = 10,00
+		x = 4
+		y = 0
+
+	}
+	focus = {
+		id = AUS_monarchy
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10,00
+		x = 4
+		y = 8
+
+	}
+	focus = {
+		id = AUS_specops
+		icon = GFX_goal_generic_special_forces
+		cost = 10,00
+		x = 9
+		y = 1
+
+	}
+	focus = {
+		id = AUS_lansturm_exercise
+		icon = GFX_focus_secret_rearmament
+		cost = 10,00
+		x = 11
+		y = 1
+
+	}
+	focus = {
+		id = AUS_deploy_landsturm
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10,00
+		x = 11
+		y = 2
+
+	}
+	focus = {
+		id = AUS_internationale
+		icon = GFX_goal_support_fourth_int
+		cost = 10,00
+		x = 15
+		y = 3
+
+	}
+	focus = {
+		id = AUS_edu
+		icon = GFX_focus_generic_polish_deal
+		cost = 10,00
+		x = 17
+		y = 3
+
+	}
+	focus = {
+		id = AUS_own_alliance
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10,00
+		x = 19
+		y = 3
+
+	}
+	focus = {
+		id = AUS_catholic_bloc
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10,00
+		x = 19
+		y = 2
+
+	}
+	focus = {
+		id = AUS_volunteers
+		icon = GFX_focus_generic_military_mission
+		cost = 10,00
+		x = 13
+		y = 1
+
+	}
+	focus = {
+		id = AUS_christian_resistance
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10,00
+		x = 21
+		y = 2
+
+	}
+	focus = {
+		id = AUS_fatherland_front
+		icon = GFX_goal_support_fascism
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_politics
+		}
+		mutually_exclusive = {
+			focus = AUS_unification_party
+		}
+		x = 3
+		y = 1
+
+	}
+	focus = {
+		id = AUS_unification_party
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_politics
+		}
+		mutually_exclusive = {
+			focus = AUS_fatherland_front
+		}
+		x = 5
+		y = 1
+
+	}
+	focus = {
+		id = AUS_landreform
+		icon = GFX_goal_generic_position_armies
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_fatherland_front
+			focus = AUS_unification_party
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = AUS_slavic
+		icon = GFX_goal_tripartite_pact
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_landreform
+		}
+		x = 1
+		y = 3
+
+	}
+	focus = {
+		id = AUS_ausgleich
+		icon = GFX_focus_proclaim_the_restauration_of_austria_hungary
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_landreform
+		}
+		x = 4
+		y = 3
+
+	}
+	focus = {
+		id = AUS_appointed_representatives
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_ausgleich
+		}
+		x = 4
+		y = 4
+
+	}
+	focus = {
+		id = AUS_carpathian_district
+		icon = GFX_goal_generic_construct_military
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_appointed_representatives
+		}
+		x = 4
+		y = 5
+
+	}
+	focus = {
+		id = AUS_voivodina
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_carpathian_district
+		}
+		x = 4
+		y = 6
+
+	}
+	focus = {
+		id = AUS_teke_germany
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_monarchy
+		}
+		x = 4
+		y = 9
+
+	}
+	focus = {
+		id = AUS_hre
+		icon = GFX_focus_generic_home_defense
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_teke_germany
+		}
+		x = 4
+		y = 10
+
+	}
+	focus = {
+		id = AUS_advisors_comitee
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_landreform
+		}
+		x = 7
+		y = 3
+
+	}
+	focus = {
+		id = AUS_romanian_cadets
+		icon = GFX_goal_generic_military_deal
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_advisors_comitee
+		}
+		x = 7
+		y = 4
+
+	}
+	focus = {
+		id = AUS_puppet_guard
+		icon = GFX_goal_generic_military_sphere
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_romanian_cadets
+		}
+		x = 7
+		y = 5
+
+	}
+	focus = {
+		id = AUS_princely_confrderation
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_puppet_guard
+		}
+		x = 7
+		y = 6
+
+	}
+	focus = {
+		id = AUS_status_quo
+		icon = GFX_goal_generic_alliance
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_princely_confrderation
+		}
+		prerequisite = {
+			focus = AUS_voivodina
+		}
+		mutually_exclusive = {
+			focus = AUS_romanian_transylvania
+		}
+		x = 5
+		y = 7
+
+	}
+	focus = {
+		id = AUS_romanian_transylvania
+		icon = GFX_goal_anschluss
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_princely_confrderation
+		}
+		mutually_exclusive = {
+			focus = AUS_status_quo
+		}
+		x = 7
+		y = 7
+
+	}
+	focus = {
+		id = AUS_yugoslavism
+		icon = GFX_goal_generic_political_pressure
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_slovenia
+		}
+		mutually_exclusive = {
+			focus = AUS_divide_slavs
+		}
+		x = 0
+		y = 5
+
+	}
+	focus = {
+		id = AUS_divide_slavs
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_slovenia
+		}
+		mutually_exclusive = {
+			focus = AUS_yugoslavism
+		}
+		x = 2
+		y = 5
+
+	}
+	focus = {
+		id = AUS_croatia
+		icon = GFX_focus_yug_banovina_of_croatia
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_yugoslavism
+			focus = AUS_divide_slavs
+		}
+		x = 0
+		y = 6
+
+	}
+	focus = {
+		id = AUS_serbia
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_yugoslavism
+			focus = AUS_divide_slavs
+		}
+		x = 2
+		y = 6
+
+	}
+	focus = {
+		id = AUS_czechoslovakia
+		icon = GFX_goal_anschluss
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_serbia
+		}
+		prerequisite = {
+			focus = AUS_croatia
+		}
+		mutually_exclusive = {
+			focus = AUS_hungarian_slovakia
+		}
+		x = 1
+		y = 7
+
+	}
+	focus = {
+		id = AUS_hungarian_slovakia
+		icon = GFX_focus_proclaim_the_restauration_of_austria_hungary
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_voivodina
+		}
+		prerequisite = {
+			focus = AUS_serbia
+		}
+		prerequisite = {
+			focus = AUS_croatia
+		}
+		mutually_exclusive = {
+			focus = AUS_czechoslovakia
+		}
+		x = 3
+		y = 7
+
+	}
+	focus = {
+		id = AUS_slovenia
+		icon = GFX_goal_generic_propaganda
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_slavic
+		}
+		x = 1
+		y = 4
+
+	}
+	focus = {
+		id = AUS_puppet_pope
+		icon = GFX_focus_generic_self_management
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_hre
+		}
+		mutually_exclusive = {
+			focus = AUS_take_rome
+		}
+		x = 3
+		y = 11
+
+	}
+	focus = {
+		id = AUS_take_rome
+		icon = GFX_goal_generic_major_war
+		cost = 10,00
+		prerequisite = {
+			focus = AUS_hre
+		}
+		mutually_exclusive = {
+			focus = AUS_puppet_pope
+		}
+		x = 5
+		y = 11
+
+	}
+}

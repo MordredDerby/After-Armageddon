@@ -589,3 +589,27 @@ LAK = {
 	color = rgb { 165 0 33 }
 	color_ui = rgb { 255 255 122 }
 }
+BAL = {
+	color = rgb { 0  114  206 }
+	color_ui = rgb { 255 255 122 }
+}
+YAK = {
+	color = rgb { 17  153  255 }
+	color_ui = rgb { 255 255 122 }
+}
+DKB = {
+	color = rgb { 249 201 0 }
+	color_ui = rgb { 249 201 0 }
+}
+TEX = {
+	color = rgb { 255 112 23 }
+	color_ui = rgb { 249 201 0 }
+}
+SDT = {
+	color = rgb { 221 0 0 }
+	color_ui = rgb { 138 155 116 }
+}
+VOL = {
+	color = rgb { 43 108 247 }
+	color_ui = rgb { 43 108 247 }
+}

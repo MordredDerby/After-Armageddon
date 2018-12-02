@@ -84,7 +84,50 @@ create_country_leader = {
 create_field_marshal = {
 	name = "Евгений I"
 	portrait_path = "gfx/leaders/GHE/Portrait_Eugene.dds"
-	traits = { offensive_doctrine inspirational_leader }
+	traits = { 
+		offensive_doctrine 
+		expert_delegator 
+		harsh_leader
+		aggressive_assaulter
+	}
+	skill = 5	
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 5
+}
+create_corps_commander = {
+	name = "Евгений Довбушенко"
+	portrait_path = "gfx/leaders/GHE/Portrait_Dovbush.dds"
+	traits = {
+		trait_reckless
+		politically_connected
+		infantry_leader
+		urban_assault_specialist
+	}
 	skill = 3
+	
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Владимир Шевченко"
+	portrait_path = "gfx/leaders/GHE/Portrait_Shevchenko.dds"
+	traits = {
+		career_officer
+		cavalry_leader
+		brilliant_strategist
+		organizer
+		cavalry_leader
+	}
+	skill = 3
+	
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 1
 }
 

@@ -1,0 +1,43 @@
+add_namespace = ITA
+
+country_event = {
+	id = ITA.1
+	title = ITA.1.t
+	desc = ITA.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = ITA.1.a
+		transfer_state = 115
+		transfer_state = 116
+	}
+}
+
+news_event = {
+	id = ITA.2
+	title = ITA.2.t
+	desc = ITA.2.d
+	picture = GFX_news_event_sicilians
+
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = ITA.2.a
+		ITA = {
+			remove_ideas = anarchy_idea
+			load_focus_tree = generic_focus
+			create_country_leader = {
+				name = "Сальваторе Джулиано"
+				picture = "gfx/leaders/ITA/Portrait_Salvatore_Giuliano.dds"
+				expire = "1970.1.1"
+				ideology = fascism_ideology
+				traits = {
+					#
+				}
+			}			
+		}
+	}
+}

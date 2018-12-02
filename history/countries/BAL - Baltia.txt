@@ -1,0 +1,56 @@
+﻿capital = 12
+
+#oob = ""
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	early_destroyer = 1
+	transport = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+}
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 10
+		}
+
+		fascism = {
+			popularity = 30
+		}
+		
+		communism = {
+			popularity = 60
+		}
+
+		neutrality = {
+			popularity = 0
+		}
+	}
+	ruling_party = communism
+}
+
+create_country_leader = {
+	name = "Адриан фон Фёлькерзам" 
+	picture = "gfx/leaders/BAL/Portrait_Adrian_von_Folkersam.dds"
+	expire = "1979.1.1"
+	ideology = nazism
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Альфонс Ребане" 
+	picture = "gfx/leaders/BAL/Portrait_Rebane.dds"
+	expire = "1979.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+

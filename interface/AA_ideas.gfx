@@ -4,4 +4,20 @@ spriteTypes = {
 		name = "GFX_idea_sib_broken"
 		texturefile = "gfx/interface/ideas/SIB_broken.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_anarchy"
+		texturefile = "gfx/interface/ideas/anarchy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_knighthood"
+		texturefile = "gfx/interface/ideas/knighthood.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Abdullah_I"
+		texturefile = "gfx/interface/ideas/idea_Abdullah_I.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_german_clique"
+		texturefile = "gfx/interface/ideas/idea_german_clique.dds"
+	}
 }
