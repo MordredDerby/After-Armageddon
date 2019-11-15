@@ -29,6 +29,98 @@ political_actions = {
 			factor = 10
 		}
 	}
+	integrate_austria = {
+		allowed = {
+			tag = GER
+		}
+		visible = {
+			any_country = {
+				original_tag = AUS
+				has_government = fascism
+				has_civil_war = no
+			}
+			has_completed_focus = GER_AUS_cw
+		}
+		available = {
+		}
+		cost = 100
+		days_remove = 120
+		remove_effect = {
+			AUS = {
+				every_unit_leader = {
+					set_nationality = GER
+				}
+			}
+			annex_country = { target = AUS transfer_troops = yes }
+			add_state_core = 74
+			add_state_core = 69
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	subdue_rheinland = {
+		allowed = {
+			tag = GER
+		}
+		visible = {
+			has_completed_focus = GER_end_warlords
+		}
+		available = {
+			command_power > 49
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 100
+
+		modifier = {
+			political_power_gain = -0.75
+			command_power_gain = -0.75
+		}
+
+		remove_effect = {
+			remove_ideas = resource_clique
+			28 = {
+				set_demilitarized_zone = no
+			}
+			42 = {
+				set_demilitarized_zone = no
+			}
+			51 = {
+				set_demilitarized_zone = no
+			}
+		}
+	}
+	subdue_hannover = {
+		allowed = {
+			tag = GER
+		}
+		visible = {
+			has_completed_focus = GER_end_warlords
+		}
+		available = {
+			command_power > 49
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 100
+
+		modifier = {
+			political_power_gain = -0.75
+			command_power_gain = -0.75
+		}
+
+		remove_effect = {
+			remove_ideas = dockyard_clique
+			56 = {
+				set_demilitarized_zone = no
+			}
+			59 = {
+				set_demilitarized_zone = no
+			}
+		}
+	}
 }
 
 operations = {
@@ -82,25 +174,25 @@ operations = {
 			}
 		}
 	}
-	retreat_czechia = {
-		allowed = {
-			tag = GER
-		}
-		visible = {
-			has_border_war_between = {
-   				attacker = 69
-    			defender = 9
-			}
-		}
-		fire_only_once = yes
-		complete_effect = {
-			cancel_border_war = {
-    			dont_fire_events = yes
-    			defender = 69
-   				attacker = 9
-			}
-			add_stability = -0.05
-			add_war_support = -0.05
-		}
-	}
+	#retreat_czechia = {
+	#	allowed = {
+	#		tag = GER
+	#	}
+	#	visible = {
+	#		has_border_war_between = {
+   	#			attacker = 69
+    #			defender = 9
+	#		}
+	#	}
+	#	fire_only_once = yes
+	#	complete_effect = {
+	#		cancel_border_war = {
+    #			dont_fire_events = yes
+    #			defender = 69
+   	#			attacker = 9
+	#		}
+	#		add_stability = -0.05
+	#		add_war_support = -0.05
+	#	}
+	#}
 }

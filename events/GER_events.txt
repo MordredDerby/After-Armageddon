@@ -1,0 +1,480 @@
+﻿add_namespace = GER
+
+#Choose Kaiser
+country_event = {
+	id = GER.1
+	title = GER.1.t
+	desc = GER.1.d
+
+	is_triggered_only = yes
+
+	#Legitimist
+	option = {
+		name = GER.1.a
+		add_ideas = GER_louis_ferdinand
+		add_popularity = {
+    		ideology = neutrality
+   			popularity = 0.05
+		}
+	}
+	#Nazist
+	option = {
+		name = GER.1.b
+		add_ideas = GER_alexander_ferdinand
+	}
+}
+
+#Switzerland anschluss
+country_event = {
+	id = GER.2
+	title = GER.2.t
+	desc = GER.2.d
+
+	is_triggered_only = yes
+
+	#Agree
+	option = {
+		name = GER.2.a
+		GER = {
+			annex_country = { target = SWI transfer_troops = yes }
+			add_state_core = 151
+			country_event = { id = GER.3 }
+		}
+	}
+	#Refuse
+	option = {
+		name = GER.2.b
+		GER = {
+			country_event = { id = GER.4 }
+		}
+	}
+}
+
+#Anschluss succeed 
+country_event = {
+	id = GER.3
+	title = GER.3.t
+	desc = GER.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = GER.3.a
+	}
+}
+
+#Anschluss failed
+country_event = {
+	id = GER.4
+	title = GER.4.t
+	desc = GER.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = GER.4.a
+		create_wargoal = {
+    		type = annex_everything
+   			target = SWI
+		}
+	}
+}
+
+#Swiss rebellion
+country_event = {
+	id = GER.5
+	title = GER.5.t
+	desc = GER.5.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		has_stability < 70
+		owns_state = 151
+		owns_state = 3
+	}
+
+	mean_time_to_happen = {
+		days = 200
+		modifier = {
+			factor = 0.7
+			divisions_in_state = {
+    			size < 1
+    			state = 3
+			}
+		}
+		modifier = {
+			factor = 0.7
+			divisions_in_state = {
+    			size < 1
+    			state = 151
+			}
+		}
+		modifier = {
+			factor = 0.7
+			has_war = yes
+		}
+	}
+
+	option = {
+		name = GER.5.a
+		SWI = {
+			transfer_state = 3
+			declare_war_on = {
+    			target = GER
+    			type = take_core_state
+				generator = { 151 }
+			}
+			hidden_effect = {
+				division_template = {
+					name = "Milice"
+					regiments = {
+						mountaineers = { x = 0 y = 0 }
+						mountaineers = { x = 0 y = 1 }
+						mountaineers = { x = 1 y = 0 }
+						mountaineers = { x = 1 y = 1 }
+					}
+				}
+				3 = {
+					create_unit = { 
+						division = "name = \"1. Milice\" division_template = \"Milice\" start_experience_factor = 0.5" 
+						owner = SWI
+					}
+					create_unit = { 
+						division = "name = \"2. Milice\" division_template = \"Milice\" start_experience_factor = 0.5" 
+						owner = SWI
+					}
+					create_unit = { 
+						division = "name = \"3. Milice\" division_template = \"Milice\" start_experience_factor = 0.5" 
+						owner = SWI
+					}
+					create_unit = { 
+						division = "name = \"4. Milice\" division_template = \"Milice\" start_experience_factor = 0.5" 
+						owner = SWI
+					}
+				}
+				151 = {
+					create_unit = { 
+						division = "name = \"5. Milice\" division_template = \"Milice\" start_experience_factor = 0.5" 
+						owner = SWI
+					}
+					create_unit = { 
+						division = "name = \"6. Milice\" division_template = \"Milice\" start_experience_factor = 0.5" 
+						owner = SWI
+					}
+				}
+			}
+		}
+	}
+}
+
+#Munich pact
+country_event = {
+	id = GER.6
+	title = GER.6.t
+	desc = GER.6.d
+
+	is_triggered_only = yes
+
+	#Agree
+	option = {
+		name = GER.6.a
+		GER = {
+			create_faction = munich_pact_faction
+			add_to_faction = GER
+			add_to_faction = AUS
+		}
+	}
+	#Refuse
+	option = {
+		name = GER.6.b
+	}
+}
+
+#EDU partition - Austria
+country_event = {
+	id = GER.7
+	title = GER.7.t
+	desc = GER.7.d
+
+	is_triggered_only = yes
+
+	#Agree
+	option = {
+		name = GER.7.a
+		set_global_flag = AUS_EDU_partition
+	}
+	#Refuse
+	option = {
+		name = GER.7.b
+		add_stability = 0.05
+	}
+}
+#EDU partition - GHE
+country_event = {
+	id = GER.8
+	title = GER.8.t
+	desc = GER.8.d
+
+	is_triggered_only = yes
+
+	#Agree
+	option = {
+		name = GER.8.a
+		ai_chance = { factor = 10 }
+		set_global_flag = GHE_EDU_partition
+	}
+	#Refuse
+	option = {
+		ai_chance = { factor = 1 }
+		name = GER.8.b
+	}
+}
+#EDU partition - both refused
+country_event = {
+	id = GER.9
+	title = GER.9.t
+	desc = GER.9.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = GER.9.a
+	}
+}
+#EDU recieves demands
+country_event = {
+	id = GER.10
+	title = GER.10.t
+	desc = GER.10.d
+
+	is_triggered_only = yes
+
+	#Agree
+	option = {
+		name = GER.10.a
+		GER = {
+			transfer_state = 62
+			transfer_state = 63
+			transfer_state = 64
+			transfer_state = 61
+			transfer_state = 68
+			transfer_state = 5
+			transfer_state = 86
+			transfer_state = 85
+		}
+		if = {
+			limit = {
+				has_global_flag = AUS_EDU_partition
+			}
+			AUS = {
+				transfer_state = 762
+				transfer_state = 66
+				transfer_state = 67
+			}
+			else = {
+				GER = {
+					transfer_state = 762
+					transfer_state = 66
+					transfer_state = 67
+				}
+			}
+		}
+	}
+	#Resist
+	option = {
+		name = GER.10.b
+		hidden_effect = {
+			GER = {
+				create_wargoal = {
+    				target = EDU
+    				type = take_core_state
+					generator = { 62 63 64 61 68 5 86 85 }
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = AUS_EDU_partition
+				}
+				AUS = {
+					create_wargoal = {
+    					target = EDU
+    					type = take_core_state
+						generator = { 762 66 67 }
+					}
+				}
+			}
+		}
+	}
+}
+#EDU folded
+country_event = {
+	id = GER.11
+	title = GER.11.t
+	desc = GER.11.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = GER.11.a
+	}
+}
+#EDU refused
+country_event = {
+	id = GER.12
+	title = GER.12.t
+	desc = GER.12.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = GER.12.a
+	}
+}
+#Prussian reintegration
+country_event = {
+	id = GER.13
+	title = GER.13.t
+	desc = GER.13.d
+
+	is_triggered_only = yes
+
+	#Agree
+	option = {
+		name = GER.13.a
+		GER = {
+			annex_country = { target = DDR transfer_troops = yes }
+		}
+	}
+	#NotMyFuhrer
+	option = {
+		name = GER.13.b
+	}
+}
+#Stockholm agreement
+country_event = {
+	id = GER.14
+	title = GER.14.t
+	desc = GER.14.d
+
+	is_triggered_only = yes
+
+	#Agree
+	option = {
+		name = GER.14.a
+		ai_chance = { factor = 5 }
+		GER = {
+			transfer_state = 58
+			create_import = {
+   				resource = oil
+    			amount = 16
+    			exporter = SCA
+			}
+			country_event = { id = GER.15 days = 5 }
+		}		
+		add_ideas = SCA_stockholm_agreement
+		diplomatic_relation = {
+    		country = GER
+    		relation = non_aggression_pact
+    		active = yes
+		}
+		add_stability = -0.1
+		set_global_flag = stockholm_agreement
+	}
+	#Refuse
+	option = {
+		name = GER.14.b
+		ai_chance = { factor = 1 }
+		country_event = { id = GER.16 days = 5 }
+	}
+}
+#Scandinavia agreed
+country_event = {
+	id = GER.15
+	title = GER.15.t
+	desc = GER.15.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = GER.15.a
+		add_stability = 0.05
+	}
+}
+#Scandinavia refused
+country_event = {
+	id = GER.16
+	title = GER.16.t
+	desc = GER.16.d
+
+	is_triggered_only = yes
+
+	#Ignore
+	option = {
+		name = GER.16.a
+		ai_chance = { factor = 5 }
+	}
+	#Attack
+	option = {
+		name = GER.16.b
+		ai_chance = { 
+			factor = 10 
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		create_wargoal = {
+   			target = SCA
+   			type = take_core_state
+			generator = { 58 }
+		}
+	}
+}
+#Scadinavia invited into Munich pact
+country_event = {
+	id = GER.17
+	title = GER.17.t
+	desc = GER.17.d
+
+	is_triggered_only = yes
+
+	#Join
+	option = {
+		name = GER.17.a
+		GER = {
+			add_to_faction = SCA
+			country_event = { id = GER.18 days = 1 }
+		}
+	}
+	#Refuse
+	option = {
+		name = GER.17.b
+		SCA = { country_event = { id = GER.19 days = 1 } }
+	}
+}
+#Scandinavia joins
+country_event = {
+	id = GER.18
+	title = GER.18.t
+	desc = GER.18.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = GER.18.a
+	}
+}
+#Scandinavia refuses
+country_event = {
+	id = GER.19
+	title = GER.19.t
+	desc = GER.19.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = GER.19.a
+	}
+}

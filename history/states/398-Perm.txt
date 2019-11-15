@@ -5,13 +5,13 @@ state={
 	manpower = 2135879
 	state_category = rural
 	resources={
-		aluminium=10
+		aluminium=6 # was: 10
 	}
 
 	history={
 		owner = URA
 		buildings = {
-			infrastructure = 4
+			infrastructure = 6
 			arms_factory = 1
 
 		}

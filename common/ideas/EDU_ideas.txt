@@ -1,10 +1,10 @@
 ideas = {
 	country = {
-		EDU_enthic_tensions = {
+		EDU_ethnic_tensions = {
 			picture = great_depression
 			modifier = {
-				political_power_cost = 0.5
-				unity_factor = -0.1
+				political_power_cost = 0.05
+				stability_weekly = -0.05
 			}
 		}
 		EDU_pacifism = {

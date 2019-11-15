@@ -1,0 +1,49 @@
+﻿TEX_INF = {
+	name = "Texas Rangers"
+
+	for_countries = { TEX }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d Rangers Division"
+
+	ordered = {
+		1 = { "%dst Rangers Division" }
+		2 = { "%dnd Rangers Division" }
+		3 = { "%drd Rangers Division" }
+		4 = { "%dth Rangers Division" }
+		5 = { "%dth Rangers Division" }
+		6 = { "%dth Rangers Division" }
+		7 = { "%dth Rangers Division" }
+		8 = { "%dth Rangers Division" }
+		9 = { "%dth Rangers Division" }
+		10 = { "%dth Rangers Division" }
+	}
+}
+
+TEX_CAV = {
+	name = "Mounted Rangers"
+
+	for_countries = { TEX }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	fallback_name = "%d Mounted Rangers Division"
+
+	ordered = {
+		1 = { "%dst Mounted Rangers Division" }
+		2 = { "%dnd Mounted Rangers Division" }
+		3 = { "%drd Mounted Rangers Division" }
+		4 = { "%dth Mounted Rangers Division" }
+		5 = { "%dth Mounted Rangers Division" }
+		6 = { "%dth Mounted Rangers Division" }
+		7 = { "%dth Mounted Rangers Division" }
+		8 = { "%dth Mounted Rangers Division" }
+		9 = { "%dth Mounted Rangers Division" }
+		10 = { "%dth Mounted Rangers Division" }
+	}
+}

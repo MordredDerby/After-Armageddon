@@ -9,11 +9,12 @@ state={
 	}
 
 	history={
-		owner = VOL
+		owner = VLG
 		buildings = {
 			infrastructure = 3
 		}
-		add_core_of = VOL
+		add_core_of = VLG
+		add_core_of = UDM
 	}
 
 	provinces={

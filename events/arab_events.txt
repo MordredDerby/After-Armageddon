@@ -1,0 +1,155 @@
+﻿add_namespace = arab
+
+#Abdullah assassinated
+country_event = {
+	id = arab.1
+	title = arab.1.t
+	desc = arab.1.d
+	#picture = 
+	trigger = {
+		tag = SYR
+		date > 1950.7.19
+	}
+
+	fire_only_once = yes
+
+	#Talal inherits
+	option = {
+		name = arab.1.a
+		swap_ideas = {
+    		remove_idea = abdullah_i
+    		add_idea = talal_i
+		}
+		hidden_effect = {
+			IRQ = {
+				country_event = {
+    				id = arab.2
+  					days = 10
+  				}
+			}
+		}
+	}
+	#Abolish monarchy
+	option = {
+		name = arab.1.b
+		remove_ideas = abdullah_i
+		add_stability = -0.15
+		add_political_power = 100
+		hidden_effect = {
+			IRQ = {
+				country_event = {
+    				id = arab.2
+  					days = 10
+  				}
+			}
+		}
+	}
+	#Pro-British coup
+	option = {
+		name = arab.1.c
+		remove_ideas = abdullah_i
+		set_politics = {
+			ruling_party = neutrality
+		}
+		hidden_effect = {
+			country_event = {
+    			id = arab.3
+  				days = 5
+  			}
+			IRQ = {
+				country_event = {
+    				id = arab.2
+  					days = 10
+  				}
+			}
+		}
+	}
+}
+
+#Iraq gets opportunity
+country_event = {
+	id = arab.2
+	title = arab.2.t
+	desc = arab.2.d
+
+	is_triggered_only = yes
+
+	#Depose the madman
+	option = {
+		name = arab.2.a
+		trigger = {
+			SYR = {
+				has_idea = talal_i
+			}
+		}
+		add_war_support = -0.05
+		create_wargoal = {
+    		type = annex_everything
+   			target = SYR
+		}
+		every_state = {
+			limit = {
+				is_owned_by = SYR
+			}
+			add_claim_by = IRQ
+		}
+	}
+	#Take empty throne
+	option = {
+		name = arab.2.b
+		trigger = {
+			SYR = {
+				NOT = { has_idea = talal_i }
+			}
+		}
+		add_war_support = 0.05
+		create_wargoal = {
+    		type = annex_everything
+   			target = SYR
+		}
+		every_state = {
+			limit = {
+				is_owned_by = SYR
+			}
+			add_claim_by = IRQ
+		}
+	}
+	#Do not intervene
+	option = {
+		name = arab.2.c
+		ai_chance = { 
+			base = 1
+			modifier = {
+				factor = 5
+				SYR = { is_subject = yes }
+			}
+		}
+	}
+}
+
+#Egypt or Britain
+country_event = {
+	id = arab.3
+	title = arab.3.t
+	desc = arab.3.d
+
+	is_triggered_only = yes
+
+	#Britain
+	option = {
+		name = arab.3.a
+		ENG = {
+			puppet = SYR
+		}
+		set_cosmetic_tag = SYR_ENG
+	}
+	#Egypt
+	option = {
+		name = arab.3.b
+		EGY = {
+			puppet = SYR
+		}
+		set_cosmetic_tag = SYR_EGY
+	}
+}
+

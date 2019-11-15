@@ -22,6 +22,12 @@ political_actions = {
 
 		#cost = 25
 
+		selectable_mission = yes
+		days_mission_timeout = 30
+		timeout_effect = {
+			set_country_flag = decided_siberia
+		}
+
 		ai_will_do = {
 			factor = 1
 		}
@@ -78,6 +84,12 @@ political_actions = {
 
 		cost = 25
 
+		selectable_mission = yes
+		days_mission_timeout = 30
+		timeout_effect = {
+			set_country_flag = decided_siberia
+		}
+
 		complete_effect = {
 			set_country_flag = decided_siberia
 			set_country_flag = siberia_defender	
@@ -105,9 +117,39 @@ political_actions = {
 			NOT = { has_country_flag = decided_siberia }
 		}
 
+		selectable_mission = yes
+		days_mission_timeout = 30
+		timeout_effect = {
+			set_country_flag = decided_siberia
+		}
+
 		complete_effect = {
 			set_country_flag = decided_siberia
 			add_stability = 0.05
+		}
+	}
+
+	SIB_move_capital = {
+		icon = infiltrate_state
+		allowed = {
+			tag = SIB
+		}
+		available = {}
+		visible = {
+			OR = {
+				has_war = yes
+				NOT = { has_government = radical_rightist }
+			}
+		}
+		highlight_states = {
+			state = 570 
+		}
+		cost = 15
+		days_remove = 15
+		remove_effect = {
+			set_capital = 570
+			add_war_support = 0.005
+			set_country_flag = SIB_moved_capital
 		}
 	}
 }

@@ -8,13 +8,136 @@ ideas = {
 				army_morale_factor = 0.1
 			}
 		}
-		guerilla_state = {
+		FRU_guerilla_state = {
 			picture = FRA_scw_intervention_republicans_focus
 			
 			modifier = {
-				partisan_effect = 1
+				#partisan_effect = 1
 				max_dig_in = 15
 				dig_in_speed_factor = 0.50
+			}
+		}
+		FRU_great_retreat = {
+			picture = PRC_the_long_march
+
+			modifier = {
+				industrial_capacity_factory = -0.10
+				production_speed_buildings_factor = -0.25
+			}
+		}
+		FRU_great_retreat_recover = {
+			picture = PRC_the_long_march_2
+			modifier = {
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		FRU_clandestine_press = {
+			picture = 
+			modifier = {
+				subversive_activites_upkeep = -0.25
+			}
+		}
+		FRU_night_raids = {
+			picture = 
+			modifier = {
+				land_night_attack = 0.25
+			}
+		}
+		FRU_anarchist_broadcasts = {
+			picture = 
+			modifier = {
+				radical_leftist_drift = 0.05
+				war_support_weekly = -0.01
+			}
+		}
+		FRU_free_economy = {
+			picture = 
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		FRU_free_economy2 = {
+			picture = 
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		FRU_free_economy3 = {
+			picture = 
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+		FRU_free_economy4 = { #Black market
+			picture = 
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		FRU_carpathian_mines = {
+			picture = 
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		FRU_improvised_weapons = {
+			picture = 
+			modifier = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 
+					reliability = -0.15
+					instant = yes
+				}
+			}
+		}
+		FRU_shumko_cocktail = {
+			picture = 
+			modifier = {
+				infantry_equipment = {
+					hard_attack = 0.05
+					ap_attack = 0.05
+					instant = yes
+				}
+			}
+		}
+		FRU_ragtag_army = {
+			picture = 
+			modifier = {
+				army_org_factor = -0.1
+				army_org_regain = -0.05
+			}
+		}
+		FRU_united_militias = {
+			picture = 
+			modifier = {
+				conscription = 0.05
+				army_org_regain = -0.05
+			}
+		}
+		FRU_elected_commanders = {
+			picture = 
+			modifier = {
+				conscription = 0.05
+				army_morale_factor = 0.1
+			}
+		}
+		FRU_town_guard = {
+			picture = 
+			modifier = {
+				army_core_defence_factor = 0.15
+			}
+		}
+		FRU_transit_trade = {
+			picture = 
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 	}

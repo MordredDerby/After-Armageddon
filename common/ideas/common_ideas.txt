@@ -3,10 +3,11 @@ ideas = {
 		anarchy_idea = {
 			picture = anarchy
 			modifier = {
-				local_resources_factor = -1
+				enemy_justify_war_goal_time = 10
+				local_resources_factor = -10
 				consumer_goods_factor = 1
-				research_time_factor = 10
-				industrial_capacity_factory = -1
+				research_speed_factor = -10
+				industrial_capacity_factory = -10
 			}
 		}
 	}

@@ -1,0 +1,13 @@
+ideas = {
+	country = {
+		WAL_guzzolene = {
+			picture = generic_refining_concern_1
+			modifier = {
+				fuel_gain_factor = 0.1
+				fuel_gain_factor_from_states = 0.15
+				fuel_gain_from_states = 0.2
+			}
+		}
+	}
+}
+

@@ -2,14 +2,14 @@
 state={
 	id=13
 	name="STATE_13"
-	manpower = 730660
 	resources={
-		steel=3
+		steel=2.000
 	}
-	state_category = town
+
 	history={
 		owner = EDU
 		add_core_of = EDU
+		add_core_of = BAL
 		victory_points = {
 			3152 5 
 		}
@@ -21,12 +21,18 @@ state={
 			3152 = {
 				naval_base = 3
 				coastal_bunker = 1
+
 			}
+
 		}
 		add_core_of = EST
+
 	}
 
 	provinces={
-		83 185 308 496 567 3074 3152 3174 6201 6381 9079 11127 11291 11426 
+		83 308 496 567 3074 3152 3174 6381 9079 11127 11291 11426 
 	}
+	manpower=610350
+	buildings_max_level_factor=1.000
+	state_category=town
 }

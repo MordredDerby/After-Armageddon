@@ -7,13 +7,16 @@ state={
 	
 	history=
 	{
-		owner = FRU
+		victory_points = {
+			577 1 
+		}
+		owner = BUK
 		buildings = {
 			infrastructure = 6
 			arms_factory = 1
 		}
-		add_core_of = ROM
-		add_core_of = FRU
+		#add_core_of = ROM
+		add_core_of = BUK
 	}
 	provinces={
 		577 9548

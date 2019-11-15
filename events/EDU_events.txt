@@ -1,17 +1,24 @@
-add_namespace = EDU
+﻿add_namespace = EDU
 
+#Prussian revolt
 country_event = {
 	id = EDU.1
 	title = EDU.1.t
 	desc = EDU.1.d
 	#picture = 
-	is_triggered_only = yes
+	trigger = {
+		tag = EDU
+		has_idea = EDU_ethnic_tensions
+		has_stability < 0.3
+	}
+
+	fire_only_once = yes
 
 	option = {
 		name = EDU.1.a
 		start_civil_war = {
 			ideology = fascism
-			size = 0.45
+			size = 0.4
 			states = { 68 61 67 64 66 62 63 }
 		}
 		random_country = {
@@ -31,12 +38,38 @@ country_event = {
 	}
 }
 
+#Baltic secession
 country_event = {
 	id = EDU.2
 	title = EDU.2.t
 	desc = EDU.2.d
 	#picture = 
 	is_triggered_only = yes
+
+	trigger = {
+		has_stability < 0.4
+		OR = {
+			has_war = yes
+			has_stability < 0.25
+		}
+		divisions_in_state = {
+   			type = infantry
+    		size < 2
+    		state = 13
+		}
+		divisions_in_state = {
+   			type = infantry
+    		size < 2
+    		state = 12
+		}
+		divisions_in_state = {
+   			type = infantry
+    		size < 2
+    		state = 11
+		}
+	}
+
+	fire_only_once = yes
 
 	option = {
 		name = EDU.2.a
@@ -48,9 +81,184 @@ country_event = {
 			add_state_core = 12
 			add_state_core = 191
 			add_state_core = 13
+			country_event = {
+				id = EDU.4
+				days = 2
+			}
 		}
 		release = BAL
 		create_wargoal = { type = annex_everything target = BAL }
-		RSR = { give_guarantee = BAL }
 	}
+}
+
+#Ostpreussen revolt
+country_event = {
+	id = EDU.3
+	title = EDU.3.t
+	desc = EDU.3.d
+	#picture = 
+
+	trigger = {
+		tag = EDU
+		BAL = { exists = yes }
+		has_global_flag = german_baltia
+		has_war_with = BAL
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 10 }
+
+	option = {
+		name = EDU.3.a
+		BAL = {
+			transfer_state = 5
+			hidden_effect = {
+				5 = {
+					create_unit = { 
+						division = "division_template = \"Freikorps\" start_experience_factor = 0" 
+						owner = BAL
+					}
+					create_unit = { 
+						division = "division_template = \"Freikorps\" start_experience_factor = 0" 
+						owner = BAL
+					}
+				}
+			}
+		}
+	}
+}
+
+#Baltic leadership
+country_event = {
+	id = EDU.4
+	title = EDU.4.t
+	desc = EDU.4.d
+	#picture = 
+
+	is_triggered_only = yes
+	
+	#Avantgardists
+	option = {
+		name = EDU.4.a
+		RSR = { give_guarantee = BAL }
+		hidden_effect = {
+			division_template = {
+				name = "Avangards"
+				is_locked = yes
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = { 
+					division = "division_template = \"Avangards\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Avangards\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Avangards\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Avangards\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Avangards\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Avangards\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Avangards\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Avangards\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Avangards\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Avangards\" start_experience_factor = 0" 
+					owner = BAL
+				}
+			}
+		}
+	}
+	#Germans
+	option = {
+		name = EDU.4.b
+		set_global_flag = german_baltia
+		BAL = {
+			set_politics = {
+				ruling_party = fascism
+			}
+		}
+		hidden_effect = {
+			division_template = {
+				name = "Freikorps"
+				is_locked = yes
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = { 
+					division = "division_template = \"Freikorps\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Freikorps\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Freikorps\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Freikorps\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Freikorps\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Freikorps\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Freikorps\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Freikorps\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Freikorps\" start_experience_factor = 0" 
+					owner = BAL
+				}
+				create_unit = { 
+					division = "division_template = \"Freikorps\" start_experience_factor = 0" 
+					owner = BAL
+				}
+			}
+		}
+	} 
 }

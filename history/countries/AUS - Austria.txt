@@ -1,4 +1,4 @@
-﻿capital = 152
+﻿capital = 806
 
 oob = "AUS_1936"
 
@@ -22,30 +22,20 @@ set_technology = {
 set_politics = {
 
 	parties = {
-		neutrality = { 
-			popularity = 50
-		}
-
-		fascism = {
-			popularity = 40
-		}
-
-		democratic = {
-			popularity = 10
-		}
-		
-		communism = {
-			popularity = 0
-		}
+		moderate_leftist = { popularity = 0 }
+		moderate_rightist = { popularity = 0 }
+		radical_rightist = { popularity = 0 }
+		radical_leftist = { popularity = 0 }
+		centrist = { popularity = 100 }
 	}
 	
-	ruling_party = neutrality
+	ruling_party = centrist
 	last_election = "1930.11.9"
 	election_frequency = 48
 	elections_allowed = no
 }
 
-#set_national_unity = 0.50
+#set_stability = 0.50
 
 create_country_leader = {
 	name = "Элизабет Альтенкиркен"

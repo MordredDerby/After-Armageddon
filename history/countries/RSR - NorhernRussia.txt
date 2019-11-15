@@ -1,6 +1,6 @@
 ﻿capital = 195
 
-oob = "RSR_1936"
+#oob = "RSR_1936"
 
 set_research_slots = 3
 
@@ -16,23 +16,13 @@ set_technology = {
 set_politics = {
 
 	parties = {
-		democratic = { 
-			popularity = 0
-		}
-
-		fascism = {
-			popularity = 0
-		}
-		
-		communism = {
-			popularity = 100
-		}
-
-		neutrality = {
-			popularity = 0
-		}
+		moderate_leftist = { popularity = 25 }
+		moderate_rightist = { popularity = 5 }
+		radical_rightist = { popularity = 5 }
+		radical_leftist = { popularity = 60 }
+		centrist = { popularity = 5 }
 	}
-	ruling_party = communism
+	ruling_party = radical_leftist
 }
 
 create_country_leader = {
@@ -40,7 +30,7 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/RSR/Portrait_Gubarev.dds"
 	expire = "1953.3.1"
-	ideology = marxism
+	ideology = social_vanguardism
 	traits = {	
 	}
 }

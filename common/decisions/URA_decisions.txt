@@ -1,0 +1,76 @@
+operations = {
+	form_tatarstan = {
+		icon = generic_independence
+		allowed = { 
+			tag = URA
+		}
+		visible = {
+			VLG = {
+				exists = yes
+				has_idea = anarchy_idea
+			}
+			NOT = { has_war_with = VLG }
+			TAT = { exists = no }
+		}
+		highlight_states = {
+			state = 249
+		}
+		available = {
+			249 = {
+				any_neighbor_state = { 
+					OR = {
+						is_owned_by = URA
+						owner = { is_subject_of = URA  }
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 75
+		days_remove = 90
+		remove_effect = {
+			TAT = {
+				transfer_state = 249
+				inherit_technology = URA
+			}
+			puppet = TAT
+		}
+	}
+	form_umdurt = {
+		icon = generic_independence
+		allowed = { 
+			tag = URA
+		}
+		visible = {
+			VLG = {
+				exists = yes
+				has_idea = anarchy_idea
+			}
+			NOT = { has_war_with = VLG }
+			UDM = { exists = no }
+		}
+		highlight_states = {
+			state = 399
+		}
+		available = {
+			399 = {
+				any_neighbor_state = { 
+					OR = {
+						is_owned_by = URA
+						owner = { is_subject_of = URA  }
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 75
+		days_remove = 90
+		remove_effect = {
+			UDM = {
+				transfer_state = 249
+				inherit_technology = URA
+			}
+			puppet = UDM
+		}
+	}
+}

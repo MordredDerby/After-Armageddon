@@ -1,5 +1,30 @@
 ideas = {
 	country = {
+		GHE_conscription_idea = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				tag = UKR
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				#stability_factor = 0.10
+				#army_leader_start_defense_level= 1
+				#political_advisor_cost_factor = 0.25
+				#trade_laws_cost_factor = 0.25
+				#mobilization_laws_cost_factor = 0.25
+				#economy_cost_factor = 0.25
+			}
+		}
 		shevchenko_plan = {
 			available = { is_subject = yes }
 			modifier = {
@@ -8,12 +33,18 @@ ideas = {
 			}
 		}
 		GHE_court_ministry = {
+
+			picture = ROM_king_carol_ii_hedonist
+
 			modifier = {
 				consumer_goods_factor = 0.1
 				political_power_factor = 0.25
 			}
 		}
 		GHE_court_ministry_ref = {
+
+			picture = ROM_king_carol_ii_hedonist
+
 			modifier = {
 				consumer_goods_factor = 0.05
 				political_power_factor = 0.15
@@ -47,12 +78,6 @@ ideas = {
 		GHE_yunarmia_idea = {
 			modifier = {
 				conscription_factor = 0.15
-			}
-		}
-		GHE_conscription_idea = {
-			modifier = {
-				mobilization_laws_cost_factor = -0.30
-				economy_cost_factor = 0.2
 			}
 		}
 		GHE_air_production_idea = {

@@ -1,6 +1,6 @@
 ﻿capital = 569
 
-oob = "SIB_1936"
+oob = "SIB"
 
 set_research_slots = 3
 
@@ -18,31 +18,75 @@ add_ideas = {
 set_politics = {
 
 	parties = {
-		democratic = { 
-			popularity = 0
+		radical_rightist = { 
+			popularity = 20
 		}
-
-		fascism = {
-			popularity = 100
+		moderate_rightist = { 
+			popularity = 15
 		}
-		
-		communism = {
-			popularity = 0
+		radical_leftist = { 
+			popularity = 15
 		}
-
-		neutrality = {
-			popularity = 0
+		centrist = { 
+			popularity = 50
 		}
 	}
-	ruling_party = fascism
+	ruling_party = radical_rightist
 }
+#Сибирский государственный институт чёрных металлов
 
 create_country_leader = {
 	name = "Иван Таежин"
 	desc = ""
 	picture = "gfx/leaders/SOV/Portrait_Soviet_Generic_3.dds"
-	expire = "1953.3.1"
-	ideology = fascism_ideology
+	expire = "1980.3.1"
+	ideology = technocracy
 	traits = {	
 	}
+}
+create_country_leader = {
+	name = "Александра Самусенко"
+	desc = ""
+	picture = "gfx/leaders/SIB/Portrait_Aleksandra_Samusenko.dds"
+	expire = "1980.3.1"
+	ideology = junta
+	traits = {	
+	}
+}
+create_country_leader = {
+	name = "Леонид Мартынов"
+	desc = ""
+	picture = "gfx/leaders/SIB/.dds"
+	expire = "1980.3.1"
+	ideology = national_constructivism
+	traits = {	
+	}
+}
+
+create_corps_commander = {
+	name = "Валентина Дуда"
+	portrait_path = "gfx/leaders/SIB/Portrait_Valentina_Duda.dds"
+	traits = { 
+		career_officer
+		armor_officer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	id = 331922
+	name = "Александра Самусенко"
+	portrait_path = "gfx/leaders/SIB/Portrait_Aleksandra_Samusenko.dds"
+	traits = { 
+		media_personality
+		organizer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 1
 }

@@ -1,4 +1,4 @@
-add_namespace = SIB
+﻿add_namespace = SIB
 
 news_event = {
 	id = SIB.1
@@ -6,9 +6,9 @@ news_event = {
 	desc = SIB.1.d
 	picture = GFX_news_event_kuznetsk
 
-	tigger = {
+	trigger = {
 		tag = SIB
-		date > 1937.1.1
+		date > 1961.6.6
 	}
 
 	major = yes
@@ -47,8 +47,10 @@ country_event = {
 		}
 	}
 
+	#Give up
 	option = {
 		name = SIB.2.a
+		set_country_flag = SIB_surrendered
 		if = {
 			limit = {
 				has_global_flag = TRK_partition_siberia
@@ -63,10 +65,10 @@ country_event = {
 				has_global_flag = MAN_partition_siberia
 			}
 			MAN = {
+				transfer_state = 561
 				transfer_state = 562
 				transfer_state = 637
-				transfer_state = 561
-				transfer_state = 644
+				transfer_state = 1090
 			}
 		}
 		if = {
@@ -83,27 +85,34 @@ country_event = {
 			limit = {
 				has_global_flag = MON_partition_siberia
 			}
+			release = YAK
 			MON = {
 				transfer_state = 654
-				transfer_state = 568
-				transfer_state = 569
+				puppet = YAK
 			}
 			BUR = {
 				transfer_state = 565
-				transfer_state = 567
-			}
-			YAK = {
-				transfer_state = 574
-				add_state_core = 574
+				transfer_state = 566
 			}
 		}
 	}
+	#Rely on defender
 	option = {
 		name = SIB.2.b
-		trigger = { check_temp_variable = { siberia_defenders > 0 } }
+		trigger = { 
+			check_variable = {
+				var = siberia_defenders
+				value = 0
+				compare = more_than
+			}
+		}
 		if = {
 			limit = {
-				check_temp_variable = { siberia_defenders = 1 }
+				check_variable = {
+					var = siberia_defenders
+					value = 1
+					compare = equal
+				}
 			}
 			random_country = {
 				limit = {
@@ -119,9 +128,16 @@ country_event = {
 			country_event =  { id = SIB.3 }
 		}
 	}
+	#Resist
 	option = {
 		name = SIB.2.c
-		trigger = { check_temp_variable = { siberia_defenders < 1 } }
+		trigger = { 
+			check_variable = {
+				var = siberia_defenders
+				value = 1
+				compare = less_than
+			}
+		}
 		every_country = {
 			limit = {
 				has_country_flag = siberia_attacker
@@ -131,6 +147,7 @@ country_event = {
 	}
 }
 
+#Siberia resists
 country_event = {
 	id = SIB.3
 	title = SIB.3.t
@@ -147,7 +164,7 @@ country_event = {
 			create_wargoal = {
 				type = take_state
 				target = SIB
-				generator = { 562 637 561 644 }
+				generator = { 562 637 561 644 1090 }
 			}
 		}
 		if = {
@@ -157,7 +174,8 @@ country_event = {
 			create_wargoal = {
 				type = take_state
 				target = SIB
-				generator = { 562 637 561 654 565 567 574 574 568 569 }
+				generator = { 654 565 566 574 }
+
 			}
 		}
 		if = {
@@ -182,3 +200,143 @@ country_event = {
 		}
 	}
 }
+#Siberia folds
+country_event = {
+	id = SIB.4
+	title = SIB.4.t
+	desc = SIB.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SIB.4.a
+	}
+}
+#Enter the junta
+country_event = {
+	id = SIB.5
+	title = SIB.5.t
+	desc = SIB.5.d
+	picture = GFX_report_event_soviet_tank_parade
+
+	fire_only_once = yes
+	mean_time_to_happen = { days = 21 }
+	trigger = {
+		tag = SIB
+		OR = {
+			NOT = { 
+				has_country_flag = SIB_moved_capital
+				controls_state = 569
+			}
+			has_country_flag = SIB_surrendered
+		}
+	}
+
+	option = {
+		name = SIB.5.a
+		set_politics = {
+			ruling_party = centrist
+		}
+		add_popularity = {
+    		ideology = radical_rightist
+    		popularity = -0.3
+		}
+		add_popularity = {
+    		ideology = centrist
+    		popularity = 0.1
+		}
+		random_unit_leader = {
+			limit = {
+				has_id = 331922
+			}
+			promote_leader = yes
+			add_unit_leader_trait = politically_connected
+		}
+	}
+}
+#Dictatorship or elections
+country_event = {
+	id = SIB.6
+	title = SIB.6.t
+	desc = SIB.6.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+	mean_time_to_happen = { days = 50 }
+	trigger = {
+		tag = SIB
+		has_country_leader = {
+    		name = "Александра Самусенко"
+    		ruling_only = yes
+		}
+		has_country_flag = SIB_moved_capital
+	}
+
+	option = {
+		name = SIB.6.a
+		add_war_support = 0.05
+		add_popularity = {
+    		ideology = centrist
+    		popularity = 0.05
+		}
+		add_country_leader_trait = camarilla_leader
+	}
+	option = {
+		name = SIB.6.b
+		add_stability = 0.1
+		set_politics = {
+			elections_allowed = yes
+			election_frequency = 48
+		}
+		hidden_effect = {
+			country_event = {
+   				id = SIB.7
+    			days = 50
+    			random = 10
+			}
+		}
+	}
+}
+#Election
+country_event = {
+	id = SIB.7
+	title = SIB.7.t
+	desc = SIB.7.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	immediate = { hold_election = SIB }
+
+	option = {
+		name = SIB.7.a
+		set_politics = {
+			ruling_party = moderate_rightist
+		}
+		add_popularity = {
+    		ideology = moderate_rightist
+    		popularity = 0.1
+		}
+	}
+	option = {
+		name = SIB.7.b
+		set_politics = {
+			ruling_party = radical_leftist
+		}
+		add_popularity = {
+    		ideology = radical_leftist
+    		popularity = 0.1
+		}
+	}
+	option = {
+		name = SIB.7.c		
+		trigger = {
+			any_unit_leader = {
+				has_id = 331922
+				has_trait = inspirational_leader
+			}
+		}
+		add_country_leader_trait = popular_figurehead2
+	}
+}
+#Reunion with Russia

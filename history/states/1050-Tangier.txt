@@ -1,0 +1,28 @@
+state={
+	id=1050
+	name="STATE_1050"
+
+	history={
+		owner = MOR
+		add_core_of = MOR
+		victory_points = {
+			10113 1 
+		}
+		buildings = {
+			infrastructure = 3
+			10113 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		10113 
+	}
+	manpower=12000
+	buildings_max_level_factor=1.000
+	state_category=enclave
+}

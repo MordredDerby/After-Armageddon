@@ -35,19 +35,10 @@ set_politics = {
 	elections_allowed = no
 }
 
-set_cosmetic_tag = SYR_LEV
+set_global_flag = SUEZ_CANAL_BLOCKED
+#set_cosmetic_tag = SYR_LEV
 add_ideas = {
 	abdullah_i
-}
-
-create_country_leader = {
-	name = "Hashim al-Atassi"
-	desc = ""
-	picture = "gfx/leaders/SYR/Portrait_Arabia_Generic_navy_1.dds"
-	ideology = liberalism
-	traits = {
-		#
-	}
 }
 
 create_country_leader = {
@@ -61,21 +52,37 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Ghazi bin Faisal"
+	name = "Джон Глабб"
 	desc = ""
-	picture = "gfx/leaders/SYR/Portrait_Arabia_Generic_2.dds"
+	picture = "gfx/leaders/SYR/Portrait_John_Glubb.dds"
 	ideology = despotism
 	traits = {
 		#
 	}
 }
-
 create_country_leader = {
-	name = "Khalid Bakdash"
+	name = "Джон Глабб"
 	desc = ""
-	picture = "gfx/leaders/SYR/Portrait_Arabia_Generic_1.dds"
-	ideology = leninism
+	picture = "gfx/leaders/SYR/Portrait_John_Glubb.dds"
+	ideology = conservatism
 	traits = {
 		#
 	}
+}
+
+create_corps_commander = {
+	name = "Джон Глабб"
+	portrait_path = "gfx/leaders/SYR/Portrait_John_Glubb.dds"
+	traits = {
+		trait_engineer
+		cavalry_leader
+		trickster
+	}
+
+	skill = 2
+	
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 3
 }

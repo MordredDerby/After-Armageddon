@@ -1,6 +1,6 @@
 ﻿capital = 2
 
-№oob = "ITA_1936"
+oob = "ITA_1936"
 
 set_research_slots = 4
 set_stability = 0.6
@@ -38,8 +38,6 @@ set_politics = {
 	election_frequency = 60
 	elections_allowed = no
 }
-
-set_cosmetic_tag = ITA_anarchy
 
 create_country_leader = {
 	name = "Мафия"

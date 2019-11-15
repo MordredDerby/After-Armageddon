@@ -14,7 +14,7 @@ set_technology = {
 }
 
 add_ideas = {
-	EDU_enthic_tensions
+	EDU_ethnic_tensions
 	EDU_pacifism
 }
 

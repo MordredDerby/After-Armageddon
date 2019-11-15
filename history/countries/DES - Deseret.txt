@@ -1,0 +1,93 @@
+﻿capital = 380
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+}
+
+set_research_slots = 3
+
+1939.1.1 = {
+
+	add_political_power = 1198
+	
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = large_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	set_technology = {
+		interwar_artillery = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		oil_processing = 1
+		improved_oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+	}
+}
+
+
+set_politics = {
+
+	parties = {
+		moderate_leftist = { popularity = 25 }
+		moderate_rightist = { popularity = 55 }
+		radical_rightist = { popularity = 0 }
+		radical_leftist = { popularity = 0 }
+		centrist = { popularity = 20 }
+	}
+	ruling_party = moderate_rightist
+}
+
+create_country_leader = {
+	name = "Henry Blood"
+	desc = ""
+	picture = "Blood.dds"
+	expire = "1965.1.1"
+	ideology = moderate_rightist_ideology
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Gerhard Wilhelm Kunze"
+	desc = ""
+	picture = "DKunze.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+set_stability = 0.85
+set_war_support = 0.22

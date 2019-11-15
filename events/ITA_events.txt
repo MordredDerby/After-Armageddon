@@ -1,4 +1,4 @@
-add_namespace = ITA
+﻿add_namespace = ITA
 
 country_event = {
 	id = ITA.1

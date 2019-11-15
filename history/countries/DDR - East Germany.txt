@@ -38,9 +38,7 @@ set_technology = {
 	transport = 1
 }
 
-
-
-
+set_cosmetic_tag = DDR_provisional
 
 set_research_slots = 4
 set_convoys = 50

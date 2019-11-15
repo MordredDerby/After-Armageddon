@@ -7,4 +7,9 @@ spriteTypes = {
 		name = "GFX_news_event_sicilians"
 		texturefile = "gfx/event_pictures/news_sicilians.dds"
 	}
+
+	spriteType = {
+		name = "GFX_select_date_AA"
+		texturefile = "gfx/interface/select_date_aa.dds"
+	}
 }

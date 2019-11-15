@@ -1,0 +1,45 @@
+ideas = {
+	country = {
+		LUX_against_barbarians = {
+			picture = 
+			allowed = {
+				original_tag = LUX
+			}
+			available = { has_war_with = HOL }
+			removal_cost = -1
+			
+			modifier = {
+				non_core_manpower = 0.1
+				weekly_manpower = 250
+			}
+		}
+		LUX_desperate_defence = {
+			picture = 
+			allowed = {
+				original_tag = LUX
+			}
+			available = { has_war_with = HOL }
+
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = 0.15
+			}
+		}
+		LUX_final_push = {
+			picture = 
+			allowed = {
+				original_tag = LUX
+			}
+			available = { has_war_with = HOL }
+
+			removal_cost = -1
+			
+			modifier = {
+				ai_focus_aggressive_factor = 1
+				army_speed_factor = 0.1
+				army_attack_factor = 0.15
+			}
+		}
+	}
+}

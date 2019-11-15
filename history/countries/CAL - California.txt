@@ -37,26 +37,17 @@ set_technology = {
 }
 
 set_convoys = 400
-set_national_unity = 0.6
+set_stability = 0.6
 
 set_politics = {
 
 	parties = {
-		democratic = { 
-			popularity = 99
-		}
-
-		fascism = {
-			popularity = 0
-		}
-		
-		communism = {
-			popularity = 1
-			#banned = no #default is no
+		moderate_rightist = { 
+			popularity = 100
 		}
 	}
 	
-	ruling_party = democratic
+	ruling_party = moderate_rightist
 	last_election = "1932.11.8"
 	election_frequency = 48
 	elections_allowed = yes

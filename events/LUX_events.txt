@@ -1,0 +1,54 @@
+add_namespace = LUX
+
+country_event = {
+	id = LUX.1
+	title = LUX.1.t
+	desc = LUX.1.d
+	#picture = 
+	trigger = {
+		tag = HOL
+		is_subject_of = GER
+		owns_state = 8
+	}
+	
+	mean_time_to_happen = { days = 5 }
+
+	fire_only_once = yes
+		
+	option = {
+		name = LUX.1.a
+		release = LUX
+		declare_war_on = { target = LUX type = annex_everything }
+		LUX = {
+			division_template = {
+				name = "Militia"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+			}
+
+			random_owned_controlled_state = {
+				prioritize = { 8 }
+				
+				hidden_effect = {
+					create_unit = { 
+						division = "name = \"Lëtzebuerger Miliz\" division_template = \"Militia\" start_experience_factor = 0.5" 
+						owner = LUX
+					}
+					create_unit = { 
+						division = "name = \"Lëtzebuerger Miliz\" division_template = \"Militia\" start_experience_factor = 0.5" 
+						owner = LUX
+					}
+					create_unit = { 
+						division = "name = \"Lëtzebuerger Miliz\" division_template = \"Militia\" start_experience_factor = 0.5" 
+						owner = LUX
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,202 @@
+focus_tree = {
+	id = luxembourg_rebel
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LUX
+		}
+	}
+	default = no
+
+	focus = {
+		id = LUX_barricades
+		icon = GFX_goal_liberty
+		cost = 2
+		x = 3
+		y = 0
+		completion_reward = {
+			8 = {
+				add_building_construction = {
+    				type = bunker
+    				level = 2
+    				instant_build = yes
+    				province = 6583
+				}
+			}
+		}
+	}
+	focus = {
+		id = LUX_scrap_weapons
+		icon = GFX_goal_break_rifle
+		cost = 5
+		prerequisite = {
+			focus = LUX_barricades
+		}
+		x = -2
+		y = 1
+		relative_position_id = LUX_barricades
+		completion_reward = {
+			add_equipment_to_stockpile = {
+   				type = infantry_equipment
+    			amount = 500
+			}
+		}
+	}
+	focus = {
+		id = LUX_against_barbarians
+		icon = GFX_focus_attack_germany
+		cost = 5
+		prerequisite = {
+			focus = LUX_barricades
+		}
+		x = 0
+		y = 1
+		relative_position_id = LUX_barricades
+		completion_reward = {
+			add_ideas = LUX_against_barbarians
+		}
+	}
+	focus = {
+		id = LUX_desperate_defence
+		icon = GFX_goal_generic_defence
+		cost = 5
+		prerequisite = {
+			focus = LUX_barricades
+		}
+		x = 2
+		y = 1
+		relative_position_id = LUX_barricades
+		completion_reward = {
+			add_ideas = LUX_desperate_defence
+		}
+	}
+	focus = {
+		id = LUX_belgian_revolt
+		icon = GFX_goal_flanders
+		cost = 5
+		prerequisite = {
+			focus = LUX_against_barbarians
+		}
+		available = {
+			controls_state = 813
+		}
+		x = -1
+		y = 1
+		relative_position_id = LUX_against_barbarians
+		completion_reward = {
+			HOL = {
+				add_war_support = -0.1
+			}
+			random_state = {
+				limit = {
+					is_core_of = FLA
+				}
+				create_unit = { 
+					division = "name = \"Vlaamse Militie\" division_template = \"Militia\" start_experience_factor = 0.2" 
+					owner = LUX
+				}
+			}
+			random_state = {
+				limit = {
+					is_core_of = FLA
+				}
+				create_unit = { 
+					division = "name = \"Vlaamse Militie\" division_template = \"Militia\" start_experience_factor = 0.2" 
+					owner = LUX
+				}
+			}			
+		}
+	}
+	focus = {
+		id = LUX_netherlands_revolt
+		icon = GFX_goal_netherlands_soldier
+		cost = 5
+		prerequisite = {
+			focus = LUX_against_barbarians
+		}
+		available = {
+			controls_state = 6
+		}
+		x = 1
+		y = 1
+		relative_position_id = LUX_against_barbarians
+		completion_reward = {
+			HOL = {
+				add_war_support = -0.1
+			}
+			random_state = {
+				limit = {
+					is_core_of = HOL
+				}
+				create_unit = { 
+					division = "name = \"Nederlandse Militie\" division_template = \"Militia\" start_experience_factor = 0.2" 
+					owner = LUX
+				}
+			}
+			random_state = {
+				limit = {
+					is_core_of = HOL
+				}
+				create_unit = { 
+					division = "name = \"Nederlandse Militie\" division_template = \"Militia\" start_experience_factor = 0.2" 
+					owner = LUX
+				}
+			}			
+		}
+	}
+	focus = {
+		id = LUX_final_push
+		icon = GFX_goal_planning_bonus
+		cost = 5
+		prerequisite = {
+			focus = LUX_netherlands_revolt
+		}
+		prerequisite = {
+			focus = LUX_belgian_revolt
+		}
+		x = 0
+		y = 2
+		relative_position_id = LUX_against_barbarians
+		completion_reward = {
+			add_ideas = LUX_final_push
+		}
+	}
+	focus = {
+		id = LUX_revolution_success
+		icon = GFX_goal_planning_bonus
+		cost = 5
+		prerequisite = {
+			focus = LUX_final_push
+		}
+		available = {
+			controls_state = 8
+			controls_state = 34
+			controls_state = 813
+			controls_state = 6
+			controls_state = 7
+			controls_state = 35
+			controls_state = 36
+			controls_state = 1058
+			controls_state = 1059
+			controls_state = 1060
+			controls_state = 1061
+			controls_state = 1062
+		}
+		x = 0
+		y = 1
+		relative_position_id = LUX_final_push
+		completion_reward = {
+			set_cosmetic_tag = UNL_UNIFIED
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = BEL
+						is_core_of = HOL
+					}
+				}
+				add_core_of = LUX
+			}
+		}
+	}
+}

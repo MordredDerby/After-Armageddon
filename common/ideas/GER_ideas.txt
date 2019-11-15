@@ -2,18 +2,102 @@ ideas = {
 	country = {
 		dockyard_clique = {
 			picture = german_clique
-			available = { war = no }
+			available = { has_war = no }
 			modifier = {
 				industrial_capacity_dockyard = -0.25
-				stability_factor = -0.05
+				stability_factor = -0.1
 			}
 		}
 		resource_clique = {
 			picture = german_clique
-			available = { war = no }
+			available = { has_war = no }
 			modifier = {
 				local_resources_factor = -0.25
-				stability_factor = -0.05
+				stability_factor = -0.1
+			}
+		}
+		GER_police_state_1 = {
+			picture = generic_secret_police
+			modifier = {
+				foreign_subversive_activites = -0.25
+				enemy_partisan_effect = -0.1
+			}
+		}
+		GER_police_state_2 = {
+			picture = generic_secret_police
+			modifier = {
+				foreign_subversive_activites = -0.25
+				enemy_partisan_effect = -0.1
+				drift_defence_factor = 0.25
+				encryption_factor = 0.1
+			}
+		}
+		GER_police_state_3 = {
+			picture = generic_secret_police
+			modifier = {
+				foreign_subversive_activites = -0.25
+				enemy_partisan_effect = -0.1
+				drift_defence_factor = 0.25
+				encryption_factor = 0.1
+				resistance_tick_auto = -2
+			}
+		}
+		GER_panzerwagen_idea = {
+			picture = FRA_motorized_focus
+			equipment_bonus = {
+				motorized = {
+					armor_value = 0.05
+				}
+			}
+		}
+		GER_conversion_idea = {
+			picture = generic_goods_red_bonus
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.2
+				equipment_conversion_speed = 0.05
+			}
+		}
+		GER_volksdeutsche = {
+			picture = generic_manpower_bonus
+			modifier = {
+				non_core_manpower = 0.025
+			}
+		}
+		GER_alexander_ferdinand = {
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.1
+			}
+		}
+		GER_louis_ferdinand = {
+			traits = { popular_figurehead }
+		}
+		GER_freikorps_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				conscription_factor = 0.02
+			}
+		}
+		GER_army_rule_idea = {
+			picture = general_staff
+			modifier = {
+				planning_speed = 0.25
+				experience_gain_army = 0.05
+			}
+		}
+		GER_paganism_idea = {
+			picture = vittoria_mutilata
+			modifier = {
+				fascism_drift = 0.1
+				subversive_activites_upkeep = 0.25
+			}
+		}
+		GER_realpolitik_idea = {
+			picture = CZE_planning_bonus
+			modifier = {
+				send_volunteer_size = 3
+				guarantee_cost = -0.5
+				lend_lease_tension = -0.20
 			}
 		}
 	}

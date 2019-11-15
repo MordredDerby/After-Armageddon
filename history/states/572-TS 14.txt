@@ -9,10 +9,10 @@ state={
 	history={
 		owner = URA
 		victory_points = {
-			9292 1
+			9292 5
 		}
 		buildings = {
-			infrastructure = 4
+			infrastructure = 6
 			industrial_complex = 1
 
 		}

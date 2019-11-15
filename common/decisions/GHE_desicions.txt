@@ -7,7 +7,7 @@ operations = {
 		}
 
 		available = {
-			war = no
+			has_war = no
 		}
 		visible = {
 			has_completed_focus = GHE_volga

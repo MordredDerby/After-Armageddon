@@ -37,30 +37,25 @@ set_technology = {
 }
 
 set_convoys = 400
-set_national_unity = 0.6
+set_stability = 0.6
 
 set_politics = {
 
 	parties = {
-		democratic = { 
+		moderate_rightist = { 
 			popularity = 70
 		}
 
-		fascism = {
+		radical_rightist = {
 			popularity = 15
 		}
 
-		neutrality = {
+		centrist = {
 			popularity = 15
-		}
-		
-		communism = {
-			popularity = 0
-			#banned = no #default is no
 		}
 	}
 	
-	ruling_party = democratic
+	ruling_party = moderate_rightist
 	last_election = "1932.11.8"
 	election_frequency = 48
 	elections_allowed = yes
@@ -75,7 +70,7 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/TEX/Portrait_Dulles.dds"
 	expire = "1953.3.1"
-	ideology = conservatism
+	ideology = moderate_rightist_ideology
 	traits = {
 	}
 }

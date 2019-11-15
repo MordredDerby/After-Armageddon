@@ -1,0 +1,27 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_ideology_radical_leftist_group"
+		texturefile = "gfx/interface/ideologies/communism_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_radical_rightist_group"
+		texturefile = "gfx/interface/ideologies/fascism_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_moderate_leftist_group"
+		texturefile = "gfx/interface/new_ideology.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_moderate_rightist_group"
+		texturefile = "gfx/interface/ideologies/democratic_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_centrist_group"
+		texturefile = "gfx/interface/ideologies/neutrality_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_BUK_centrist_group"
+		texturefile = "gfx/interface/ideologies/BUK_centrist.dds"
+	}
+}

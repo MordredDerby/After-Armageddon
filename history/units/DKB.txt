@@ -1,7 +1,6 @@
 ﻿##### Division Templates #####
 division_template = {
 	name = "Gorkovskaya Diviziya"			# Rifle Division
-	division_names_group = RUS_INF_01
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -29,7 +28,6 @@ division_template = {
 
 division_template = {
 	name = "Kavaleriyskaya Diviziya"	# Kavaleriyskaya Diviziya
-	division_names_group = RUS_CAV_01
 	regiments = {
 		cavalry = { x = 0 y = 0 }
 		cavalry = { x = 0 y = 1 }
@@ -127,10 +125,10 @@ units = {
 		base = 9417
 		location = 9417
 		# 1. Flotiliya Esmintsev
-		ship = { name = "Dzerzhinskiy" definition = destroyer equipment = { destroyer_pre = { amount = 1 owner = SOV } } }
-		ship = { name = "Nezamozhnik" definition = destroyer equipment = { destroyer_pre = { amount = 1 owner = SOV } } }
-		ship = { name = "Petrovskiy" definition = destroyer equipment = { destroyer_pre = { amount = 1 owner = SOV } } }
-		ship = { name = "Shaumyan" definition = destroyer equipment = { destroyer_pre = { amount = 1 owner = SOV } } }
+		ship = { name = "Dzerzhinskiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DKB } } }
+		ship = { name = "Nezamozhnik" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DKB } } }
+		ship = { name = "Petrovskiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DKB } } }
+		ship = { name = "Shaumyan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DKB } } }
 
 
 

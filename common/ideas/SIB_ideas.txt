@@ -17,7 +17,7 @@ ideas = {
 		SIB_technocracy = {
 			picture = generic_research_bonus
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 				political_power_factor = -0.25
 				consumer_goods_factor = 0.1
 			}

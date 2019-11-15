@@ -1,0 +1,29 @@
+﻿capital = 611
+
+oob = "MEN_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	
+}
+
+set_politics = {
+
+	parties = {
+		moderate_rightist = {
+			popularity = 100
+		}
+	}
+	
+	ruling_party = moderate_rightist
+}
+
+create_country_leader = {
+	name = "Айсиньгёро Сяньюй"
+	desc = "POLITICS_DEMCHUGDONGRUB_DESC"
+	picture = "GFX_portrait_men_demchugdongrub"
+	expire = "1965.1.1"
+	ideology = moderate_rightist_ideology
+	traits = {
+	}
+}

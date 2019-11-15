@@ -1,0 +1,183 @@
+﻿add_namespace = MEX
+
+#Successfull Raid - Mexico
+country_event = {
+	id = MEX.1
+	title = MEX.1.t
+	desc = MEX.1.desc
+	#picture = 
+
+	is_triggered_only = yes
+
+	option = {
+		name = MEX.1.a
+		add_political_power = 100
+		add_war_support = 0.05
+		add_stability = 0.05
+		event_target:mexican_raid_base = {
+			add_manpower = 2500
+		}
+		effect_tooltip = {
+			TEX = {
+				send_equipment = {
+    				equipment = infantry_equipment
+    				amount = 750
+    				target = MEX
+				}
+			}
+		}
+	}
+}
+#Successfull Raid - America
+country_event = {
+	id = MEX.2
+	title = MEX.2.t
+	desc = MEX.2.desc
+	#picture = 
+
+	is_triggered_only = yes
+
+	option = {
+		name = MEX.2.a
+		add_political_power = -50
+		add_stability = -0.05
+		send_equipment = {
+    		equipment = infantry_equipment
+    		amount = 750
+    		target = MEX
+		}
+		event_target:mexican_raid_target = {
+			add_manpower = -5000
+			random_list = {
+    			50 = {
+					remove_building = {
+   						type = industrial_complex
+    					level = 1
+					}
+				}
+				50 = {
+					remove_building = {
+   						type = arms_factory 
+    					level = 1
+					}
+				}
+			}
+			remove_building = {
+   				type = infrastructure
+   	 			damage = 1
+			}
+		}
+	}
+}
+#Raid retreat - Mexico
+country_event = {
+	id = MEX.3
+	title = MEX.3.t
+	desc = MEX.3.desc
+	#picture = 
+
+	is_triggered_only = yes
+
+	option = {
+		name = MEX.3.a
+		add_war_support = 0.025
+		add_stability = 0.025
+		event_target:mexican_raid_base = {
+			add_manpower = 500
+		}
+		effect_tooltip = {
+			TEX = {
+				send_equipment = {
+    				equipment = infantry_equipment
+    				amount = 250
+    				target = MEX
+				}
+			}
+		}
+	}
+}
+#Raid retreat - America
+country_event = {
+	id = MEX.4
+	title = MEX.4.t
+	desc = MEX.4.desc
+	#picture = 
+
+	is_triggered_only = yes
+
+	option = {
+		name = MEX.4.a
+		add_political_power = -25
+		add_stability = -0.025
+		send_equipment = {
+    		equipment = infantry_equipment
+    		amount = 250
+    		target = MEX
+		}
+		event_target:mexican_raid_target = {
+			add_manpower = -1000
+			random_list = {
+    			50 = {
+    				damage_building = {
+    					type = industrial_complex
+   						damage = 0.7
+					}
+				}
+				50 = {
+    				damage_building = {
+    					type = arms_factory
+   						damage = 0.7
+					}
+				}
+			}
+			damage_building = {
+   				type = infrastructure
+   	 			damage = 1
+			}
+		}
+	}
+}
+#Raid failed - Mexico
+country_event = {
+	id = MEX.5
+	title = MEX.5.t
+	desc = MEX.5.desc
+	#picture = 
+
+	is_triggered_only = yes
+
+	option = {
+		name = MEX.5.a
+		add_political_power = -50
+		add_war_support = -0.1
+		add_stability = -0.1
+		event_target:mexican_raid_base = {
+			add_manpower = -1000
+		}
+	}
+}
+#Raid failed - Americans
+country_event = {
+	id = MEX.6
+	title = MEX.6.t
+	desc = MEX.6.desc
+	#picture = 
+
+	is_triggered_only = yes
+
+	option = {
+		name = MEX.6.a
+		add_political_power = 50
+		add_war_support = 0.1
+		add_stability = 0.1
+		add_equipment_to_stockpile = {
+    		type = infantry_equipment
+    		amount = 250
+    		producer = MEX
+		}
+	}
+}
+
+
+
+

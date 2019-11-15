@@ -1,0 +1,240 @@
+ukrainian_civil_war_category = {
+	FRU_incite_desertion = {
+		icon = infiltrate_state
+
+		allowed = { 
+			tag = FRU
+		}
+
+		available = {
+			has_war_with = UKR
+			has_completed_focus = FRU_clandestine_press
+		}
+		visible = {
+			#has_completed_focus = 
+		}
+		cost = 75
+		fire_only_once = no
+		days_remove = 90
+		days_re_enable = 120
+
+		targeted_modifier = {
+			tag = UKR
+			weekly_manpower = -500
+		}
+		modifier = {
+			weekly_manpower = 250
+		}
+	}
+	FRU_propaganda = {
+		icon = generic_propaganda
+
+		allowed = { 
+			tag = FRU
+		}
+		available = {
+			has_completed_focus = FRU_illegal_literature
+		}
+		visible = {
+			#has_completed_focus = 
+		}
+		cost = 75
+		fire_only_once = no
+		days_remove = 90
+		days_re_enable = 120
+		targeted_modifier = {
+			tag = UKR
+			stability_weekly = -0.005
+			radical_leftist_drift = 0.05
+		}
+	}
+	FRU_lvov_depots = {
+		icon = generic_prepare_civil_war
+
+		allowed = { 
+			tag = FRU
+		}
+
+		available = {
+			has_war_with = UKR
+			controls_state = 91
+		}
+		visible = {
+			#controls_state = 91
+		}
+		highlight_states = {
+			state = 91
+		}
+		fire_only_once = yes
+		complete_effect = {
+			UKR = {
+				send_equipment = {
+    				equipment = infantry_equipment
+    				amount = 2000
+    				target = FRU
+				}
+			}
+		}
+	}
+	FRU_crackdown = {
+		icon = oppression
+
+		allowed = { 
+			tag = FRU
+		}
+
+		available = {
+			#has_war_with = UKR
+		}
+		visible = {
+			#has_completed_focus = 
+		}
+		cost = 50
+		fire_only_once = no
+		days_remove = 90
+		days_re_enable = 120
+		modifier = {
+			radical_rightist_drift = -0.1
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+		}
+	}
+	FRU_terror = {
+		icon = generic_scorched_earth
+
+		allowed = { 
+			tag = FRU
+		}
+
+		available = {
+			#has_war_with = UKR
+		}
+		visible = {
+			#has_completed_focus = 
+		}
+		cost = 100
+		fire_only_once = no
+		days_remove = 120
+		days_re_enable = 180
+		targeted_modifier = {
+			tag = UKR
+			command_power_gain = -0.15
+			political_power_cost = -0.15
+		}
+	}
+	FRU_raise_militia = {
+		icon = generic_nationalism
+
+		allowed = { 
+			tag = FRU
+		}
+
+		available = {
+			has_war_with = UKR
+		}
+		visible = {
+			#has_completed_focus = FRU_arm_resistance
+			any_state = {
+				is_owned_by = UKR
+				NOT = { has_state_flag = FRU_militia_raised }
+			}
+		}
+		highlight_states = {
+			is_owned_by = UKR
+			is_controlled_by = FRU
+			NOT = { has_state_flag = FRU_militia_raised }
+		}
+		days_remove = 30
+		remove_effect = {
+			#add_equipment_to_stockpile = {
+   			#	type = infantry_equipment
+    		#	amount = -800
+			#}
+			random_state = {
+				limit = {
+					is_owned_by = UKR
+					is_controlled_by = FRU
+					NOT = { has_state_flag = FRU_militia_raised }
+				}
+				set_state_flag = FRU_militia_raised
+				create_unit = { 
+					division = "name = \"Вольный полк\" division_template = \"Повстанческий полк\" start_experience_factor = 0.1" 
+					owner = FRU
+				}
+				create_unit = { 
+					division = "name = \"Вольный полк\" division_template = \"Конный полк\" start_experience_factor = 0.1" 
+					owner = FRU
+				}
+			}
+		}
+	}
+	FRU_railroad_raid = {
+		icon = generic_ignite_civil_war
+
+		allowed = { 
+			tag = FRU
+		}
+
+		available = {
+			#has_war_with = UKR
+		}
+		visible = {
+			#has_completed_focus = 
+		}
+		highlight_states = {
+			is_owned_by = UKR
+			is_controlled_by = UKR
+			any_neighbor_state = {
+				is_controlled_by = FRU
+			}
+		}
+
+		cost = 25
+
+		fire_only_once = no
+		days_remove = 15
+		days_re_enable = 90
+
+		remove_effect = {
+			random_state = {
+				limit = {
+					is_owned_by = UKR
+					is_controlled_by = UKR
+					any_neighbor_state = {
+						is_controlled_by = FRU
+					}
+				}
+				damage_building = {
+    				type = infrastructure
+    				damage = 1
+				}
+			}
+			UKR = {
+				send_equipment = {
+    				equipment = support_equipment
+    				amount = 100
+    				target = FRU
+				}
+			}
+		}
+	}
+	FRU_mountain_guns = {
+		icon = generic_industry
+
+		allowed = { 
+			tag = FRU
+		}
+
+		available = {
+			has_completed_focus = FRU_mountain_troops
+		}
+		visible = {
+			#has_completed_focus = FRU_mountain_troops
+		}
+		cost = 75
+		fire_only_once = yes
+		complete_effect = {
+			set_technology = { mountain_gun = 1 }
+		}
+	}
+}

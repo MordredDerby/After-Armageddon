@@ -10,33 +10,19 @@ set_technology = {
 }
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 70
-		}
-
-		fascism = {
-			popularity = 20
-		}
-		
-		communism = {
-			popularity = 10
-		}
-
-		neutrality = {
-			popularity = 0
-		}
-	}
-	ruling_party = democratic
+    parties = {
+        moderate_leftist = { popularity = 100 }
+    }
+    ruling_party = moderate_leftist
 }
+
 
 create_country_leader = {
 	name = "Михаил Кузнецов"
 	desc = ""
 	picture = "gfx/leaders/URA/Portrait_Mikhail_Kuznetsov.dds"
 	expire = "1953.3.1"
-	ideology = socialism
+	ideology = moderate_leftist_ideology
 	traits = {	
 	}
 }

@@ -4,4 +4,120 @@ spriteTypes = {
 		name = "GFX_goal_freedom"
 		texturefile = "gfx/interface/goals/focus_freedom.dds"			
 	}
+	SpriteType = {
+		name = "GFX_goal_books"
+		texturefile = "gfx/interface/goals/focus_books.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_radio_tower"
+		texturefile = "gfx/interface/goals/focus_radio_tower.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_gold_mountain"
+		texturefile = "gfx/interface/goals/focus_gold_mountain.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_rail_skull"
+		texturefile = "gfx/interface/goals/focus_rail_skull.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_syndicalist_industry"
+		texturefile = "gfx/interface/goals/focus_syndicalist_industry.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_two_soldiers"
+		texturefile = "gfx/interface/goals/focus_two_soldiers.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_anarcho_communism"
+		texturefile = "gfx/interface/goals/focus_anarcho_communism.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_press"
+		texturefile = "gfx/interface/goals/focus_press.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_corruption"
+		texturefile = "gfx/interface/goals/focus_generic_corruption.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_global_trade"
+		texturefile = "gfx/interface/goals/focus_global_trade.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_government_icon"
+		texturefile = "gfx/interface/goals/focus_government_icon.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_money_flames"
+		texturefile = "gfx/interface/goals/focus_money_flames.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_free_trade"
+		texturefile = "gfx/interface/goals/focus_free_trade.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_molotov"
+		texturefile = "gfx/interface/goals/focus_molotov.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_urban"
+		texturefile = "gfx/interface/goals/focus_urban.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_rail_skull_three"
+		texturefile = "gfx/interface/goals/focus_rail_skull_three.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_soldiers_hand"
+		texturefile = "gfx/interface/goals/focus_soldiers_hand.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_liberty"
+		texturefile = "gfx/interface/goals/focus_liberty.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_planning_bonus"
+		texturefile = "gfx/interface/goals/focus_planning_bonus.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_flanders"
+		texturefile = "gfx/interface/goals/focus_flanders.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_netherlands_soldier"
+		texturefile = "gfx/interface/goals/focus_netherlands_soldier.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_break_rifle"
+		texturefile = "gfx/interface/goals/focus_break_rifle.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_mountain_soldiers"
+		texturefile = "gfx/interface/goals/focus_mountain_soldiers.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_soldiers_windrose"
+		texturefile = "gfx/interface/goals/focus_soldiers_windrose.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_into_flames"
+		texturefile = "gfx/interface/goals/focus_into_flames.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_arms_export"
+		texturefile = "gfx/interface/goals/focus_arms_export.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_flames_of_rebellion"
+		texturefile = "gfx/interface/goals/focus_flames_of_rebellion.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_industry_paper"
+		texturefile = "gfx/interface/goals/focus_industry_paper.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_unequal_treaty"
+		texturefile = "gfx/interface/goals/focus_unequal_treaty.dds"			
+	}
 }

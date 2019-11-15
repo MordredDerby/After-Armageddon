@@ -1,0 +1,25 @@
+ideas = {
+	country = {
+		SCA_gustaf_adolf = {
+			picture = gustaf_adolf
+			modifier = {
+				stability_factor = -0.1
+				fascism_drift = 0.05
+			}
+		}
+		SCA_stockholm_agreement = {
+			picture = generic_exploit_mines
+			available = {
+				NOT = { has_war_with = GER }
+			}
+			modifier = {
+				production_oil_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = SOV
+				extra_trade_to_target_factor = 0.4
+				trade_cost_for_target_factor = -0.2
+			}
+		}
+	}
+}

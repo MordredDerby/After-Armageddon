@@ -1,4 +1,4 @@
-add_namespace = SDT
+﻿add_namespace = SDT
 
 #Crisis
 country_event = {
@@ -27,10 +27,10 @@ country_event = {
 	#Cede
 	option = {
 		name = SDT.1.b
-		country_event = { id = SDT.2 }
+		GER = { country_event = { id = SDT.2 } }
 	}
 }
-#Sudetenland seded
+#Sudetenland ceded
 country_event = {
 	id = SDT.2
 	title = SDT.2.t
@@ -183,6 +183,7 @@ country_event = {
 	option = {
 		name = SDT.6.b
 		add_stability = -0.2
+		UKR = { country_event = { id = SDT.8 } }
 	}
 }
 #Germany: Austria refused
@@ -196,7 +197,6 @@ country_event = {
 	#Ignore
 	option = {
 		name = SDT.7.a
-		add_war_support = -0.05
 	}
 	#Fight
 	option = {
@@ -249,8 +249,9 @@ country_event = {
 		name = SDT.9.b
 		add_threat = 5
 		add_stability = -0.15
+		add_war_support = -0.15
 		add_political_power = -50
-		else_if = {
+		if = {
 			limit = {
 				country_exists = CZE
 			}
@@ -259,12 +260,12 @@ country_event = {
 				target = CZE
 				generator = { 69 74 }
 			}
-		}
-		else = {
-			create_wargoal = {
-				type = take_state
-				target = SDT
-				generator = { 69 74 }
+			else = {
+				create_wargoal = {
+					type = take_state
+					target = SDT
+					generator = { 69 74 }
+				}
 			}
 		}
 	}
@@ -301,14 +302,15 @@ country_event = {
 	option = {
 		name = SDT.10.c
 		set_cosmetic_tag = CZE_SDT
+		set_country_flag = czechosudetia
 		set_politics = {
 			ruling_party = democratic
 			elections_allowed = yes
 		}
 		#TODO - ask for guarantees
-		UKR = { give_guarantee = CZE }
-		AUS = { give_guarantee = CZE }
-		EDU = { give_guarantee = CZE }
+		#UKR = { give_guarantee = CZE }
+		#AUS = { give_guarantee = CZE }
+		#EDU = { give_guarantee = CZE }
 	}
 }
 #Resolution - tie 

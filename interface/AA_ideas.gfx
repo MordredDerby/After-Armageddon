@@ -17,7 +17,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_Abdullah_I.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_talal_i"
+		texturefile = "gfx/interface/ideas/idea_talal.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_german_clique"
 		texturefile = "gfx/interface/ideas/idea_german_clique.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_warlike_britain"
+		texturefile = "gfx/interface/ideas/idea_warlike_britain.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_gustaf_adolf"
+		texturefile = "gfx/interface/ideas/idea_gustaf_adolf.dds"
 	}
 }

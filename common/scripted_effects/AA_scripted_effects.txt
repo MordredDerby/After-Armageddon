@@ -1,0 +1,10 @@
+remove_anarchy = {
+	effect_tooltip = {
+		remove_ideas = anarchy_idea #remove_anarchy_tt
+	}
+	hidden_effect = {		
+		remove_ideas = anarchy_idea
+		load_focus_tree = generic_focus
+		drop_cosmetic_tag = yes
+	}
+}

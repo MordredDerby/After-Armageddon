@@ -1,0 +1,29 @@
+capital = 393
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	early_destroyer = 1
+	transport = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+}
+
+set_politics = {
+	parties = {
+		radical_rightist = { popularity = 100 }
+	}
+	ruling_party = radical_rightist
+}
+
+create_country_leader = {
+	name = "Элайджа Мухаммад" 
+	picture = "gfx/leaders/NOI/Portrait_Elijah_Muhammad.dds"
+	expire = "1979.1.1"
+	ideology = religious_extremism
+	traits = {
+		#
+	}
+}

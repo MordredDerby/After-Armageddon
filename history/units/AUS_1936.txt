@@ -89,7 +89,7 @@ units = {
 	}
 }
 assign_all_forces_to = "Дьёрдь Яношфи"
-name = "Корпус 'Блок'"
+#name = "Корпус 'Блок'"
 
 units = {
 	##### Österreichisches Bundesheer #####

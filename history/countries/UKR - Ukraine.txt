@@ -14,29 +14,22 @@ set_technology = {
 }
 
 add_ideas = {
+	GHE_court_ministry
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
 }
 
 set_politics = {
-
 	parties = {
-		democratic = { 
-			popularity = 15
-		}
-
-		fascism = {
-			popularity = 85
-		}
-		
-		communism = {
-			popularity = 0
-		}
+		moderate_leftist = { popularity = 15 }
+		moderate_rightist = { popularity = 15 }
+		radical_rightist = { popularity = 60 }
+		radical_leftist = { popularity = 5 }
+		centrist = { popularity = 5 }
 	}
-	ruling_party = fascism
+	ruling_party = radical_rightist
 }
-
 create_country_leader = {
 	name = "Kost Levytsky"
 	desc = ""
@@ -62,9 +55,9 @@ create_country_leader = {
 create_country_leader = {
 	name = "Евгений I"
 	desc = ""
-	picture = "gfx/leaders/GHE/Portrait_Eugene.dds"
+	picture = "gfx/leaders/UKR/Portrait_Eugene.dds"
 	expire = "1953.3.1"
-	ideology = fascism_ideology
+	ideology = fascism
 	traits = {
 		
 	}
@@ -82,8 +75,9 @@ create_country_leader = {
 #}
 
 create_field_marshal = {
+	id = 74586
 	name = "Евгений I"
-	portrait_path = "gfx/leaders/GHE/Portrait_Eugene.dds"
+	portrait_path = "gfx/leaders/UKR/Portrait_Eugene.dds"
 	traits = { 
 		offensive_doctrine 
 		expert_delegator 
@@ -98,7 +92,7 @@ create_field_marshal = {
 }
 create_corps_commander = {
 	name = "Евгений Довбушенко"
-	portrait_path = "gfx/leaders/GHE/Portrait_Dovbush.dds"
+	portrait_path = "gfx/leaders/UKR/Portrait_Dovbush.dds"
 	traits = {
 		trait_reckless
 		politically_connected
@@ -115,7 +109,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Владимир Шевченко"
-	portrait_path = "gfx/leaders/GHE/Portrait_Shevchenko.dds"
+	portrait_path = "gfx/leaders/UKR/Portrait_Shevchenko.dds"
 	traits = {
 		career_officer
 		cavalry_leader

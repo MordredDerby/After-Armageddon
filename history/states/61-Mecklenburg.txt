@@ -10,7 +10,10 @@ state={
 		owner = EDU
 		add_core_of = EDU
 		victory_points = {
-			321 1
+			321 5
+		}
+		victory_points = {
+			11305 3
 		}
 		buildings = {
 			infrastructure = 6
@@ -22,10 +25,10 @@ state={
 			air_base = 3
 		}
 		add_core_of = GER
-		add_core_of = DDR
+		add_core_of = MEK
 	}
 
 	provinces={
-		268 293 321 3258 9294 11276 11305 
+		268 293 321 9294 11276 11305 
 	}
 }

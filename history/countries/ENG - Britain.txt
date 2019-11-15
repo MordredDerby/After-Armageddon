@@ -3,11 +3,9 @@
 oob = "ENG_1936"
 
 
-#Северная Дакота, Южная Дакота, Небраска, Вайоминг и Монтана.
-
 set_research_slots = 4
 
-set_national_unity = 0.6
+set_stability = 0.6
 
 # Starting tech
 set_technology = {
@@ -48,47 +46,14 @@ set_technology = {
 }
 
 add_ideas = {
-	stiff_upper_lip
-	ENG_the_war_to_end_all_wars
-	george_v
+	ENG_warlike_britain
+	ENG_irish_resistance
 }
 
 set_convoys = 800
 
 # DIPLOMACY
-if = {
-	limit = {
-		has_dlc = "Together for Victory"
-	}
-	set_autonomy = {
-		target = MAL
-		autonomous_state = autonomy_integrated_puppet
-	}
-	set_autonomy = {
-		target = RAJ
-		autonomous_state = autonomy_colony
-		freedom_level = 0.35
-	}
-	set_autonomy = {
-		target = SAF
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.4
-	}
-	set_autonomy = {
-		target = AST
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.2
-	}
-	set_autonomy = {
-		target = NZL
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.2
-	}
-	else = {
-		puppet = MAL
-		puppet = RAJ
-	}
-}
+
 
 
 if = {
@@ -121,15 +86,15 @@ set_politics = {
 
 
 
-create_faction = Allies
-add_to_faction = ENG
-add_to_faction = AST
-add_to_faction = NZL
-add_to_faction = SAF
+#create_faction = Allies
+#add_to_faction = ENG
+#add_to_faction = AST
+#add_to_faction = NZL
+#add_to_faction = SAF
 
-give_military_access = RAJ
-add_to_faction = RAJ		# Must be after puppet
-add_to_faction = MAL
+#give_military_access = RAJ
+#add_to_faction = RAJ		# Must be after puppet
+#add_to_faction = MAL
 
 #give_guarantee = CZE
 

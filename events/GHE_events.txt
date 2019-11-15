@@ -1,4 +1,4 @@
-add_namespace = GHE
+﻿add_namespace = GHE
 
 #Stalingrad captured
 country_event = {
@@ -27,5 +27,51 @@ country_event = {
 		name = GHE.2.a
 		add_political_power = -50
 		add_stability = -0.1
+	}
+}
+#Greece recieves alliance proposal
+country_event = {
+	id = GHE.3
+	title = GHE.3.t
+	desc = GHE.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = GHE.3.a
+		UKR = {
+			create_faction = slavo_greek_faction
+			add_to_faction = UKR
+			add_to_faction = GRE
+			country_event = { id = GHE.4 }	
+		}
+	}
+	option = {
+		name = GHE.3.a
+		country_event = { id = GHE.5 }	
+	}
+}
+#Greece agreed
+country_event = {
+	id = GHE.4
+	title = GHE.4.t
+	desc = GHE.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = GHE.4.a
+	}
+}
+#Greece refused
+country_event = {
+	id = GHE.5
+	title = GHE.5.t
+	desc = GHE.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = GHE.5.a
 	}
 }

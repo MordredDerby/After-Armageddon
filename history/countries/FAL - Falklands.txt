@@ -1,0 +1,30 @@
+﻿capital = 299
+
+#oob = "FAL"
+
+set_research_slots = 4
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+}
+
+set_politics = {
+	parties = {
+		radical_rightist = { 
+			popularity = 100
+		}
+	}
+	ruling_party = radical_rightist
+}
+
+create_country_leader = {
+	name = "Фольксрат"
+	desc = ""
+	picture = "gfx/leaders/TEX/Portrait_Dulles.dds"
+	expire = "1953.3.1"
+	ideology = nazism
+	traits = {
+	}
+}

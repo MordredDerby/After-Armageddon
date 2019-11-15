@@ -1,5 +1,5 @@
 ﻿l_russian:
- EDU_enthic_tensions:0 "Этнические конфликты"
+ EDU_ethnic_tensions:0 "Этнические конфликты"
  EDU_pacifism:0 "Антимилитаризм"
  SIB_decentralization:0 "Партикуляризм"
  SIB_military_women:0 "Женщины в армии"
@@ -8,10 +8,27 @@
  internationale_aid:0 "Помощь Интернационала"
  anarchy_idea:0 "Анархия"
  anarchy_idea_desc:0 "Правительство этого региона, если таковое вообще существует, имеет власть лишь на бумаге."
- abdullah_i:0 "Абдалла I"
+ abdullah_i:0 "Абдалла ибн Хусейн"
+ talal_i:0 "Талал ибн Абдалла"
+
+ ENG_warlike_britain:0 "Воинственная демократия"
+ ENG_irish_resistance:0 "Ирландское сопротивление"
 
  dockyard_clique:0 "Ганноверская клика"
  resource_clique:0 "Рейнская клика"
+ GER_police_state_1:0 "Полицейское государство"
+ GER_police_state_2:0 "Полицейское государство"
+ GER_police_state_3:0 "Полицейское государство"
+ GER_panzerwagen_idea:0 "Панцерваген"
+ GER_conversion_idea:0 "Тотальная конверсия"
+ GER_volksdeutsche:0 "Фольксдойче"
+ GER_alexander_ferdinand:0 "Александр Фердинанд"
+ GER_louis_ferdinand:0 "Луи Фердинанд"
+ GER_freikorps_idea:0 "Фрайкоры"
+ GER_army_rule_idea:0 "Независимость армии"
+ GER_army_rule_idea_desc:0 "Наше правительство состоит из военных, а потому армия не скована зависимостью от политиков и может принимать решения максимально оперативно."
+ GER_paganism_idea:0 "Государственное язычество"
+ GER_realpolitik_idea:0 "Реальная политика"
 
  shevchenko_plan:0 "План Шевченко"
  GHE_court_ministry:0 "Министерство двора"
@@ -25,3 +42,8 @@
  GHE_air_production_idea:0 "Харьковский авиазавод"
  GHE_welfare_idea:0 "Комитет народного благосостояния"
  GHE_grand_fleet:0 "Великая армада"
+
+ SCA_gustaf_adolf:0 "Густав VI Адольф"
+ SCA_stockholm_agreement:0 "Стокгольмское соглашение"
+
+ WAL_guzzolene:0 "Бензак!"

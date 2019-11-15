@@ -1,0 +1,788 @@
+focus_tree = {
+	id = free_ukraine
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FRU
+		}
+	}
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1200 }
+
+	focus = {
+		id = FRU_great_retreat
+		icon = GFX_goal_into_flames
+		cost = 10
+		x = 6
+		y = 0
+		completion_reward = {
+			remove_ideas = FRU_great_retreat
+			add_timed_idea = {
+    			idea = FRU_great_retreat_recover
+   				days = 180
+			}
+		}
+	}
+	focus = {
+		id = FRU_last_troopers
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		prerequisite = {
+			focus = FRU_great_retreat
+		}
+		x = -2
+		y = 1
+		relative_position_id = FRU_great_retreat
+		completion_reward = {
+			add_manpower = 10000
+		}
+	}
+	focus = {
+		id = FRU_retreat_recover
+		icon = GFX_goal_two_soldiers
+		cost = 10
+		prerequisite = {
+			focus = FRU_great_retreat
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_great_retreat
+		completion_reward = {
+			add_war_support = 0.05
+			modify_timed_idea = {
+    			idea = FRU_great_retreat_recover
+    			days = -60
+			}
+		}
+	}
+	focus = {
+		id = FRU_undermine_railways
+		icon = GFX_goal_rail_skull
+		cost = 10
+		prerequisite = {
+			focus = FRU_great_retreat
+		}
+		x = 2
+		y = 1
+		relative_position_id = FRU_great_retreat
+		completion_reward = {
+			91 = {
+				remove_building = {
+    				type = infrastructure
+    				level = 2
+				}
+				damage_building = {
+    				type = infrastructure
+    				damage = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRU_exiled_government
+		icon = GFX_goal_government_icon
+		cost = 10
+		prerequisite = {
+			focus = FRU_undermine_railways
+			focus = FRU_retreat_recover
+			focus = FRU_last_troopers
+		}
+		available = {
+			NOT = {
+				has_idea = FRU_great_retreat_recover
+			}
+		}
+		x = 0
+		y = 2
+		relative_position_id = FRU_great_retreat
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = FRU_congress
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = FRU_exiled_government
+		}
+		x = -3
+		y = 1
+		relative_position_id = FRU_exiled_government
+		completion_reward = {
+			add_political_power = 75
+			add_popularity = {
+    			ideology = radical_leftist
+    			popularity = 0.15
+			}
+		}
+	}
+	focus = {
+		id = FRU_clandestine_press
+		icon = GFX_goal_press
+		cost = 10
+		prerequisite = {
+			focus = FRU_congress
+		}
+		available = {
+			NOT = { is_subject_of = UKR }
+		}
+		x = -2
+		y = 1
+		relative_position_id = FRU_congress
+		completion_reward = {
+			add_ideas = FRU_clandestine_press
+			UKR = {
+				add_popularity = {
+    				ideology = radical_leftist
+   					popularity = 0.05
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRU_free_radio
+		icon = GFX_goal_radio_tower
+		cost = 10
+		prerequisite = {
+			focus = FRU_clandestine_press
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_clandestine_press
+		completion_reward = {
+			add_tech_bonus = {
+  				bonus = 0.5
+   				uses = 1
+    			category = electronics
+			}
+			add_timed_idea = {
+   				idea = FRU_anarchist_broadcasts
+    			days = 180
+			}
+		}
+	}
+	focus = {
+		id = FRU_illegal_literature
+		icon = GFX_goal_books
+		cost = 10
+		prerequisite = {
+			focus = FRU_free_radio
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_free_radio
+		completion_reward = {
+			unlock_decision_tooltip = FRU_propaganda
+		}
+	}
+	focus = {
+		id = FRU_international_anarchism
+		icon = GFX_goal_anarcho_communism
+		cost = 10
+		prerequisite = {
+			focus = FRU_illegal_literature
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_illegal_literature
+		completion_reward = {
+			add_ideas = internationale_aid
+		}
+	}
+	focus = {
+		id = FRU_no_regulations
+		icon = GFX_goal_free_trade
+		cost = 10
+		prerequisite = {
+			focus = FRU_congress
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_congress
+		completion_reward = {
+			add_ideas = FRU_free_economy
+		}
+	}
+	focus = {
+		id = FRU_no_taxes
+		icon = GFX_goal_money_flames
+		cost = 10
+		prerequisite = {
+			focus = FRU_no_regulations
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_no_regulations
+		completion_reward = {
+			swap_ideas = {
+   				remove_idea = FRU_free_economy
+    			add_idea = FRU_free_economy2
+			}
+		}
+	}
+	focus = {
+		id = FRU_international_trade
+		icon = GFX_goal_global_trade
+		cost = 10
+		prerequisite = {
+			focus = FRU_no_taxes
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_no_taxes
+		completion_reward = {
+			swap_ideas = {
+   				remove_idea = FRU_free_economy2
+    			add_idea = FRU_free_economy3
+			}
+		}
+	}
+	focus = {
+		id = FRU_black_market
+		icon = GFX_goal_generic_corruption
+		cost = 10
+		prerequisite = {
+			focus = FRU_international_trade
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_international_trade
+		completion_reward = {
+			swap_ideas = {
+   				remove_idea = FRU_free_economy3
+    			add_idea = FRU_free_economy4
+			}
+		}
+	}
+	focus = {
+		id = FRU_evacuated_factories
+		icon = GFX_focus_generic_industry_1
+		cost = 10
+		prerequisite = {
+			focus = FRU_congress
+		}
+		x = 2
+		y = 1
+		relative_position_id = FRU_congress
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRU_cooperative_workshops
+		icon = GFX_focus_generic_industry_2
+		cost = 10
+		prerequisite = {
+			focus = FRU_evacuated_factories
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_evacuated_factories
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRU_carpathian_mines
+		icon = GFX_goal_gold_mountain
+		cost = 10
+		prerequisite = {
+			focus = FRU_cooperative_workshops
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_cooperative_workshops
+		completion_reward = {
+			add_ideas = FRU_carpathian_mines
+			add_tech_bonus = {
+  				bonus = 0.5
+   				uses = 2
+    			category = excavation_tech
+			}
+			add_resource = {
+    			type = steel
+    			amount = 5
+			}
+		}
+	}
+	focus = {
+		id = FRU_peoples_industrial_fund
+		icon = GFX_goal_syndicalist_industry
+		cost = 10
+		prerequisite = {
+			focus = FRU_carpathian_mines
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_carpathian_mines
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+	focus = {
+		id = FRU_economic_miracle
+		icon = GFX_focus_generic_industry_3
+		cost = 10
+		prerequisite = {
+			focus = FRU_black_market
+		}
+		prerequisite = {
+			focus = FRU_peoples_industrial_fund
+		}
+		x = 1
+		y = 1
+		relative_position_id = FRU_black_market
+		completion_reward = {
+			add_tech_bonus = {
+  				bonus = 0.5
+   				uses = 3
+    			category = industry
+			}
+		}
+	}
+	focus = {
+		id = FRU_ignore_laws
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		cost = 10
+		prerequisite = {
+			focus = FRU_black_market
+		}
+		prerequisite = {
+			focus = FRU_international_anarchism
+		}
+		x = -1
+		y = 1
+		relative_position_id = FRU_black_market
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = FRU_revolutionary_military_council
+		icon = GFX_goal_soldiers_windrose
+		cost = 5
+		prerequisite = {
+			focus = FRU_exiled_government
+		}
+		x = 3
+		y = 1
+		relative_position_id = FRU_exiled_government
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+	focus = {
+		id = FRU_improvised_weapons
+		icon = GFX_goal_break_rifle
+		cost = 10
+		prerequisite = {
+			focus = FRU_revolutionary_military_council
+		}
+		x = -2
+		y = 1
+		relative_position_id = FRU_revolutionary_military_council
+		completion_reward = {
+			add_ideas = FRU_improvised_weapons
+			add_equipment_to_stockpile = {
+    			type = infantry_equipment
+    			amount = 1000
+   				producer = FRU
+			}
+		}
+	}
+	focus = {
+		id = FRU_shumko_cocktail
+		icon = GFX_goal_molotov
+		cost = 10
+		prerequisite = {
+			focus = FRU_improvised_weapons
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_improvised_weapons
+		completion_reward = {
+			add_ideas = FRU_shumko_cocktail
+		}
+	}
+	focus = {
+		id = FRU_fortified_passes
+		icon = GFX_goal_fortify_the_westwall
+		cost = 10
+		prerequisite = {
+			focus = FRU_shumko_cocktail
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_shumko_cocktail
+		completion_reward = {
+			89 = {
+				add_building_construction = {
+    				type = bunker
+    				level = 2
+    				instant_build = yes
+    				province = 6583
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRU_field_fortification
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		prerequisite = {
+			focus = FRU_fortified_passes
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_fortified_passes
+		completion_reward = {
+			add_ideas = FRU_guerilla_state
+		}
+	}
+	focus = {
+		id = FRU_integrate_militias
+		icon = GFX_goal_two_soldiers
+		cost = 10
+		prerequisite = {
+			focus = FRU_revolutionary_military_council
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_revolutionary_military_council
+		completion_reward = {
+			swap_ideas = {
+   				remove_idea = FRU_ragtag_army
+    			add_idea = FRU_united_militias
+			}
+		}
+	}
+	focus = {
+		id = FRU_elected_commanders
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = FRU_integrate_militias
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_integrate_militias
+		completion_reward = {
+			swap_ideas = {
+   				remove_idea = FRU_united_militias
+    			add_idea = FRU_elected_commanders
+			}
+		}
+	}
+	focus = {
+		id = FRU_town_guard
+		icon = GFX_goal_urban
+		cost = 10
+		prerequisite = {
+			focus = FRU_elected_commanders
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_elected_commanders
+		completion_reward = {
+			add_ideas = FRU_town_guard
+		}
+	}
+	focus = {
+		id = FRU_mountain_troops
+		icon = GFX_goal_mountain_soldiers
+		cost = 10
+		prerequisite = {
+			focus = FRU_town_guard
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_town_guard
+		completion_reward = {
+			add_tech_bonus = {
+  				bonus = 0.5
+   				uses = 2
+    			category = mountaineers_tech
+			}
+			unlock_decision_tooltip = FRU_mountain_guns
+		}
+	}
+	focus = {
+		id = FRU_arm_resistance
+		icon = GFX_goal_arms_export
+		cost = 10
+		prerequisite = {
+			focus = FRU_revolutionary_military_council
+		}
+		x = 2
+		y = 1
+		relative_position_id = FRU_revolutionary_military_council
+		completion_reward = {
+			add_war_support = 0.1
+			unlock_decision_tooltip = FRU_raise_militia
+		}
+	}
+	focus = {
+		id = FRU_coordinate_guerillas
+		icon = GFX_goal_soldiers_hand
+		cost = 10
+		prerequisite = {
+			focus = FRU_arm_resistance
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_arm_resistance
+		completion_reward = {
+			add_ideas = paramilitarism_focus
+			add_tech_bonus = {
+  				bonus = 0.5
+   				uses = 2
+    			category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = FRU_night_raids
+		icon = GFX_focus_prc_infiltration
+		cost = 10
+		prerequisite = {
+			focus = FRU_coordinate_guerillas
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_coordinate_guerillas
+		completion_reward = {
+			add_ideas = FRU_night_raids
+		}
+	}
+	focus = {
+		id = FRU_railroad_raids
+		icon = GFX_goal_rail_skull_three
+		cost = 5
+		prerequisite = {
+			focus = FRU_night_raids
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_night_raids
+		completion_reward = {
+			unlock_decision_tooltip = FRU_railroad_raid
+		}
+	}
+	focus = {
+		id = FRU_peoples_fury
+		icon = GFX_goal_flames_of_rebellion
+		cost = 10
+		prerequisite = {
+			focus = FRU_mountain_troops
+		}
+		prerequisite = {
+			focus = FRU_field_fortification
+		}
+		prerequisite = {
+			focus = FRU_railroad_raids
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_mountain_troops
+		completion_reward = {
+			army_experience = 20
+			add_war_support = 0.2
+			add_tech_bonus = {
+  				bonus = 0.5
+   				uses = 2
+    			category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = FRU_submit_GHE
+		icon = GFX_focus_CZE_german_puppet
+		cost = 10
+		x = 15
+		y = 0
+		completion_reward = {
+			UKR = {
+				set_autonomy = {
+					target = FRU
+					autonomous_state = autonomy_dominion
+					freedom_level = 0.4
+				}
+			}
+			hidden_effect = {
+				set_politics = {
+					parties = {
+						moderate_leftist = { popularity = 20 }
+						moderate_rightist = { popularity = 20 }
+						radical_rightist = { popularity = 5 }
+						radical_leftist = { popularity = 50 }
+						centrist = { popularity = 5 }
+					}
+					ruling_party = radical_leftist
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRU_transit_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+		prerequisite = {
+			focus = FRU_submit_GHE
+		}
+		x = -2
+		y = 1
+		relative_position_id = FRU_submit_GHE
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = FRU_special_economic_zone
+		icon = GFX_goal_industry_paper
+		cost = 10
+		prerequisite = {
+			focus = FRU_transit_trade
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_transit_trade
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = FRU_ask_subsidies
+		icon = GFX_focus_generic_concessions
+		cost = 10
+		prerequisite = {
+			focus = FRU_submit_GHE
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_submit_GHE
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = FRU_ukrainian_currency_area
+		icon = GFX_focus_mex_privatisation
+		cost = 10
+		prerequisite = {
+			focus = FRU_ask_subsidies
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_ask_subsidies
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = FRU_mutual_defence
+		icon = GFX_goal_generic_military_deal
+		cost = 10
+		prerequisite = {
+			focus = FRU_submit_GHE
+		}
+		x = 2
+		y = 1
+		relative_position_id = FRU_submit_GHE
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = FRU_promote_officers
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10
+		prerequisite = {
+			focus = FRU_mutual_defence
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRU_mutual_defence
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = FRU_professional_army
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = FRU_promote_officers
+		}
+		prerequisite = {
+			focus = FRU_ukrainian_currency_area
+		}
+		x = -1
+		y = 1
+		relative_position_id = FRU_promote_officers
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = FRU_economic_council
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = FRU_special_economic_zone
+		}
+		prerequisite = {
+			focus = FRU_ukrainian_currency_area
+		}
+		x = 1
+		y = 1
+		relative_position_id = FRU_special_economic_zone
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = FRU_autonomous_region
+		icon = GFX_goal_unequal_treaty
+		cost = 10
+		prerequisite = {
+			focus = FRU_economic_council
+		}
+		prerequisite = {
+			focus = FRU_professional_army
+		}
+		x = 0
+		y = 4
+		relative_position_id = FRU_submit_GHE
+		completion_reward = {
+			add_stability = 0.2
+			set_cosmetic_tag = FRU_carpathia
+		}
+	}
+}

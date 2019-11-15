@@ -1,0 +1,47 @@
+add_namespace = UKR_RUS
+
+country_event = {
+	id = UKR_RUS.1
+	title = UKR_RUS.1.t
+	desc = UKR_RUS.1.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = UKR
+		stability < 0.3
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = UKR_RUS.1.a
+		set_party_name = { 
+    		ideology = moderate_rightist 
+    		long_name = UKR_moderate_rightist_RUS_long 
+    		name = UKR_moderate_rightist_RUS 
+		}
+		set_politics = {
+			ruling_party = moderate_rightist
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Владимир Романов"
+			picture = "gfx/leaders/UKR/Portrait_Vladimir_Romanov.dds"
+			expire = "1970.1.1"
+			ideology = moderate_rightist_ideology
+			traits = {
+				#
+			}
+		}
+		set_cosmetic_tag = UKR_RUS
+		remove_unit_leader = 74586
+		add_popularity = {
+    		ideology = moderate_rightist
+    		popularity = 0.15
+		}
+		add_stability = -0.1
+	}
+}

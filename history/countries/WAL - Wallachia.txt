@@ -1,4 +1,4 @@
-capital = 46
+﻿capital = 46
 
 oob = "WAL_1936"
 
@@ -30,6 +30,11 @@ set_politics = {
 		}
 	}
 	ruling_party = neutrality
+}
+
+add_ideas = {
+	WAL_guzzolene
+	free_trade
 }
 
 create_country_leader = {

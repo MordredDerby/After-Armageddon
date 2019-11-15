@@ -1,4 +1,4 @@
-add_namespace = GRE
+﻿add_namespace = GRE
 
 #Выбор столицы
 country_event = {
@@ -11,7 +11,7 @@ country_event = {
 	option = {
 		name = GRE.1.a
 		set_capital = 341 #Константинополь
-		add_national_unity = 0.1
+		add_stability = 0.1
 	}
 	option = {
 		name = GRE.1.b

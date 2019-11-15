@@ -1,0 +1,10 @@
+ukrainian_civil_war_category = {
+
+	icon = GFX_decision_category_infiltration
+
+	picture = GFX_decision_cat_picture_ukrainian_civil_war
+
+	allowed = {
+		tag = FRU
+	}
+}

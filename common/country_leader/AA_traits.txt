@@ -1,0 +1,21 @@
+leader_traits = {
+	
+	lovecraft_trait = {
+		random = no
+		custom_effect_tooltip = lovecraft_trait_tt
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	scout_king = {
+		random = no
+		recon_factor = 0.1
+		recon = 0.25
+		army_speed_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

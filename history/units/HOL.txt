@@ -1,0 +1,96 @@
+﻿division_template = {
+	name = "Feldgendarmerie"
+	is_locked = yes
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+	support = {
+		military_police = { x = 0 y = 0 }  
+	}
+}
+
+units = {
+	division= {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 3314  # Amsterdam
+		division_template = "Feldgendarmerie"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 3211 # The Hague
+		division_template = "Feldgendarmerie"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 9498  # Rotterdam
+		division_template = "Feldgendarmerie"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 11562  # Maastricht
+		division_template = "Feldgendarmerie"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 11519  # Liege
+		division_template = "Feldgendarmerie"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 516  #Brussels
+		division_template = "Feldgendarmerie"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 13068  # Leuven
+		division_template = "Feldgendarmerie"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 6583  # Luxembourg
+		division_template = "Feldgendarmerie"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+}

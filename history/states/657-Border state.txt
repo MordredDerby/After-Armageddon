@@ -4,7 +4,7 @@ state={
 	name="STATE_657" # Birobidzhan
 	manpower = 308380
 	resources={
-		steel=24
+		steel=18 # was: 24
 	}
 
 
@@ -12,11 +12,19 @@ state={
 
 	history={
 		owner = MAN
+		add_core_of = MAN
+
+		victory_points = {
+			7672 3
+		}
+		victory_points = {
+			7763 1
+		}
+
 		buildings = {
 			infrastructure = 3
 			air_base = 2
 		}
-		add_core_of = MAN
 	}
 
 	provinces={

@@ -1,0 +1,78 @@
+operations = {
+	
+	mexican_raid = {
+		icon = border_war
+		allowed = {
+			original_tag = MEX
+		}
+		available = {
+			NOT = { has_non_aggression_pact_with = TEX }
+			any_state = {
+				is_owned_and_controlled_by = TEX
+				any_neighbor_state = {
+					is_fully_controlled_by = ROOT
+					has_ROOT_at_least_1_div_in_current_state_scope = yes
+				}
+			}
+		}
+		visible = {
+			TEX = { exists = yes }
+			NOT = { has_war_with = TEX }
+		}
+
+		cost = 100
+		days_remove = 60
+		days_re_enable = 180
+
+		complete_effect = {
+			hidden_effect = {
+				random_state = {
+					limit = {
+						is_owned_and_controlled_by = FROM
+						any_neighbor_state = {
+							has_ROOT_at_least_1_div_in_current_state_scope = yes
+							is_fully_controlled_by = ROOT
+						}
+					}
+					set_variable = { mexican_raid_target = id }
+					save_global_event_target_as = mexican_raid_target
+				}
+				random_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						any_neighbor_state = {
+							state = var:mexican_raid_target
+						}
+					}
+					set_variable = { mexican_raid_base = id }
+					save_global_event_target_as = mexican_raid_base
+				}
+			}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:mexican_raid_base
+					num_provinces = 4
+					on_win = MEX.1
+					on_lose = MEX.5
+					on_cancel = MEX.3
+				}
+				
+				defender = {
+					state = var:mexican_raid_target
+					num_provinces = 4
+					on_win = MEX.6
+					on_lose = MEX.2
+					on_cancel = MEX.4
+				}
+			}
+		}
+
+		remove_effect = {
+			cancel_border_war = {
+  				defender = var:mexican_raid_target
+    			attacker = var:mexican_raid_base
+			}
+		}
+	}
+}

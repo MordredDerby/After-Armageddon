@@ -1,0 +1,48 @@
+﻿capital = 46
+
+#oob = "WAL_1936"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	early_destroyer = 1
+	transport = 1
+}
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 65
+		}
+
+		fascism = {
+			popularity = 10
+		}
+		
+		communism = {
+			popularity = 15
+		}
+		neutrality = {
+			popularity = 10
+		}
+	}
+	ruling_party = democratic
+}
+
+create_country_leader = {
+	name = "Фридрих фон унд цу Банат"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	expire = "1970.3.1"
+	ideology = socialism
+	traits = {
+		
+	}
+}
+
+
+
+
+

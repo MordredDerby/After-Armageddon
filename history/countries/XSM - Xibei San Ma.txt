@@ -1,0 +1,38 @@
+﻿capital = 604
+
+oob = "XSM_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	mass_assault = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "Waking the Tiger"
+	}
+	add_ideas = {
+		PRC_government_corruption
+		CHI_ineffective_bureaucracy_warlord
+	}
+}
+
+set_politics = {
+	parties = {
+		democratic = { 
+			moderate_leftist = 100
+		}
+	ruling_party = moderate_leftist
+}
+
+create_country_leader = {
+	name = "Ма Цзиюань"
+	desc = ""
+	picture = "gfx/leaders/AUS/Portrait_Ma_Jiyuan.tga"
+	expire = "1965.1.1"
+	ideology = religious_socialism
+	traits = {
+		#
+	}
+}

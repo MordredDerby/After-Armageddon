@@ -4,19 +4,23 @@ state={
 	name="STATE_82"
 	manpower = 941500
 	resources={
-		aluminium=6
+		aluminium=4 # was: 6
 	}
 	
 	state_category = rural
 
 	history={
-		owner = HUN
-		add_core_of = HUN
+		victory_points = {
+			9606 3
+		}
+		owner = BNT
+		add_core_of = BNT
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 2
 		}
-		add_core_of = ROM
+		#add_core_of = ROM
+		add_core_of = TRA
 	}
 
 	provinces={

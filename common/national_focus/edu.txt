@@ -11,7 +11,7 @@ focus_tree = {
 	focus = {
 		id = EDU_provisional_regime
 		icon = GFX_goal_generic_neutrality_focus
-		cost = 10,00
+		cost = 10
 		x = 5
 		y = 0
 
@@ -19,7 +19,7 @@ focus_tree = {
 	focus = {
 		id = EDU_federal_army
 		icon = GFX_goal_rhineland
-		cost = 10,00
+		cost = 10
 		mutually_exclusive = {
 			focus = EDU_local_armies
 		}
@@ -30,7 +30,7 @@ focus_tree = {
 	focus = {
 		id = EDU_local_armies
 		icon = GFX_focus_generic_little_entente
-		cost = 10,00
+		cost = 10
 		mutually_exclusive = {
 			focus = EDU_federal_army
 		}
@@ -41,7 +41,7 @@ focus_tree = {
 	focus = {
 		id = EDU_german_officers
 		icon = GFX_goal_generic_axis_build_infantry
-		cost = 10,00
+		cost = 10
 		mutually_exclusive = {
 			focus = EDU_polish_officers
 		}
@@ -52,7 +52,7 @@ focus_tree = {
 	focus = {
 		id = EDU_polish_officers
 		icon = GFX_goal_generic_allies_build_infantry
-		cost = 10,00
+		cost = 10
 		mutually_exclusive = {
 			focus = EDU_german_officers
 		}
@@ -63,7 +63,7 @@ focus_tree = {
 	focus = {
 		id = EDU_war_is_nigh
 		icon = GFX_goal_generic_attack_allies
-		cost = 10,00
+		cost = 10
 		x = 16
 		y = 1
 
@@ -71,7 +71,7 @@ focus_tree = {
 	focus = {
 		id = EDU_suffrage
 		icon = GFX_goal_generic_forceful_treaty
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_provisional_regime
 		}
@@ -82,7 +82,7 @@ focus_tree = {
 	focus = {
 		id = EDU_leftism
 		icon = GFX_focus_yug_pan_slavic_congress
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_suffrage
 		}
@@ -93,7 +93,7 @@ focus_tree = {
 	focus = {
 		id = EDU_coalition
 		icon = GFX_goal_generic_national_unity
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_suffrage
 		}
@@ -104,7 +104,7 @@ focus_tree = {
 	focus = {
 		id = EDU_languages
 		icon = GFX_goal_generic_propaganda
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_coalition
 		}
@@ -115,7 +115,7 @@ focus_tree = {
 	focus = {
 		id = EDU_lustration
 		icon = GFX_goal_continuous_def_against_influence
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_languages
 		}
@@ -126,7 +126,7 @@ focus_tree = {
 	focus = {
 		id = EDU_nonpartisan
 		icon = GFX_goal_anschluss
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_suffrage
 		}
@@ -137,7 +137,7 @@ focus_tree = {
 	focus = {
 		id = EDU_tutelage
 		icon = GFX_focus_generic_support_the_left_right
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_nonpartisan
 		}
@@ -148,7 +148,7 @@ focus_tree = {
 	focus = {
 		id = EDU_sanation
 		icon = GFX_goal_demand_sudetenland
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_tutelage
 		}
@@ -159,7 +159,7 @@ focus_tree = {
 	focus = {
 		id = EDU_nationalities
 		icon = GFX_goal_generic_national_unity
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_provisional_regime
 		}
@@ -170,7 +170,7 @@ focus_tree = {
 	focus = {
 		id = EDU_baltic_vanguard
 		icon = GFX_focus_generic_soviet_politics
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_nationalities
 		}
@@ -181,7 +181,7 @@ focus_tree = {
 	focus = {
 		id = EDU_pacification_baltia
 		icon = GFX_goal_generic_political_pressure
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_nationalities
 		}
@@ -192,7 +192,7 @@ focus_tree = {
 	focus = {
 		id = EDU_ostzee
 		icon = GFX_focus_generic_home_defense
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_nationalities
 		}
@@ -203,7 +203,7 @@ focus_tree = {
 	focus = {
 		id = EDU_baltia
 		icon = GFX_focus_freedom
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_baltic_vanguard
 		}
@@ -220,7 +220,7 @@ focus_tree = {
 	focus = {
 		id = EDU_german_friendship
 		icon = GFX_goal_tripartite_pact
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_baltia
 		}
@@ -231,7 +231,7 @@ focus_tree = {
 	focus = {
 		id = EDU_polonization
 		icon = GFX_goal_generic_demand_territory
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_baltia
 		}
@@ -242,7 +242,7 @@ focus_tree = {
 	focus = {
 		id = EDU_german_paramilitary
 		icon = GFX_goal_generic_military_sphere
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_baltia
 		}
@@ -253,7 +253,7 @@ focus_tree = {
 	focus = {
 		id = EDU_peacekeeping
 		icon = GFX_focus_secret_rearmament
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_federal_army
 			focus = EDU_local_armies
@@ -265,7 +265,7 @@ focus_tree = {
 	focus = {
 		id = EDU_war_propaganda
 		icon = GFX_goal_generic_propaganda
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_war_is_nigh
 		}
@@ -276,7 +276,7 @@ focus_tree = {
 	focus = {
 		id = EDU_armed_neutrality
 		icon = GFX_goal_generic_defence
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_war_propaganda
 		}
@@ -290,7 +290,7 @@ focus_tree = {
 	focus = {
 		id = EDU_defend_democracy
 		icon = GFX_goal_generic_small_arms
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_war_propaganda
 		}
@@ -304,7 +304,7 @@ focus_tree = {
 	focus = {
 		id = EDU_general_staff
 		icon = GFX_goal_generic_army_doctrines
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_polish_officers
 			focus = EDU_german_officers
@@ -316,7 +316,7 @@ focus_tree = {
 	focus = {
 		id = EDU_junta
 		icon = GFX_focus_generic_military_mission
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_sanation
 		}
@@ -327,7 +327,7 @@ focus_tree = {
 	focus = {
 		id = EDU_federation
 		icon = GFX_goal_support_democracy
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_lustration
 		}
@@ -338,7 +338,7 @@ focus_tree = {
 	focus = {
 		id = EDU_soviet
 		icon = GFX_focus_generic_join_comintern
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_override_parliament
 		}
@@ -349,7 +349,7 @@ focus_tree = {
 	focus = {
 		id = EDU_syndicalism
 		icon = GFX_goal_generic_consumer_goods
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_leftism
 		}
@@ -360,7 +360,7 @@ focus_tree = {
 	focus = {
 		id = EDU_override_parliament
 		icon = GFX_focus_generic_soviet_politics
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_syndicalism
 		}
@@ -371,7 +371,7 @@ focus_tree = {
 	focus = {
 		id = EDU_germania
 		icon = GFX_focus_freedom
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = EDU_german_paramilitary
 		}

@@ -12,20 +12,31 @@ ideas = {
 				NOT ={
 					has_government = communism
 				}
-				NOT = {
-					any_other_country = {
-						original_tag = SYR
-						has_government = democratic 
-						NOT = {
-							tag = ROOT
-						}
-					}
-				}
 			}
 			
 			removal_cost = -1
 			
 			traits = { popular_figurehead }
+		}
+		talal_i = {
+
+			picture = talal_i
+			
+			allowed = {
+				original_tag = SYR
+			}
+
+			allowed_civil_war = {
+				NOT ={
+					has_government = communism
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.5
+			}
 		}
 	}
 }

@@ -6,8 +6,9 @@ state={
 	state_category = rural
 	
 	history={
-		owner = IRQ
+		add_core_of = KUW
 		add_core_of = IRQ
+		owner = IRQ
 		victory_points = {
 			8085 1 
 		}
@@ -17,6 +18,7 @@ state={
 				naval_base = 4
 			}
 		}
+
 	}
 	provinces={
 		8085

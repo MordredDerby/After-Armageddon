@@ -13,25 +13,19 @@ set_technology = {
 add_ideas = {
 	scraping_the_barrel
 	free_trade
-	guerilla_state
-	internationale_aid
+	FRU_great_retreat
+	FRU_ragtag_army
 }
 set_politics = {
 
 	parties = {
-		democratic = { 
-			popularity = 10
-		}
-
-		fascism = {
-			popularity = 0
-		}
-		
-		communism = {
-			popularity = 90
-		}
+		moderate_leftist = { popularity = 30 }
+		moderate_rightist = { popularity = 0 }
+		radical_rightist = { popularity = 0 }
+		radical_leftist = { popularity = 70 }
+		centrist = { popularity = 0 }
 	}
-	ruling_party = communism
+	ruling_party = radical_leftist
 }
 
 create_country_leader = {
@@ -39,7 +33,7 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/FRU/Portrait_Artemius.dds"
 	expire = "1953.3.1"
-	ideology = anarchist_communism
+	ideology = radical_leftist_ideology
 	traits = {
 		cornered_fox
 	}

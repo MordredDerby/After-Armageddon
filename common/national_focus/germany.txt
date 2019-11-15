@@ -1,0 +1,734 @@
+focus_tree = {
+	id = german_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1350 }
+
+	shared_focus = army_effort
+	shared_focus = aviation_effort
+	shared_focus = naval_effort
+	shared_focus = industrial_effort
+
+	focus = {
+		id = GER_end_warlords
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		x = 7
+		y = 0
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = GER_unlock_clique_decisions
+		}
+	}
+	focus = {
+		id = GER_army_rule
+		icon = GFX_focus_ger_oppose_hitler
+		cost = 10
+		available = {
+			NOT = {
+				has_idea = dockyard_clique
+				has_idea = resource_clique
+			}
+		}
+		x = 16
+		y = 0
+		completion_reward = {
+			add_ideas = GER_army_rule_idea
+		}
+	}
+	focus = {
+		id = GER_restore_party
+		icon = GFX_goal_support_fascism
+		cost = 10
+		prerequisite = {
+			focus = GER_end_warlords
+		}
+		available = {
+			NOT = {
+				has_idea = dockyard_clique
+				has_idea = resource_clique
+			}
+		}
+		x = 3
+		y = 1
+		relative_position_id = GER_end_warlords
+		completion_reward = {
+			add_popularity = {
+    			ideology = fascism
+   				popularity = 0.15
+			}
+		}
+	}
+	focus = {
+		id = GER_ask_jutland
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		prerequisite = {
+			focus = GER_negotiate_east_germany
+			focus = GER_root_out_radicals
+		}
+		mutually_exclusive = {
+			focus = GER_take_jutland
+		}
+		available = {
+			NOT = { has_war_with = SCA }
+		}
+		x = 1
+		y = 2
+		relative_position_id = GER_baltic
+		completion_reward = {
+			SCA = {
+				country_event = { id = GER.14 }
+			}
+		}
+	}
+	focus = {
+		id = GER_take_jutland
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 10
+		prerequisite = {
+			focus = GER_negotiate_east_germany
+			focus = GER_root_out_radicals
+		}
+		mutually_exclusive = {
+			focus = GER_ask_jutland
+		}
+		x = -1
+		y = 2
+		relative_position_id = GER_baltic
+		completion_reward = {
+			create_wargoal = {
+   				target = SCA
+   				type = take_core_state
+				generator = { 58 }
+			}
+		}
+	}
+	focus = {
+		id = GER_sudetenland
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = GER_pangermanism
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_pangermanism
+		completion_reward = {
+			AUS = {
+				country_event = { id = SDT.1 } 
+			}
+		}
+	}
+	focus = {
+		id = GER_support_separatism
+		icon = GFX_focus_secret_rearmament
+		cost = 10
+		prerequisite = {
+			focus = GER_pangermanism
+		}
+		x = 2
+		y = 1
+		relative_position_id = GER_pangermanism
+		completion_reward = {
+			EDU = {
+				add_stability = -0.1
+				add_popularity = {
+    			ideology = fascism
+   					popularity = 0.1
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_negotiate_east_germany
+		icon = GFX_goal_generic_military_deal
+		cost = 10
+		prerequisite = {
+			focus = GER_support_separatism
+		}
+		available = {
+			DDR = {
+				exists = yes
+				has_war = no
+				is_subject = no
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_support_separatism
+		completion_reward = {
+			country_event = { id = GER.13 }
+		}
+	}
+	focus = {
+		id = GER_paganism
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10
+		prerequisite = {
+			focus = GER_spirit
+		}
+		x = 18
+		y = 3
+		completion_reward = {
+			add_ideas = GER_paganism_idea
+		}
+	}
+	focus = {
+		id = GER_switzerland_anschluss
+		icon = GFX_focus_attack_switzerland
+		cost = 10
+		prerequisite = {
+			focus = GER_AUS_cw
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_AUS_cw
+		completion_reward = {
+			SWI = {
+				country_event = { id = GER.2 }
+			}
+		}
+	}
+	focus = {
+		id = GER_austrian_opposition
+		icon = GFX_goal_generic_attack_allies
+		cost = 10
+		prerequisite = {
+			focus = GER_pangermanism
+		}
+		x = -3
+		y = 1
+		relative_position_id = GER_pangermanism
+		completion_reward = {
+			AUS = {
+				add_ideas = fascist_influence
+				add_stability = -0.05
+			}
+		}
+	}
+	focus = {
+		id = GER_AUS_cw
+		icon = GFX_goal_support_fascism
+		cost = 10
+		prerequisite = {
+			focus = GER_austrian_opposition
+		}
+		prerequisite = {
+			focus = GER_sudetenland
+		}
+		available = {
+			AUS = {
+				NOT = {
+					has_government = fascism
+					owns_state = 9
+				}
+				has_stability < 0.5
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_austrian_opposition
+		completion_reward = {
+			AUS = {
+				start_civil_war = {
+    				ideology = fascism
+    			}
+			}
+		}
+	}
+	focus = {
+		id = GER_pangermanism
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		prerequisite = {
+			focus = GER_puppet_monarch
+			focus = GER_personality_cult
+		}
+		x = -3
+		y = 1
+		relative_position_id = GER_personality_cult
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = GER_freikorps
+		icon = GFX_goal_generic_military_sphere
+		cost = 10
+		prerequisite = {
+			focus = GER_spirit
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_spirit
+		completion_reward = {
+			add_ideas = GER_freikorps_idea
+		}
+	}
+	focus = {
+		id = GER_folks
+		icon = GFX_focus_chi_army_reform
+		cost = 10
+		prerequisite = {
+			focus = GER_spirit
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_spirit
+		completion_reward = {
+			add_ideas = GER_volksdeutsche
+		}
+	}
+	focus = {
+		id = GER_personality_cult
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		prerequisite = {
+			focus = GER_no_monarch
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_no_monarch
+		completion_reward = {
+			add_country_leader_trait = dictator
+		}
+	}
+	focus = {
+		id = GER_spirit
+		icon = GFX_focus_ger_reichskommisariats
+		cost = 10
+		prerequisite = {
+			focus = GER_army_rule
+		}
+		x = 2
+		y = 1
+		relative_position_id = GER_army_rule
+
+	}
+	focus = {
+		id = GER_technology
+		icon = GFX_focus_generic_tank_production
+		cost = 10
+		prerequisite = {
+			focus = GER_army_rule
+		}
+		x = -2
+		y = 1
+		relative_position_id = GER_army_rule
+		completion_reward = {
+			add_tech_bonus = {
+    			bonus = 0.25
+   				uses = 3
+    			category = armor
+    			category = industry
+			}
+		}
+	}
+	focus = {
+		id = GER_autarky
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		prerequisite = {
+			focus = GER_technology
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_technology
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_autarky
+				bonus = 0.5
+				uses = 2
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+			add_ideas = GER_autarky_idea
+		}
+	}
+	focus = {
+		id = GER_baltic
+		icon = GFX_focus_generic_home_defense
+		cost = 10
+		prerequisite = {
+			focus = GER_pangermanism
+			focus = GER_realpolitik
+		}
+		x = 0
+		y = 4
+		relative_position_id = GER_reichsreform
+
+	}
+	focus = {
+		id = GER_transylvanian_saxons
+		icon = GFX_focus_rom_preserve_romania
+		cost = 10
+		prerequisite = {
+			focus = GER_pangermanism
+		}
+		prerequisite = {
+			focus = GER_sudetenland
+		}
+		x = 0
+		y = 2
+		relative_position_id = GER_pangermanism
+
+	}
+	focus = {
+		id = GER_coronation
+		icon = GFX_focus_ger_return_of_the_kaiser
+		cost = 10
+		prerequisite = {
+			focus = GER_reichsreform
+		}
+		mutually_exclusive = {
+			focus = GER_no_monarch
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_reichsreform
+		completion_reward = {
+			country_event = { id = GER.1 }
+		}
+	}
+	focus = {
+		id = GER_monarchist_coup
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 10
+		prerequisite = {
+			focus = GER_coronation
+		}
+		mutually_exclusive = {
+			focus = GER_puppet_monarch
+		}
+		available = {
+			has_idea = GER_louis_ferdinand
+		}
+		x = 2
+		y = 1
+		relative_position_id = GER_coronation
+		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality
+			}
+			add_stability = -0.15
+		}
+	}
+	focus = {
+		id = GER_puppet_monarch
+		icon = GFX_focus_rom_handle_king
+		cost = 10
+		prerequisite = {
+			focus = GER_coronation
+		}
+		mutually_exclusive = {
+			focus = GER_monarchist_coup
+		}
+		available = {
+			has_idea = GER_alexander_ferdinand
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_coronation
+		completion_reward = {
+			add_country_leader_trait = imperial_connections
+		}
+	}
+	focus = {
+		id = GER_no_monarch
+		icon = GFX_focus_ger_reichskommisariats
+		cost = 10
+		prerequisite = {
+			focus = GER_reichsreform
+		}
+		mutually_exclusive = {
+			focus = GER_coronation
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_reichsreform
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = GER_reichsreform
+		icon = GFX_focus_generic_treaty
+		cost = 15
+		prerequisite = {
+			focus = GER_end_warlords
+		}
+		available = {
+			NOT = {
+				has_idea = dockyard_clique
+				has_idea = resource_clique
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_end_warlords
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+			army_experience = 25
+		}
+	}
+	focus = {
+		id = GER_purge
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = GER_end_warlords
+		}
+		x = -3
+		y = 1
+		relative_position_id = GER_end_warlords
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_police_state_1
+				add_idea = GER_police_state_2
+			}
+		}
+	}
+	focus = {
+		id = GER_army_police
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = GER_purge
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_purge
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_police_state_2
+				add_idea = GER_police_state_3
+			}
+		}
+	}
+	focus = {
+		id = GER_realpolitik
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		prerequisite = {
+			focus = GER_monarchist_coup
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_monarchist_coup
+		completion_reward = {
+			add_ideas = GER_realpolitik_idea
+		}
+	}
+	focus = {
+		id = GER_take_brandenburg
+		icon = GFX_focus_cze_german_puppet
+		cost = 10
+		prerequisite = {
+			focus = GER_realpolitik
+		}
+		available = {
+			DDR = {
+				exists = yes
+				has_war = no
+				is_subject = no
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = GER_realpolitik
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_everything
+   				target = DDR
+			}
+		}
+	}
+	focus = {
+		id = GER_root_out_radicals
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 10
+		prerequisite = {
+			focus = GER_take_brandenburg
+		}
+		prerequisite = {
+			focus = GER_take_brandenburg
+		}
+		x = -2
+		y = 2
+		relative_position_id = GER_realpolitik
+		completion_reward = {
+			add_popularity = {
+    			ideology = fascism
+   				popularity = -0.25
+			}
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = GER_ally_AUS
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10
+		prerequisite = {
+			focus = GER_realpolitik
+		}
+		x = 11
+		y = 5
+		completion_reward = {
+			AUS = { country_event = { id = GER.6 } }
+		}
+	}
+	focus = {
+		id = GER_partition_EDU
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = GER_ally_AUS
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_ally_AUS
+		completion_reward = {
+			AUS = {
+				country_event = { id = GER.7 }
+			}
+			UKR = {
+				country_event = { id = GER.8 }
+			}
+		}
+	}
+	focus = {
+		id = GER_benelux_kingdom
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10
+		prerequisite = {
+			focus = GER_realpolitik
+		}
+		x = 2
+		y = 1
+		relative_position_id = GER_realpolitik
+		completion_reward = {
+			set_autonomy = {
+   				target = HOL
+    			autonomy_state = autonomy_puppet
+			}
+			HOL = {
+				set_cosmetic_tag = HOL_united
+				create_country_leader = {
+					name = "Ян I"
+					picture = "gfx/leaders/HOL/Portrait_Jean.dds"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+					}
+				}
+				set_politics = {
+					ruling_party = neutrality
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_take_france
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		cost = 10
+		prerequisite = {
+			focus = GER_benelux_kingdom
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_benelux_kingdom
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = FRA
+			}
+		}
+	}
+	focus = {
+		id = GER_osten
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = GER_partition_EDU
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_partition_EDU
+
+	}
+	focus = {
+		id = GER_colonies
+		icon = GFX_focus_generic_cruiser2
+		cost = 10
+		prerequisite = {
+			focus = GER_take_france
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_take_france
+		completion_reward = {
+			custom_effect_tooltip = GER_unlock_colony_decisions
+		}
+	}
+	focus = {
+		id = GER_ally_SCA
+		icon = GFX_goal_tripartite_pact
+		cost = 10
+		prerequisite = {
+			focus = GER_ally_AUS
+		}
+		prerequisite = {
+			focus = GER_ask_jutland
+		}
+		available = {
+			is_faction_leader = yes
+			NOT = { has_war_with = SCA }
+			has_global_flag = stockholm_agreement
+		}
+		x = 10
+		y = 8
+		completion_reward = {
+			SCA = { country_event = { id = GER.17 } }
+		}
+	}
+	focus = {
+		id = GER_armored_cars
+		icon = GFX_focus_NZL_bob_semple_tank
+		cost = 10
+		prerequisite = {
+			focus = GER_technology
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_technology
+		completion_reward = {
+			add_ideas = GER_panzerwagen_idea
+		}
+	}
+	focus = {
+		id = GER_total_conversion
+		icon = GFX_focus_generic_industry_3
+		cost = 10
+		prerequisite = {
+			focus = GER_technology
+		}
+		x = 0
+		y = 2
+		relative_position_id = GER_technology
+		completion_reward = {
+			add_ideas = GER_conversion_idea
+		}
+	}
+}

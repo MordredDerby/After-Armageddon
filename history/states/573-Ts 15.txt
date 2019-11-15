@@ -6,13 +6,16 @@ state={
 	
 	state_category = pastoral
 	resources={
-		chromium=32
+		chromium=23 # was: 32
 	}
 
 	history={
+		victory_points = {
+			10329 1
+		}
 		owner = URA
 		buildings = {
-			infrastructure = 3
+			infrastructure = 4
 
 		}
 		add_core_of = URA
