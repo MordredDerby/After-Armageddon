@@ -14,6 +14,8 @@ set_technology = {
 
 set_convoys = 40
 
+set_stability = 0.55
+
 set_politics = {
 
 	parties = {
@@ -27,8 +29,8 @@ set_politics = {
 create_country_leader = {
 	name = "Янь Сишань"
 	desc = "POLITICS_YAN_XISHAN_DESC"
-	picture = "gfx/leaders/SHX/portrait_shx_yan_xishan.dds"
-	expire = "1960.6.6"
+	picture = "gfx/leaders/CHI/Portrait_Yan_Xishan.dds"
+	expire = "1960.12.12"
 	ideology = centrist_ideology
 	traits = {
 		#

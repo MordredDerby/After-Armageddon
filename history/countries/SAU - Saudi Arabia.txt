@@ -14,25 +14,15 @@ set_convoys = 5
 set_politics = {
 
 	parties = {
-		democratic = { 
-			popularity = 0
-		}
-
-		fascism = {
-			popularity = 0
-		}
-		
-		communism = {
-			popularity = 55
-		}
-		
-		neutrality = { 
-			popularity = 45
-		}
+		moderate_leftist = { popularity = 30 }
+		moderate_rightist = { popularity = 10 }
+		radical_rightist = { popularity = 20 }
+		radical_leftist = { popularity = 10 }
+		centrist = { popularity = 30 }
 	}
 	
-	ruling_party = communism
-	last_election = "1936.1.1"
+	ruling_party = moderate_leftist
+	last_election = "1930.11.9"
 	election_frequency = 48
 	elections_allowed = no
 }
@@ -53,7 +43,18 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/SAU/Portrait_Abdullah_Tariki.dds"
 	expire = "1965.1.1"
-	ideology = marxism
+	ideology = religious_socialism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ихваны"
+	desc = ""
+	picture = "gfx/leaders/SAU/Portrait_Abdullah_Tariki.dds"
+	expire = "1965.1.1"
+	ideology = religious_extremism
 	traits = {
 		#
 	}

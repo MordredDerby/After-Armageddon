@@ -1,0 +1,26 @@
+﻿capital = 434
+
+#oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_politics = {
+	parties = {
+		centrist = { popularity = 100 }
+	}
+	ruling_party = centrist
+}
+
+create_country_leader = {
+	name = "Нгапо Нгаванг Джигме"
+	#desc = ""
+	picture = "gfx/leaders/STB/Portrait_.dds"
+	expire = "2010.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}

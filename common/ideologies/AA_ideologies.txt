@@ -51,7 +51,7 @@ ideologies = {
 	moderate_rightist = {
 		types = {
 			moderate_rightist_ideology = {}
-			market_liberalism = {}
+			oligarchism = {}
 			conservatism = {}
 			national_constructivism = {}
 		}
@@ -151,6 +151,7 @@ ideologies = {
 	radical_rightist = {
 		types = {
 			radical_rightist_ideology = {}
+			fascist_monarchism = {}
 			integralism = {}
 			nazism = {}
 			fascism = {}

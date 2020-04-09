@@ -28,9 +28,9 @@ set_politics = {
 
 create_country_leader = {
 	name = "Чоу Цзи Юань" #Chow Chi Yuen
-	#picture = "gfx/leaders/GXC/.dds"
+	picture = "gfx/leaders/GXC/Portrait_Chow_Chi-yuen.dds"
 	expire = "1997.1.1"
-	ideology = market_liberalism
+	ideology = oligarchism
 	traits = {
 		#
 	}

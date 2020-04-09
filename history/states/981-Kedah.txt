@@ -1,0 +1,25 @@
+state={
+	id=981
+	name="STATE_981"
+
+	history={
+		owner = MLC
+		add_core_of = MLC
+		add_core_of = MAL
+		victory_points = {
+			1291 1 
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+
+	provinces={
+		1291 7342 12144 
+	}
+	manpower=21000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

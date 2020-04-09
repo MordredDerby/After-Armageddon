@@ -1,0 +1,28 @@
+﻿capital = 568
+
+#oob = "KRA"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_politics = {
+	parties = {
+		moderate_rightist = { 
+			popularity = 10
+		}
+		radical_leftist = { 
+			popularity = 60
+		}
+		moderate_leftist = { 
+			popularity = 30
+		}
+	}
+	ruling_party = radical_leftist
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}

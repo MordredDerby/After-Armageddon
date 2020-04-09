@@ -12,6 +12,7 @@ state={
 
 	history={
 		add_core_of = UAE
+		add_core_of = OMA
 		owner = SAU
 		victory_points = {
 			7960 1 

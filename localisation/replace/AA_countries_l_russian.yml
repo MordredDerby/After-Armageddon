@@ -1,6 +1,4 @@
 ﻿l_russian:
- EDU_faction:0 "СДЕГ"
- munich_pact_faction:0 "Мюнхенский пакт"
 
  UKR_radical_rightist:0 "Великая Священная Империя"
  UKR_radical_rightist_DEF:0 "Великая Священная Империя"
@@ -73,8 +71,6 @@
  SPC_radical_leftist_DEF:0 "Испанский Конгломерат"
  SPC_radical_leftist_ADJ:0 "Испанск."
 
- internationale_faction:0 "Четвёртый Интернационал"
-
  SPP_radical_rightist:0 "Иберийский Протекторат"
  SPP_radical_rightist_DEF:0 "Иберийский Протекторат"
  SPP_radical_rightist_ADJ:0 "Иберийск."
@@ -100,9 +96,12 @@
  NSP_centrist_DEF:0 "Испанская Империя"
  NSP_centrist_ADJ:0 "Испанск."
 
- MAN_radical_rightist:0 "Центральная Директория"
- MAN_radical_rightist_DEF:0 "Центральная Директория"
- MAN_radical_rightist_ADJ:0 "Дальневосточн."
+ MAN_directorate_radical_rightist:0 "Центральная Директория"
+ MAN_directorate_radical_rightist_DEF:0 "Центральная Директория"
+ MAN_directorate_radical_rightist_ADJ:0 "Дальневосточн."
+
+ EZO_centrist:0 "Эдзо"
+ EZO_centrist:0 "Эдзоск."
 
  HOL_GER_radical_rightist_autonomy_reichskommissariat:0 "Рейхскомиссариат Бенилюкс"
  HOL_GER_radical_rightist_autonomy_reichsprotectorate:0 "Протекторат Бенилюкс"
@@ -140,14 +139,12 @@
  DKB_DEF:0 "Казакия"
  DKB_ADJ:0 "Казацк."
 
- SAU_radical_rightist:0 "Арабский халифат"
- SAU_radical_rightist_DEF:0 "Арабский халифат"
+ SAU_radical_rightist:0 "Ихвания"
  SAU_moderate_rightist:0 "Арабская республика"
- SAU_moderate_rightist_DEF:0 "Арабская республика"
  SAU_centrist:0 "Саудовская Аравия"
- SAU_centrist_DEF:0 "Саудовская Аравия"
+ SAU_moderate_leftist:0 "Аравийская Республика"
  SAU_radical_leftist:0 "Аравийская Республика"
- SAU_radical_leftist_DEF:0 "Аравийская Республика"
+ #Федерация Арабских Эмиратов
 
  TEX_moderate_rightist:0 "Техасское Содружество"
  TEX_moderate_rightist_DEF:0 "Техасское Содружество"
@@ -200,12 +197,12 @@
  LUX_radical_leftist:0 "Люксембургская Коммуна"
  LUX_radical_leftist_DEF:0 "Люксембургская Коммуна"
 
- IND_moderate_rightist:0 "Индийская Конфедерация"
- IND_moderate_rightist_DEF:0 "Индийская Конфедерация"
- IND_moderate_rightist_ADJ:0 "Индийск."
+ IND_centrist:0 "Индийская Конфедерация"
+ IND_centrist_DEF:0 "Индийская Конфедерация"
+ IND_centrist_ADJ:0 "Индийск."
 
- RAJ_UK_centrist:0 "Индийское Содружество"
- RAJ_UK_centrist_DEF:0 "Индийское Содружество"
+ RAJ_UK_moderate_rightist:0 "Индийское Содружество"
+ RAJ_UK_moderate_rightist_DEF:0 "Индийское Содружество"
 
  SAF_HOL_radical_rightist:0 "Новая Голландия"
  SAF_HOL_radical_rightist_DEF:0 "Княжество Новая Голландия"
@@ -290,6 +287,9 @@
  ITB_centrist:0 "Государство Тибет"
  ITB_centrist_ADJ:0 "Тибетск."
 
+ STB_centrist:0 "Южный Тибет"
+ STB_centrist_ADJ:0 "Тибетск."
+
  FAL_radical_rightist:0 "Фолклендская Республика"
  FAL_radical_rightist_ADJ:0 "Фолклендск."
 
@@ -311,3 +311,110 @@
  TAI_moderate_leftist:0 "Формоза"
  TAI_moderate_leftist_DEF:0 "Христианская Республика Формоза"
  TAI_moderate_leftist_ADJ:0 "Формозск."
+
+ ASS_centrist:0 "Ахом"
+ ASS_centrist_ADJ:0 "Ассамск."
+
+ KAS_centrist:0 "Кашмир"
+ KAS_centrist_DEF:0 "Княжество Кашмир"
+ KAS_centrist_ADJ:0 "Кашмирск."
+ 
+ BLC_centrist:0 "Белуджистан"
+ BLC_centrist_ADJ:0 "Белуджистанск."
+
+ SND_centrist:0 "Синдудеш"
+ SND_centrist_ADJ:0 "Синдск."
+
+ BRM_centrist:0 "Бирма"
+ BRM_centrist_ADJ:0 "Бирманск."
+
+ AFG_radical_rightist:0 "Новый афганский каганат"
+ AFG_radical_rightist_DEF:0 "Новый афганский каганат"
+ AFG_moderate_rightist:0 "Республика Афганистан"
+ AFG_moderate_rightist_DEF:0 "Республика Афганистан"
+ AFG_centrist:0 "Афганистан"
+ AFG_centrist_DEF:0 "Афганистан"
+ AFG_radical_leftist:0 "Демократическая республика Афганистан"
+ AFG_radical_leftist_DEF:0 "Демократическая республика Афганистан"
+ AFG_radical_rightist_ADJ:0 "Афганск."
+ AFG_moderate_rightist_ADJ:0 "Афганск."
+ AFG_centrist_ADJ:0 "Афганск."
+ AFG_radical_leftist_ADJ:0 "Афганск."
+
+ HYD_centrist:0 "Хайдарабад"
+ HYD_centrist_ADJ:0 "Хайдарабадск."
+
+ RJS_centrist:0 "Раджастан"
+ RJS_centrist_ADJ:0 "Раджастанск."
+
+ GUJ_centrist:0 "Гуджарат"
+ GUJ_centrist_ADJ:0 "Гуджаратск."
+
+ YUN_federation_centrist:0 "Федерация Наньчжао"
+ YUN_federation_centrist_ADJ:0 "Наньчжао"
+
+ CAO_centrist:0 "Даонам"
+ CAO_centrist_ADJ:0 "Даонамск."
+
+ CHM_centrist:0 "Тямпа"
+ CHM_centrist_ADJ:0 "Тямпск."
+
+ MLC_centrist:0 "Малакка"
+ MLC_centrist_ADJ:0 "Малаккск."
+
+ SIA_radical_rightist:0 "Таиланд"
+ SIA_radical_rightist_ADJ:0 "Тайск."
+
+ VIN_north_centrist:0 "Дайвьет"
+ VIN_north_centrist_ADJ:0 "Дайвьетск."
+
+ SRW_centrist:0 "Саравак"
+ SRW_centrist_DEF:0 "Королевство Саравак"
+ SRW_centrist_ADJ:0 "Саравакск."
+
+ BRU_centrist:0 "Бруней"
+ BRU_centrist_DEF:0 "Султанат Бруней"
+ BRU_centrist_ADJ:0 "Брунейск."
+ BRU_exiled_centrist:0 "Калимантан"
+ BRU_exiled_centrist_DEF:0 "Султанат Калимантан"
+ BRU_exiled_centrist_ADJ:0 "Калимантанск."
+
+ HJZ_centrist:0 "Хашимитский Халифат"
+ HJZ_centrist_ADJ:0 "Хашимитск."
+
+ UAE_unorganized_centrist:0 "Пиратский берег"
+ UAE_unorganized_centrist_ADJ:0 "Пиратск."
+ UAE_centrist:0 "Федерация Залива"
+ UAE_centrist_adj:0 "Заливн."
+
+ YEM_radical_leftist:0 "Арабский фронт спасения"
+ YEM_radical_leftist_ADJ:0 "Арабск."
+
+ HDR_moderate_rightist:0 "Хадрамаут"
+ HDR_moderate_rightist_DEF:0 "Федерация эмиратов Хадрамаута"
+ HDR_moderate_rightist_ADJ:0 "Хадрамаутск."
+
+ BHR_moderate_leftist:0 "Накшбандия"
+ BHR_moderate_leftist_ADJ:0 "Накшбандийск."
+
+ OMA_centrist:0 "Маскат"
+ OMA_centrist_ADJ:0 "Маскатск."
+
+ ALT_centrist:0 "Беловодье"
+ ALT_centrist_ADJ:0 "Беловодск."
+ ALT_moderate_rightist:0 "Ойротия"
+ ALT_moderate_rightist_ADJ:0 "Ойротск."
+ ALT_radical_rightist:0 "Ак-Терге"
+ ALT_radical_rightist_ADJ:0 "Бурханск."
+
+ OMS_moderate_leftist:0 "Омская трудовая коммуна"
+ OMS_moderate_leftist_ADJ:0 "Омск."
+ OMS_radical_leftist:0 "Омская трудовая коммуна"
+ OMS_radical_leftist:0 "Омск."
+ OMS_moderate_rightist:0 "Вольный город Омск"
+ OMS_moderate_rightist:0 "Омск."
+ OMS_centrist:0 "Вольный город Омск"
+ OMS_centrist:0 "Омск."
+
+ KRA_radical_leftist:0 "Центросибирская партизанская республика"
+ KRA_radical_leftist_ADJ:0 "Центросибирск."

@@ -1,0 +1,7 @@
+
+
+graphical_culture = commonwealth_gfx
+graphical_culture_2d = commonwealth_2d
+
+color = rgb { 145 77 77 }
+	color_ui = rgb { 200  10  10 }

@@ -24,4 +24,12 @@ spriteTypes = {
 		name = "GFX_ideology_BUK_centrist_group"
 		texturefile = "gfx/interface/ideologies/BUK_centrist.dds"
 	}
+	spriteType = {
+		name = "GFX_ideology_oligarchism"
+		texturefile = "gfx/interface/ideologies/Oligarchy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_theocracy"
+		texturefile = "gfx/interface/ideologies/Theocracy.dds"
+	}
 }

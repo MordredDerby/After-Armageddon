@@ -7,14 +7,15 @@ state={
 	state_category = town
 
 	history={
-		owner = SIB
+		owner = KRA
+		add_core_of = SIB
+		add_core_of = KRA
 		buildings = {
 			infrastructure = 3
 		}
 		victory_points = {
 			4724 1 
 		}
-		add_core_of = SIB
 	}
 
 	provinces={

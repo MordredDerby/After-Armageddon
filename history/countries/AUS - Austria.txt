@@ -42,7 +42,7 @@ create_country_leader = {
 	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
 	picture = "gfx/leaders/AUS/Portrait_Altenkirken.dds"
 	expire = "1970.1.1"
-	ideology = centrism
+	ideology = centrist_ideology
 	traits = {
 		#
 	}

@@ -37,29 +37,10 @@ set_convoys = 20
 set_cosmetic_tag = RAJ_UK # British Raj
 
 set_politics = {
-
 	parties = {
-		democratic = { 
-			popularity = 17
-		}
-
-		fascism = {
-			popularity = 2
-		}
-		
-		communism = {
-			popularity = 1
-		}
-
-		neutrality = {
-			popularity = 80
-		}
+		moderate_rightist = { popularity = 100 }
 	}
-	
-	ruling_party = neutrality
-	last_election = "1935.11.14"
-	election_frequency = 48
-	elections_allowed = no
+	ruling_party = moderate_rightist
 }
 
 create_country_leader = {
@@ -67,7 +48,7 @@ create_country_leader = {
 	desc = "POLITICS_LORD_LINLITHGOW_DESC"
 	picture = "gfx/leaders/RAJ/Portrait_British_Raj_Lord_Linlithgow.dds"
 	expire = "1965.1.1"
-	ideology = despotism
+	ideology = moderate_rightist_ideology
 	traits = {
 		
 	}

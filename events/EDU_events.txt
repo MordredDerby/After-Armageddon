@@ -6,6 +6,7 @@ country_event = {
 	title = EDU.1.t
 	desc = EDU.1.d
 	#picture = 
+	is_triggered_only = yes
 	trigger = {
 		tag = EDU
 		has_idea = EDU_ethnic_tensions

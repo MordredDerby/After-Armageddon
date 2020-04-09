@@ -933,3 +933,75 @@ TAI = {
 	color = rgb { 104 125 232 }
 	color_ui = rgb { 5 0 0 }
 }
+ASS = {
+	color = rgb { 5  145  20 }
+	color_ui = rgb { 5 0 0 }
+}
+BAL = {
+	color = rgb { 40  60  206 }
+	color_ui = rgb { 5 0 0 }
+}
+KAS = {
+	color = rgb { 13  75 50 }
+	color_ui = rgb { 5 0 0 }
+}
+SND = {
+	color = rgb { 0 66 38 }
+	color_ui = rgb { 5 0 0 }
+}
+HYD = {
+	color = rgb { 111 93 161 }
+	color_ui = rgb { 5 0 0 }
+}
+RJS = {
+	color = rgb { 145 77 77 }
+	color_ui = rgb { 5 0 0 }
+}
+GUJ = {
+	color = rgb { 135  56  122 }
+	color_ui = rgb { 5 0 0 }
+}
+CHM = {
+	color = rgb { 236 172 110 }
+	color_ui = rgb { 5 0 0 }
+}
+CAO = {
+	color = rgb { 51  153  254 }
+	color_ui = rgb { 5 0 0 }
+}
+MLC = {
+	color = rgb { 0  43  127 }
+	color_ui = rgb { 5 0 0 }
+}
+BLC = {
+	color = rgb { 0  204  255 }
+	color_ui = rgb { 5 0 0 }
+}
+STB = {
+	color = rgb { 42  23  111 }
+	color_ui = rgb { 5 0 0 }
+}
+SRW = {
+	color = rgb { 229  113  30 }
+	color_ui = rgb { 5 0 0 }
+}
+HJZ = {
+	color = rgb { 171  190  152 }
+	color_ui = rgb { 5 0 0 }
+}
+HDR = {
+	color = rgb { 255  212  71 }
+	color_ui = rgb { 5 0 0 }
+}
+ALT = {
+	color = rgb { 66  198  255 }
+	color_ui = rgb { 5 0 0 }
+}
+OMS = {
+	color = rgb { 255 96 17 }
+	color_ui = rgb { 5 0 0 }
+}
+KRA = {
+	color = rgb { 0 218 238 }
+	color_ui = rgb { 5 0 0 }
+}

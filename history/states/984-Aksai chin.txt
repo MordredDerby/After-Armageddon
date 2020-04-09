@@ -1,0 +1,20 @@
+state={
+	id=984
+	name="STATE_984"
+
+	history={
+		owner = KAS
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = KAS
+	}
+
+	provinces={
+		5042 
+	}
+	manpower=12100
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

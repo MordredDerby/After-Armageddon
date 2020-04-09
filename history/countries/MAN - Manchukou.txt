@@ -10,40 +10,22 @@ set_technology = {
 
 set_convoys = 5
 
+set_cosmetic_tag = MAN_direcrorate
+
 set_politics = {
-
 	parties = {
-		democratic = { 
-			popularity = 0
-			banned = yes
-		}
-
-		fascism = {
-			popularity = 80
-		}
-		
-		communism = {
-			popularity = 0
-			banned = yes
-		}
-
-		neutrality = {
-			popularity = 20
-		}
+		radical_rightist = { popularity = 100 }
 	}
-	
-	ruling_party = fascism
-	last_election = "1936.1.1"
-	election_frequency = 48
-	elections_allowed = no
+	ruling_party = radical_rightist
 }
+
 
 create_country_leader = {
 	name = "Павел Петров"
 	
 	picture = "gfx/leaders/MAN/Portrait_Pavel_Petrov.dds"
 	expire = "1967.1.1"
-	ideology = rexism
+	ideology = radical_rightist_ideology
 	traits = {
 	}
 }
@@ -80,7 +62,4 @@ create_corps_commander = {
 	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
 	traits = { }
 	skill = 3
-}
-
-1939.1.1 = {
 }

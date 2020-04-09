@@ -1,0 +1,64 @@
+units = {
+	fleet = {
+		name = "Baltic Command"			
+		naval_base = 408
+		task_force = {
+			name = "Raiding Fleet"
+			location = 408
+			ship = { 
+				name = "Sjorover" 
+				definition = destroyer 
+				start_experience_factor = 0.5 
+				equipment = { ship_hull_light_1 = { amount = 1 owner = GOT version_name = "Windjammer" } } 
+			}
+			ship = { 
+				name = "Sjorover" 
+				definition = destroyer 
+				start_experience_factor = 0.5 
+				equipment = { ship_hull_light_1 = { amount = 1 owner = GOT version_name = "Windjammer" } } 
+			}
+			ship = { 
+				name = "Sjorover" 
+				definition = destroyer 
+				start_experience_factor = 0.5 
+				equipment = { ship_hull_light_1 = { amount = 1 owner = GOT version_name = "Windjammer" } } 
+			}
+			ship = { 
+				name = "Sjorover" 
+				definition = destroyer 
+				start_experience_factor = 0.5 
+				equipment = { ship_hull_light_1 = { amount = 1 owner = GOT version_name = "Windjammer" } } 
+			}
+			ship = { 
+				name = "Sjorover" 
+				definition = destroyer 
+				start_experience_factor = 0.5 
+				equipment = { ship_hull_light_1 = { amount = 1 owner = GOT version_name = "Windjammer" } } 
+			}
+			ship = { 
+				name = "Sjorover" 
+				definition = destroyer 
+				start_experience_factor = 0.5 
+				equipment = { ship_hull_light_1 = { amount = 1 owner = GOT version_name = "Windjammer" } } 
+			}
+			ship = { 
+				name = "Sjorover" 
+				definition = destroyer 
+				start_experience_factor = 0.5 
+				equipment = { ship_hull_light_1 = { amount = 1 owner = GOT version_name = "Windjammer" } } 
+			}
+			ship = { 
+				name = "Sjorover" 
+				definition = destroyer 
+				start_experience_factor = 0.5 
+				equipment = { ship_hull_light_1 = { amount = 1 owner = GOT version_name = "Windjammer" } } 
+			}
+			ship = { 
+				name = "Sjorover" 
+				definition = destroyer 
+				start_experience_factor = 0.5 
+				equipment = { ship_hull_light_1 = { amount = 1 owner = GOT version_name = "Windjammer" } } 
+			}
+		}
+	}
+}

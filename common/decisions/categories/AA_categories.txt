@@ -8,3 +8,13 @@ ukrainian_civil_war_category = {
 		tag = FRU
 	}
 }
+CHI_succession_crisis = {
+	icon = power_struggle
+	picture = GFX_decision_cat_picture_chi_political_support
+}
+arabian_strife_category = {
+	icon = power_struggle
+	allowed = {
+		is_arabian_state = yes
+	}
+}

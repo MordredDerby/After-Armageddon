@@ -87,7 +87,7 @@
 
  GXC_moderate_rightist_party:0 "Торговый союз"
  GXC_moderate_rightist_party_long:0 "Торговая организация общественной безопасности Кантона"
- GXC_centrist_party:0 "Клика коммуникаций
+ GXC_centrist_party:0 "Клика коммуникаций"
 
  SHD_centrist_party:0 "Общество гармонии"
 
@@ -99,3 +99,5 @@
  SIB_moderate_rightist_party:0 "Сибирска вольгота"
  SIB_radical_leftist_party:0 "Народное собрание"
  SIB_centrist_party:0 "Военный совет"
+
+ JAP_radical_rightist_party:0 "Общество щита"

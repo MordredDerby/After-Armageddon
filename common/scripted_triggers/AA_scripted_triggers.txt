@@ -1,0 +1,11 @@
+is_arabian_state = {
+	OR = {
+		tag = SAU
+		tag = HDR
+		tag = HJZ
+		tag = BHR
+		tag = OMA
+		tag = YEM
+		tag = UAE
+	}
+}

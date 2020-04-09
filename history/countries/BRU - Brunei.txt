@@ -1,0 +1,44 @@
+﻿capital = 334 #982
+
+set_research_slots = 3
+
+# Starting tech
+# clone of UK
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+}
+
+set_convoys = 5
+set_cosmetic_tag = BRU_exiled
+
+set_politics = {
+
+	parties = {
+		moderate_leftist = { popularity = 0 }
+		moderate_rightist = { popularity = 0 }
+		radical_rightist = { popularity = 0 }
+		radical_leftist = { popularity = 0 }
+		centrist = { popularity = 100 }
+	}
+	
+	ruling_party = centrist
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Омар Али Сайфуддин" #III
+	desc = ""
+	picture = "gfx/leaders/BRU/Portrait_Omar_Ali_Saifuddien.dds"
+	expire = "1986.3.1"
+	ideology = centrist_ideology
+	traits = {
+		
+	}
+}
+

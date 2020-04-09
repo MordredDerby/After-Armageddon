@@ -1,0 +1,105 @@
+add_namespace = SAU
+
+#Ikhwan seizure of Riyadh
+country_event = {
+	id = SAU.1
+	title = SAU.1.t
+	desc = SAU.1.d
+	#picture = 
+	trigger = {
+		tag = SAU
+		has_stability < 0.3
+	}
+
+	fire_only_once = yes
+
+	#Hippity hoppity there is no unity
+	option = {
+		name = SAU.1.a
+		set_politics = {
+			ruling_party = radical_rightist
+			elections_allowed = no
+		}
+		release = HDR
+		release = YEM
+		release = UAE
+		release = OMA
+		HJZ = {
+			transfer_state = 679
+		}
+		BHR = {
+			add_state_core = 765
+			add_state_core = 944
+		}
+		release = BHR
+	}
+}
+
+#Sheikh federation formation
+country_event = {
+	id = SAU.2
+	title = SAU.2.t
+	desc = SAU.2.d
+	#picture = 
+	trigger = {
+		tag = HDR
+		SAU = { has_government = radical_rightist }
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = SAU.2.a
+		create_faction = emir_faction
+		UAE = {
+			country_event = {
+   				id = SAU.3
+    			days = 10
+    			random = 3
+			}
+		}
+		OMA = {
+			country_event = {
+   				id = SAU.3
+    			days = 10
+    			random = 3
+			}
+		}
+	}
+	option = {
+		name = SAU.2.b
+		add_war_support = 0.15
+	}
+}
+
+#Sheikh federation invitation
+country_event = {
+	id = SAU.3
+	title = SAU.3.t
+	desc = SAU.3.d
+	#picture = 
+	is_triggered_only = yes
+
+	option = {
+		name = SAU.3.a
+		#HDR = {
+		#	add_to_faction = ROOT
+		#}
+	}
+}
+
+#Federation ledear subdues us
+country_event = {
+	id = SAU.4
+	title = SAU.4.t
+	desc = SAU.4.d
+	#picture = 
+	is_triggered_only = yes
+
+	option = {
+		name = SAU.4.a
+		#FROM = {
+		#	puppet = ROOT
+		#}
+	}
+}

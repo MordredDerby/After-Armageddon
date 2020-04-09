@@ -1,0 +1,138 @@
+CHI_succession_crisis = {
+	CHI_succession_crisis_timer = {
+		icon = 
+
+		days_mission_timeout = 180
+		is_good = no
+		fire_only_once = yes
+
+		available = {
+			 NOT = {
+			 	has_country_leader = {
+    				name = "Центральный комитет"
+    				ruling_only = yes
+				}
+			 }
+		}
+
+		activation = {
+			has_country_leader = {
+    			name = "Центральный комитет"
+    			ruling_only = yes
+			}
+		}
+
+		visible = {
+			original_tag = CHI
+		}
+
+		modifier = {
+			moderate_leftist_drift = 0.03
+			radical_leftist_drift = 0.03
+			moderate_rightist_drift = 0.03
+			radical_rightist_drift = 0.03
+		}
+
+		timeout_effect = {
+			
+		}
+	}
+	#Common
+	CHI_postpone_elections = {
+
+	}
+	CHI_military_parade = {
+
+	}
+	#support Bo Yibo
+	CHI_rally_dare_to_die = {
+		
+	}
+	CHI_seek_compromises = {
+
+	}
+	CHI_heartwashing_societies_propaganda = {
+
+	}
+	CHI_elect_bo_yibo = {
+
+	}
+	#Leftist
+	CHI_elect_gao_gang = {
+
+	}
+
+	#Youth Party
+	CHI_soup_kitchen = {
+
+	}
+	CHI_recruit_military = {
+
+	}
+	CHI_expand_paramilitary = {
+
+	}
+	CHI_clash_with_left = {
+		allowed = { 
+			tag = CHI
+		}
+		available = {
+
+		}
+		visible = {
+			tag = SOV
+			has_country_flag = CHI_chose_youth
+		}
+		days_remove = 90
+		cost = 50
+		modifier = {
+			moderate_leftist_drift = -0.03
+			radical_leftist_drift = -0.03
+			radical_rightist_drift = 0.03
+			stability_weekly = -0.05
+		}
+	}
+	CHI_youth_party_coup = {
+
+	}
+
+
+	#### Rival governments
+	#CHI_snatch_state = {
+	#	icon = 
+	#	available = {
+	#		OR = {
+	#			tag = MEN
+	#			tag = SHD
+	#		}
+	#	}
+	#	visible = {
+	#		CHI = {
+	#			has_stability < 0.5
+	#			has_war = no
+	#		}
+	#	}
+	#	highlight_states = {
+	#		is_owned_by = CHI
+	#		is_capital = no
+	#		any_neighbor_state = {
+	#			is_owned_by = ROOT
+	#		}
+	#	}
+	#	complete_effect = {
+	#		random_state = {
+	#			limit = {
+	#				is_fully_controlled_by = CHI
+	#				is_capital = no
+	#				any_neighbor_state = {
+	#					is_fully_controlled_by = ROOT
+	#				}
+	#			}
+	#			save_event_target_as = snatched_state
+	#		}
+	#	}
+	#	remove_effect = {
+	#		transfer_state = event_target:snatched_state
+	#	}
+	#}
+}
